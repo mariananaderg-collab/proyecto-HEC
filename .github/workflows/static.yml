@@ -1,0 +1,905 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Del carbón a la universidad</title>
+<meta name="description" content="Microhistoria de una familia antioqueña entre Amagá, Titiribí y Medellín, 1930–1970.">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Mapa (Leaflet) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- Gráficas (Chart.js) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+<style>
+  :root{
+    --papel:#f5efe4;
+    --papel-2:#ece3d3;
+    --tinta:#2a231e;
+    --tinta-suave:#5e5249;
+    --carbon:#33302d;
+    --terracota:#a4512b;
+    --verde:#4f6b47;
+    --oro:#b8892e;
+    --linea:#d6cab6;
+    --blanco:#fffdf9;
+    --ancho:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--papel);
+    color:var(--tinta);
+    font-family:"Source Sans 3",system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.65;
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;font-weight:600}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.4em}
+  h3{font-size:1.3rem;margin-bottom:.3em}
+  p{margin-bottom:1em}
+  a{color:var(--terracota)}
+  img{max-width:100%;display:block}
+
+  /* Barra de progreso */
+  #progreso{position:fixed;top:0;left:0;height:4px;width:0;background:var(--terracota);z-index:1000}
+
+  /* Navegación */
+  nav{
+    position:sticky;top:0;z-index:900;
+    background:rgba(245,239,228,.94);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--linea);
+  }
+  nav ul{
+    max-width:var(--ancho);margin:0 auto;padding:.6rem 16px;
+    display:flex;gap:1.2rem;list-style:none;overflow-x:auto;white-space:nowrap;
+    scrollbar-width:none;
+  }
+  nav ul::-webkit-scrollbar{display:none}
+  nav a{color:var(--tinta-suave);text-decoration:none;font-size:.92rem;font-weight:600}
+  nav a:hover,nav a.activo{color:var(--terracota)}
+
+  /* Portada */
+  header.portada{
+    min-height:88vh;display:flex;align-items:flex-end;
+    background:
+      linear-gradient(180deg,rgba(42,35,30,.15) 0%,rgba(42,35,30,.85) 100%),
+      repeating-linear-gradient(115deg,#3b3631 0 2px,#2f2b27 2px 9px);
+    /* EDITAR: para usar una foto familiar de fondo, reemplace la línea anterior por:
+       url('fotos/portada.jpg') center/cover no-repeat; */
+    color:var(--blanco);
+  }
+  .portada .contenido{max-width:var(--ancho);margin:0 auto;padding:0 16px 4.5rem;width:100%}
+  .portada .antetitulo{letter-spacing:.18em;text-transform:uppercase;font-size:.85rem;color:#e9c99a;margin-bottom:1rem}
+  .portada h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:800;max-width:14ch}
+  .portada .bajada{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:60ch;margin-top:1.2rem;color:#efe6d8}
+  .portada .autora{margin-top:2rem;font-size:.95rem;color:#cfc3b2}
+
+  /* Secciones */
+  section{padding:5rem 16px;border-bottom:1px solid var(--linea)}
+  section.alterna{background:var(--papel-2)}
+  .envoltura{max-width:var(--ancho);margin:0 auto}
+  .texto{max-width:68ch}
+  .etiqueta{
+    display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--terracota);font-weight:700;margin-bottom:.6rem
+  }
+  .entrada{font-size:1.2rem;color:var(--tinta-suave)}
+
+  /* Pregunta destacada */
+  .pregunta{
+    font-family:"Fraunces",serif;font-size:clamp(1.25rem,2.6vw,1.6rem);
+    border-left:5px solid var(--terracota);padding:.4rem 0 .4rem 1.2rem;margin:2rem 0;max-width:60ch
+  }
+
+  /* Tarjetas */
+  .rejilla{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:2rem}
+  .tarjeta{background:var(--blanco);border:1px solid var(--linea);border-radius:10px;padding:1.4rem}
+  .tarjeta .icono{font-size:1.6rem;margin-bottom:.4rem}
+  .tarjeta p:last-child{margin-bottom:0}
+
+  /* Cita de entrevista */
+  blockquote.testimonio{
+    background:var(--blanco);border:1px solid var(--linea);border-radius:10px;
+    padding:1.6rem 1.6rem 1.2rem;margin:2rem 0;position:relative;max-width:68ch
+  }
+  blockquote.testimonio::before{
+    content:"“";font-family:"Fraunces",serif;font-size:5rem;color:var(--terracota);
+    position:absolute;top:-1.6rem;left:.8rem;line-height:1
+  }
+  blockquote.testimonio p{font-family:"Fraunces",serif;font-size:1.15rem}
+  blockquote.testimonio cite{font-style:normal;font-size:.9rem;color:var(--tinta-suave)}
+
+  /* Espacios por completar */
+  .completar{
+    background:#fff3c4;border:1px dashed var(--oro);border-radius:4px;padding:0 .25em;
+  }
+  .bloque-completar{
+    background:#fff8de;border:1px dashed var(--oro);border-radius:8px;padding:1rem 1.2rem;
+    font-size:.95rem;color:#6b5418;margin:1rem 0
+  }
+
+  /* Mapa */
+  #mapa{height:480px;border-radius:12px;border:1px solid var(--linea);margin-top:1.5rem;z-index:1}
+  .leaflet-popup-content{font-family:"Source Sans 3",sans-serif;font-size:15px;line-height:1.45}
+  .leaflet-popup-content h4{font-family:"Fraunces",serif;font-size:1.1rem;margin-bottom:.3rem}
+
+  /* Gráficas */
+  .grafica{
+    background:var(--blanco);border:1px solid var(--linea);border-radius:12px;
+    padding:1.4rem;margin-top:2rem;position:relative
+  }
+  .grafica h3{margin-bottom:.2rem}
+  .grafica .nota{font-size:.85rem;color:var(--tinta-suave);margin-top:.8rem;margin-bottom:0}
+  .lienzo{position:relative;height:380px}
+  .controles{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0 1rem}
+  .controles button{
+    font:inherit;font-size:.88rem;font-weight:600;cursor:pointer;
+    background:transparent;border:1px solid var(--linea);color:var(--tinta-suave);
+    border-radius:999px;padding:.3rem .9rem
+  }
+  .controles button.activo{background:var(--carbon);border-color:var(--carbon);color:var(--blanco)}
+  .sello{
+    display:none;position:absolute;top:1rem;right:1rem;
+    background:#b3261e;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;padding:.25rem .6rem;border-radius:4px;transform:rotate(2deg)
+  }
+  .datos-ejemplo .sello{display:block}
+
+  /* Línea de tiempo */
+  .encabezado-tiempo,.hito{
+    display:grid;grid-template-columns:1fr 90px 1fr;gap:1rem;align-items:start
+  }
+  .encabezado-tiempo{margin-top:2rem;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em}
+  .encabezado-tiempo .fam{text-align:right;color:var(--terracota)}
+  .encabezado-tiempo .col{color:var(--verde)}
+  .linea-tiempo{position:relative;margin-top:1rem}
+  .linea-tiempo::before{
+    content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--linea);transform:translateX(-1px)
+  }
+  .hito{padding:.9rem 0;position:relative}
+  .hito .anio{
+    font-family:"Fraunces",serif;font-weight:800;text-align:center;
+    background:var(--papel);position:relative;z-index:1;font-size:1.15rem
+  }
+  .hito .familia{text-align:right}
+  .hito .familia .caja{border-right:4px solid var(--terracota)}
+  .hito .colombia .caja{border-left:4px solid var(--verde)}
+  .hito .caja{background:var(--blanco);border-radius:8px;padding:.7rem 1rem;font-size:.97rem}
+  .hito .caja strong{display:block;font-family:"Fraunces",serif;font-size:1.02rem}
+  .hito .vacio{visibility:hidden}
+
+  /* Tabla de contraste */
+  .tabla-contenedor{overflow-x:auto;margin-top:2rem}
+  table{width:100%;border-collapse:collapse;background:var(--blanco);font-size:.95rem;min-width:720px}
+  th,td{text-align:left;padding:.8rem 1rem;border-bottom:1px solid var(--linea);vertical-align:top}
+  th{font-family:"Fraunces",serif;font-weight:600;background:var(--carbon);color:var(--blanco)}
+  .estado{display:inline-block;padding:.15rem .6rem;border-radius:999px;font-size:.8rem;font-weight:700;white-space:nowrap}
+  .confirmado{background:#dfead9;color:#2f4a28}
+  .parcial{background:#f6e6c8;color:#7a5512}
+  .verificar{background:#f3d9d2;color:#8a2f1a}
+
+  /* Galería */
+  .galeria{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem}
+  .galeria figure{background:var(--blanco);border:1px solid var(--linea);border-radius:10px;overflow:hidden}
+  .foto-vacia{
+    aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;text-align:center;
+    background:repeating-linear-gradient(45deg,#e6dccb 0 10px,#efe7d9 10px 20px);
+    color:var(--tinta-suave);font-size:.9rem;padding:1rem
+  }
+  .galeria figcaption{padding:.7rem .9rem;font-size:.88rem;color:var(--tinta-suave)}
+
+  /* Ficha técnica de datos */
+  .ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-top:2rem}
+  .ficha dl{background:var(--blanco);border:1px solid var(--linea);border-radius:10px;padding:1.2rem 1.4rem}
+  .ficha dt{font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--terracota);margin-top:.8rem}
+  .ficha dt:first-child{margin-top:0}
+  .ficha dd{font-size:.97rem}
+  ol.pasos{padding-left:1.3rem;margin-top:1rem}
+  ol.pasos li{margin-bottom:.5rem}
+
+  /* Conclusiones */
+  .conclusion-grande{
+    font-family:"Fraunces",serif;font-size:clamp(1.3rem,3vw,1.9rem);max-width:30ch;margin:1.5rem 0 2rem
+  }
+
+  /* Bibliografía */
+  .bibliografia li{margin-bottom:.8rem;padding-left:2em;text-indent:-2em;list-style:none;font-size:.97rem}
+
+  footer{padding:3rem 16px;text-align:center;font-size:.9rem;color:var(--tinta-suave)}
+
+  /* Aparición suave */
+  .aparecer{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .aparecer.visible{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .aparecer{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* Móvil */
+  @media (max-width:720px){
+    body{font-size:17px}
+    section{padding:3.5rem 16px}
+    #mapa{height:380px}
+    .lienzo{height:300px}
+    .encabezado-tiempo{display:none}
+    .linea-tiempo::before{left:28px}
+    .hito{grid-template-columns:56px 1fr;gap:.6rem}
+    .hito .anio{grid-row:1 / span 2;font-size:1rem;text-align:left}
+    .hito .familia,.hito .colombia{grid-column:2;text-align:left}
+    .hito .familia .caja{border-right:none;border-left:4px solid var(--terracota)}
+    .hito .vacio{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div id="progreso"></div>
+
+<!-- ============ PORTADA ============ -->
+<header class="portada">
+  <div class="contenido">
+    <p class="antetitulo">Historia Económica de Colombia · Microhistoria familiar</p>
+    <h1>Del carbón a la universidad</h1>
+    <p class="bajada">
+      Una rama de mi familia salió de la tierra y las minas de Amagá y Titiribí hacia Medellín.
+      Esta es la historia de ese viaje, contada con la memoria familiar y contrastada con los
+      censos, entre 1930 y 1970.
+    </p>
+    <p class="autora">Mariana Nader · 202321094</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#motivacion">Motivación</a></li>
+    <li><a href="#lugares">Los lugares</a></li>
+    <li><a href="#contexto">Contexto</a></li>
+    <li><a href="#poblacion">Urbanización</a></li>
+    <li><a href="#tiempo">Línea de tiempo</a></li>
+    <li><a href="#capital">Capital humano</a></li>
+    <li><a href="#contraste">Memoria vs. datos</a></li>
+    <li><a href="#archivo">Archivo familiar</a></li>
+    <li><a href="#datos">Sobre los datos</a></li>
+    <li><a href="#conclusiones">Conclusiones</a></li>
+    <li><a href="#fuentes">Fuentes</a></li>
+  </ul>
+</nav>
+
+<!-- ============ 1. MOTIVACIÓN ============ -->
+<section id="motivacion">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">1 · Motivación</span>
+    <h2>Una familia, tres lugares, cuatro décadas</h2>
+    <div class="texto">
+      <p class="entrada">
+        Según la historia oral de mi familia, las generaciones anteriores vivieron de la propiedad y
+        administración de tierras, la agricultura, la ganadería y, en Amagá, de actividades ligadas a la
+        minería de carbón. Después, algunos se trasladaron a Medellín, y las generaciones siguientes
+        llegaron a ocupaciones urbanas, al empleo público y a la universidad.
+      </p>
+      <p>
+        Quiero entender cómo esa trayectoria particular se conecta con las transformaciones más amplias de
+        la economía antioqueña. No parto del supuesto de que los cambios regionales <em>determinaron</em>
+        las decisiones de mi familia: la idea es contrastar lo que recordamos con lo que muestran los datos.
+      </p>
+    </div>
+
+    <p class="pregunta">
+      ¿Cómo se relaciona la transición de mi familia desde actividades rurales y extractivas en Amagá y
+      Titiribí hacia Medellín, y el posterior acceso a la universidad, con las transformaciones económicas
+      de Antioquia entre 1930 y 1970?
+    </p>
+
+    <div class="rejilla">
+      <div class="tarjeta">
+        <div class="icono">⛏️</div>
+        <h3>Estructura productiva</h3>
+        <p>¿Cómo cambiaron las actividades económicas del suroeste antioqueño: tierra, ganado, carbón?</p>
+      </div>
+      <div class="tarjeta">
+        <div class="icono">🏙️</div>
+        <h3>Urbanización</h3>
+        <p>¿Cómo se concentraron la población y las oportunidades en Medellín?</p>
+      </div>
+      <div class="tarjeta">
+        <div class="icono">🎓</div>
+        <h3>Capital humano y género</h3>
+        <p>¿Cómo se expandió la educación y quiénes —hombres o mujeres— accedieron a ella?</p>
+      </div>
+    </div>
+
+    <blockquote class="testimonio">
+      <!-- EDITAR: ponga aquí una frase textual de la entrevista a su mamá -->
+      <p><span class="completar">[Cita textual de la entrevista que resuma el origen de la familia. Ej.: lo que su mamá recuerda de cómo vivían en Amagá o Titiribí.]</span></p>
+      <cite>— <span class="completar">[Nombre o parentesco]</span>, entrevista, septiembre de 2026</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ 2. LOS LUGARES (MAPA) ============ -->
+<section id="lugares" class="alterna">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">2 · Los lugares</span>
+    <h2>Del suroeste a la capital</h2>
+    <div class="texto">
+      <p>
+        Amagá, Titiribí y Medellín están a pocas decenas de kilómetros, pero a comienzos del siglo XX
+        representaban economías muy distintas: la mina y la finca frente a la ciudad que se industrializaba.
+        Haga clic en cada punto para ver qué pasaba en cada lugar y qué hizo allí la familia.
+      </p>
+    </div>
+    <div id="mapa" role="img" aria-label="Mapa de la trayectoria familiar entre Titiribí, Amagá y Medellín"></div>
+    <p class="nota" style="font-size:.85rem;color:var(--tinta-suave);margin-top:.6rem">
+      La línea punteada representa la trayectoria familiar, no una ruta geográfica exacta.
+      <!-- EDITAR: si consigue un mapa histórico del Ferrocarril de Antioquia / ramal de Amagá, súmelo como imagen aquí. -->
+    </p>
+  </div>
+</section>
+
+<!-- ============ 3. CONTEXTO ============ -->
+<section id="contexto">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">3 · Contexto histórico</span>
+    <h2>Antioquia entre 1930 y 1970</h2>
+    <div class="texto">
+      <p>
+        <!-- EDITAR: este texto es un punto de partida. Revise cada afirmación, ajústela con las lecturas
+             del curso y agregue las citas correspondientes. -->
+        La familia vivió su transición en un periodo de cambios profundos. Tras la crisis de 1929, Colombia
+        adoptó controles de cambios (desde 1931) y la industria nacional, con Medellín como uno de sus centros
+        textiles, creció sustituyendo importaciones. El Ferrocarril de Antioquia, cuya conexión completa con el
+        río Magdalena se logró con el túnel de La Quiebra (1929), y el ramal hacia el suroeste integraron la cuenca
+        carbonífera de Amagá con la ciudad y sus fábricas <span class="completar">[verificar fechas y citar Correa, 2012]</span>.
+      </p>
+      <p>
+        Al mismo tiempo, la violencia política después de 1948 empujó a muchas familias rurales hacia las ciudades,
+        y el Frente Nacional (1958–1974) reorganizó la vida política. En lo económico, el Decreto-Ley 444 de 1967
+        cambió el régimen cambiario hacia devaluaciones graduales. En la educación, las mujeres ganaron acceso a la
+        universidad desde los años treinta, aunque su participación fue lenta <span class="completar">[citar fuente]</span>.
+      </p>
+    </div>
+
+    <div class="rejilla">
+      <div class="tarjeta">
+        <h3>Transporte</h3>
+        <p>El ferrocarril reduce el costo de mover carbón, café y personas hacia Medellín. Menores restricciones de transporte cambian los incentivos de hogares y empresas.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Industria y carbón</h3>
+        <p>Las fábricas de Medellín demandan energía: el carbón de Amagá conecta la economía minera del suroeste con la industrialización urbana. <span class="completar">[verificar y citar]</span></p>
+      </div>
+      <div class="tarjeta">
+        <h3>Régimen cambiario y fiscal</h3>
+        <p>Control de cambios desde 1931, protección a la industria y, en 1967, el Decreto-Ley 444. <span class="completar">[conectar con el tema: ¿afectó a la familia?]</span></p>
+      </div>
+      <div class="tarjeta">
+        <h3>Contexto mundial</h3>
+        <p>Gran Depresión, Segunda Guerra Mundial y el auge de posguerra en los precios del café moldearon las oportunidades de Antioquia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. POBLACIÓN Y URBANIZACIÓN ============ -->
+<section id="poblacion" class="alterna">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">4 · Urbanización</span>
+    <h2>Medellín crece; el suroeste se queda atrás</h2>
+    <div class="texto">
+      <p>
+        Si la experiencia de mi familia fue parte de un movimiento más amplio, los censos deberían mostrar que
+        Medellín creció mucho más rápido que Amagá y Titiribí. Como Medellín es mucho más grande, la vista
+        <strong>índice</strong> pone a los tres municipios en la misma escala (año base = 100) y permite comparar
+        sus ritmos de crecimiento.
+      </p>
+      <p><span class="completar">[Interprete aquí lo que muestran sus datos: ¿cuánto creció cada municipio? ¿En qué periodo se movió la familia?]</span></p>
+    </div>
+
+    <div class="grafica" id="caja-poblacion">
+      <span class="sello">Datos ilustrativos — reemplazar</span>
+      <h3>Población total por municipio, censos</h3>
+      <div class="controles" id="controles-poblacion">
+        <button class="activo" data-modo="indice">Índice (primer censo = 100)</button>
+        <button data-modo="absoluto">Habitantes</button>
+      </div>
+      <div class="lienzo"><canvas id="graficaPoblacion"></canvas></div>
+      <p class="nota">Fuente: elaboración propia con base en censos nacionales de población (DANE). La franja sombreada marca el periodo de traslado de la familia.</p>
+    </div>
+
+    <div class="grafica" id="caja-urbano">
+      <span class="sello">Datos ilustrativos — reemplazar</span>
+      <h3>Porcentaje de la población que vive en la cabecera municipal</h3>
+      <div class="lienzo"><canvas id="graficaUrbana"></canvas></div>
+      <p class="nota">Fuente: elaboración propia con base en censos (DANE), población de cabecera / población total.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. LÍNEA DE TIEMPO ============ -->
+<section id="tiempo">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">5 · Línea de tiempo</span>
+    <h2>Tres generaciones frente a la historia del país</h2>
+    <div class="texto">
+      <p>A la izquierda, los hitos de la familia; a la derecha, lo que pasaba en Colombia y Antioquia.</p>
+    </div>
+
+    <div class="encabezado-tiempo">
+      <div class="fam">Mi familia</div><div></div><div class="col">Colombia y Antioquia</div>
+    </div>
+
+    <!-- EDITAR: cada .hito tiene una caja de familia y una de Colombia.
+         Si un año solo tiene un evento, deje la otra caja con class="vacio". -->
+    <div class="linea-tiempo" id="lineaTiempo">
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong><span class="completar">[Generación 1]</span></strong><span class="completar">[Ej.: bisabuelo con tierras/ganado en Titiribí]</span></div></div>
+        <div class="anio">1929</div>
+        <div class="colombia"><div class="caja"><strong>Túnel de La Quiebra</strong>Se completa la conexión ferroviaria de Medellín con el Magdalena. Crisis mundial.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja vacio"></div></div>
+        <div class="anio">1931</div>
+        <div class="colombia"><div class="caja"><strong>Control de cambios</strong>Respuesta a la crisis; impulso a la industria nacional.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong><span class="completar">[Hito]</span></strong><span class="completar">[Ej.: trabajo en la mina de carbón de Amagá]</span></div></div>
+        <div class="anio"><span class="completar">19__</span></div>
+        <div class="colombia"><div class="caja"><strong>Ley 200 de 1936</strong>Reforma sobre tierras durante la "Revolución en Marcha".</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong><span class="completar">[Traslado]</span></strong><span class="completar">[¿Quién se mudó a Medellín y por qué?]</span></div></div>
+        <div class="anio"><span class="completar">19__</span></div>
+        <div class="colombia"><div class="caja"><strong>1948 · La Violencia</strong>Migración rural hacia las ciudades.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong><span class="completar">[Generación 2]</span></strong><span class="completar">[Ej.: empleo público en Medellín]</span></div></div>
+        <div class="anio"><span class="completar">19__</span></div>
+        <div class="colombia"><div class="caja"><strong>1957–1958 · Frente Nacional</strong>Primer voto de las mujeres (1957) y pacto bipartidista.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong><span class="completar">[Universidad]</span></strong><span class="completar">[¿Quién entró, a qué universidad, a qué carrera?]</span></div></div>
+        <div class="anio"><span class="completar">19__</span></div>
+        <div class="colombia"><div class="caja"><strong>Expansión educativa</strong>Crece la matrícula universitaria en Medellín. <span class="completar">[dato]</span></div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja vacio"></div></div>
+        <div class="anio">1967</div>
+        <div class="colombia"><div class="caja"><strong>Decreto-Ley 444</strong>Nuevo régimen cambiario con devaluación gradual.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. CAPITAL HUMANO Y GÉNERO ============ -->
+<section id="capital" class="alterna">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">6 · Capital humano y género</span>
+    <h2>Ellos a la universidad, ellas a la casa</h2>
+    <div class="texto">
+      <p>
+        En una de las generaciones, los hombres llegaron a la educación superior mientras las mujeres se dedicaron
+        principalmente al trabajo doméstico. ¿Era este un patrón común en Antioquia o una particularidad de mi familia?
+        Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo (2019) documentan que la inversión en educación se aceleró
+        después de mediados de siglo; los censos permiten ver si esa expansión llegó por igual a hombres y mujeres.
+      </p>
+      <p><span class="completar">[Interprete: ¿se cerró la brecha de género? ¿Cuándo? ¿Cómo se compara con su familia?]</span></p>
+    </div>
+
+    <div class="grafica" id="caja-educacion">
+      <span class="sello">Datos ilustrativos — reemplazar</span>
+      <h3>Tasa de alfabetismo en Antioquia por sexo</h3>
+      <div class="controles" id="controles-educacion">
+        <button class="activo" data-zona="total">Total</button>
+        <button data-zona="cabecera">Cabecera</button>
+        <button data-zona="resto">Resto (rural)</button>
+      </div>
+      <div class="lienzo"><canvas id="graficaEducacion"></canvas></div>
+      <p class="nota">Fuente: elaboración propia con base en censos (DANE). Población de 7 años o más <span class="completar">[confirmar rango de edad del tabulado]</span>.</p>
+    </div>
+
+    <blockquote class="testimonio">
+      <p><span class="completar">[Cita de la entrevista sobre por qué los hombres estudiaron y las mujeres no, o sobre la primera persona que fue a la universidad.]</span></p>
+      <cite>— <span class="completar">[Nombre o parentesco]</span>, entrevista</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ 7. MEMORIA VS. DATOS ============ -->
+<section id="contraste">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">7 · Memoria, documento y dato</span>
+    <h2>¿Qué sabemos, qué podemos probar?</h2>
+    <div class="texto">
+      <p>
+        Esta tabla separa tres tipos de evidencia: lo que recuerda la familia, lo que confirman los documentos y lo
+        que muestran los datos agregados. Así se distingue la experiencia particular de los procesos regionales.
+      </p>
+    </div>
+    <div class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr><th>Tema</th><th>Memoria familiar</th><th>Documento familiar</th><th>Dato agregado</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Origen</strong></td>
+            <td>La familia viene de Amagá y Titiribí.</td>
+            <td><span class="completar">[partida de bautismo, escritura…]</span></td>
+            <td>Población de ambos municipios en los censos.</td>
+            <td><span class="estado parcial">Parcial</span></td>
+          </tr>
+          <tr>
+            <td><strong>Minería de carbón</strong></td>
+            <td>Vínculo con minas en Amagá.</td>
+            <td><span class="completar">[registro laboral, foto…]</span></td>
+            <td><span class="completar">[producción de carbón / empleo minero]</span></td>
+            <td><span class="estado verificar">Por verificar</span></td>
+          </tr>
+          <tr>
+            <td><strong>Traslado a Medellín</strong></td>
+            <td><span class="completar">[año aproximado y motivo]</span></td>
+            <td><span class="completar">[dirección, escritura de casa…]</span></td>
+            <td>Crecimiento de Medellín entre censos.</td>
+            <td><span class="estado verificar">Por verificar</span></td>
+          </tr>
+          <tr>
+            <td><strong>Universidad</strong></td>
+            <td>La siguiente generación entra a la universidad.</td>
+            <td><span class="completar">[diploma, carné…]</span></td>
+            <td>Alfabetismo y escolaridad por sexo.</td>
+            <td><span class="estado verificar">Por verificar</span></td>
+          </tr>
+          <tr>
+            <td><strong>Brecha de género</strong></td>
+            <td>Hombres estudian; mujeres en el hogar.</td>
+            <td>—</td>
+            <td>Alfabetismo por sexo y zona.</td>
+            <td><span class="estado verificar">Por verificar</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- EDITAR: cambie la clase de cada estado a "confirmado", "parcial" o "verificar" según avance -->
+  </div>
+</section>
+
+<!-- ============ 8. ARCHIVO FAMILIAR ============ -->
+<section id="archivo" class="alterna">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">8 · Archivo familiar</span>
+    <h2>Fotos y documentos</h2>
+    <div class="texto">
+      <p>Las fuentes familiares muestran la experiencia particular de esta familia; no se usan como evidencia de lo que pasó en toda Antioquia.</p>
+    </div>
+    <!-- EDITAR: reemplace cada <div class="foto-vacia">…</div> por <img src="fotos/archivo.jpg" alt="descripción">
+         y guarde las imágenes en una carpeta "fotos" junto a este archivo. -->
+    <div class="galeria">
+      <figure><div class="foto-vacia">Foto de la finca o del pueblo</div><figcaption><span class="completar">[Lugar, año aprox., quién aparece]</span></figcaption></figure>
+      <figure><div class="foto-vacia">Foto relacionada con la mina</div><figcaption><span class="completar">[Descripción]</span></figcaption></figure>
+      <figure><div class="foto-vacia">Primera casa en Medellín</div><figcaption><span class="completar">[Descripción]</span></figcaption></figure>
+      <figure><div class="foto-vacia">Diploma universitario</div><figcaption><span class="completar">[Descripción]</span></figcaption></figure>
+    </div>
+    <div class="bloque-completar">
+      Opcional: un fragmento de audio de la entrevista hace la página más viva. Agregue aquí
+      <code>&lt;audio controls src="audio/entrevista.mp3"&gt;&lt;/audio&gt;</code> (con permiso de la persona entrevistada).
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. SOBRE LOS DATOS ============ -->
+<section id="datos">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">9 · Sobre los datos</span>
+    <h2>De dónde salen los números</h2>
+    <div class="texto">
+      <p>
+        Los resultados cuantitativos son elaboración propia: localicé los tabulados originales de los censos,
+        digitalicé las variables, las limpié y construí indicadores comparables entre años.
+      </p>
+    </div>
+    <div class="ficha">
+      <dl>
+        <dt>Origen</dt>
+        <dd>Censos nacionales de población, Biblioteca Virtual del DANE: <span class="completar">[1938,]</span> 1951, 1964 y 1973. Publicaciones estadísticas de Antioquia <span class="completar">[cuáles]</span>.</dd>
+        <dt>Cobertura</dt>
+        <dd>Municipios de Medellín, Amagá y Titiribí; departamento de Antioquia para las variables educativas.</dd>
+        <dt>Variables</dt>
+        <dd>Población total, población de cabecera y resto, alfabetismo por sexo y zona <span class="completar">[agregar otras]</span>.</dd>
+      </dl>
+      <dl>
+        <dt>Medición</dt>
+        <dd>Los censos cambian definiciones entre años (por ejemplo, rangos de edad para alfabetismo o la definición de cabecera). <span class="completar">[Describa las diferencias encontradas]</span></dd>
+        <dt>Limitaciones</dt>
+        <dd>Los censos colombianos de este periodo tienen problemas conocidos de cobertura; los límites municipales pueden haber cambiado. <span class="completar">[detallar]</span></dd>
+        <dt>Archivos</dt>
+        <dd><span class="completar">[Enlace a su base limpia, p. ej. un Google Sheets o CSV descargable]</span></dd>
+      </dl>
+    </div>
+    <h3 style="margin-top:2.5rem">Proceso</h3>
+    <ol class="pasos">
+      <li>Búsqueda de los tabulados de cada censo en la Biblioteca Virtual del DANE.</li>
+      <li>Digitalización manual de las cifras de interés para cada municipio.</li>
+      <li>Revisión de consistencia (que cabecera + resto = total; comparación con fuentes secundarias).</li>
+      <li>Construcción de indicadores: índices de crecimiento, porcentaje urbano, tasas de alfabetismo por sexo.</li>
+      <li><span class="completar">[Otros pasos: correcciones, decisiones sobre datos faltantes…]</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 10. CONCLUSIONES ============ -->
+<section id="conclusiones" class="alterna">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">10 · Conclusiones</span>
+    <h2>Lo que la familia y los datos cuentan juntos</h2>
+    <p class="conclusion-grande"><span class="completar">[Una frase que resuma su hallazgo principal]</span></p>
+    <div class="texto">
+      <p><span class="completar">[¿En qué coincide la trayectoria familiar con los procesos de integración regional, urbanización y acumulación de capital humano?]</span></p>
+      <p><span class="completar">[¿En qué se aparta? ¿Qué tan común o excepcional fue la experiencia de su familia?]</span></p>
+      <p><span class="completar">[¿Qué preguntas quedan abiertas?]</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. FUENTES ============ -->
+<section id="fuentes">
+  <div class="envoltura aparecer">
+    <span class="etiqueta">11 · Fuentes</span>
+    <h2>Bibliografía y fuentes</h2>
+    <h3 style="margin-top:1.5rem">Fuentes familiares</h3>
+    <ul class="bibliografia">
+      <li>Entrevista semiestructurada a mi madre, septiembre de 2026.</li>
+      <li><span class="completar">[Otras entrevistas, fotos, documentos]</span></li>
+    </ul>
+    <h3 style="margin-top:1.5rem">Datos</h3>
+    <ul class="bibliografia">
+      <li>Departamento Administrativo Nacional de Estadística (DANE). Censos nacionales de población de 1951, 1964 y 1973. Biblioteca Virtual del DANE.</li>
+    </ul>
+    <h3 style="margin-top:1.5rem">Literatura</h3>
+    <ul class="bibliografia">
+      <li>Correa Restrepo, J. S. (2012). El ferrocarril de Antioquia: empresarios extranjeros y participación local. <em>Estudios Gerenciales</em>, 28(123), 149–166.</li>
+      <li>Deas, M. (1976). Una hacienda cafetera de Cundinamarca: Santa Bárbara (1870–1912). <em>Anuario Colombiano de Historia Social y de la Cultura</em>, (8), 74–100.</li>
+      <li>Jaramillo-Echeverri, J., Meisel-Roca, A., &amp; Ramírez-Giraldo, M. T. (2019). More than 100 years of improvements in living standards: The case of Colombia. <em>Cliometrica</em>, 13(3), 323–366.</li>
+    </ul>
+    <h3 style="margin-top:1.5rem">Referentes de diseño</h3>
+    <ul class="bibliografia">
+      <li>Baics, G., Kennedy, W., Kobrin, R., Kurgan, L., Meisterlin, L., Miller, D., &amp; Ngai, M. (2021). <em>Mapping Historical New York: A digital atlas</em>. Columbia University.</li>
+      <li>Historical Society of Pennsylvania. (s. f.). <em>PhilaPlace: Sharing stories from the city of neighborhoods</em>.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Mariana Nader · Historia Económica de Colombia · 2026
+</footer>
+
+<script>
+/* =====================================================================
+   DATOS — EDITE SOLO ESTA PARTE
+   Reemplace los números por los que digitalice de los censos del DANE.
+   Cuando todos sean reales, cambie  ejemplo: true  por  ejemplo: false
+   y desaparecerán los sellos rojos de "Datos ilustrativos".
+   ===================================================================== */
+const DATOS = {
+  ejemplo: true,
+
+  // Años de los censos que va a usar (puede agregar 1938)
+  censos: [1938, 1951, 1964, 1973],
+
+  // Población total por municipio (mismo orden que "censos")
+  poblacion: {
+    "Medellín": [150000, 350000, 750000, 1050000],
+    "Amagá":    [ 15000,  18000,  20000,   22000],
+    "Titiribí": [ 15000,  14000,  13000,   12000]
+  },
+
+  // % de población en la cabecera municipal
+  porcentajeCabecera: {
+    "Medellín": [80, 90, 95, 97],
+    "Amagá":    [25, 30, 35, 40],
+    "Titiribí": [20, 22, 25, 28]
+  },
+
+  // Tasa de alfabetismo (%) en Antioquia por sexo y zona
+  alfabetismo: {
+    total:    { hombres: [55, 65, 75, 82], mujeres: [50, 62, 74, 83] },
+    cabecera: { hombres: [70, 80, 87, 91], mujeres: [65, 78, 86, 91] },
+    resto:    { hombres: [45, 55, 62, 68], mujeres: [40, 50, 60, 67] }
+  },
+
+  // Periodo aproximado de traslado de la familia a Medellín (franja sombreada)
+  periodoTraslado: [1951, 1964],
+
+  // Lugares del mapa
+  lugares: [
+    { nombre: "Titiribí", coords: [6.0636, -75.7928], color: "#4f6b47",
+      texto: "Tierras, agricultura y ganadería. Municipio con tradición minera (mina El Zancudo, siglo XIX).",
+      familia: "[COMPLETAR: qué hacía aquí la familia]" },
+    { nombre: "Amagá", coords: [6.0397, -75.7031], color: "#33302d",
+      texto: "Cuenca carbonífera del suroeste, conectada con Medellín por ferrocarril.",
+      familia: "[COMPLETAR: vínculo de la familia con el carbón]" },
+    { nombre: "Medellín", coords: [6.2518, -75.5636], color: "#a4512b",
+      texto: "Centro industrial y textil; destino de migración desde el campo antioqueño.",
+      familia: "[COMPLETAR: llegada, barrio, empleo, universidad]" }
+  ]
+};
+/* =================== FIN DE LA PARTE EDITABLE ======================= */
+
+const COLORES = { "Medellín": "#a4512b", "Amagá": "#33302d", "Titiribí": "#4f6b47" };
+
+// Sellos de datos ilustrativos
+if (DATOS.ejemplo) {
+  document.querySelectorAll(".grafica").forEach(g => g.classList.add("datos-ejemplo"));
+}
+
+// ---------- Mapa ----------
+(function () {
+  if (typeof L === "undefined") return;
+  const mapa = L.map("mapa", { scrollWheelZoom: false }).setView([6.14, -75.68], 11);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 18
+  }).addTo(mapa);
+
+  const puntos = [];
+  DATOS.lugares.forEach(l => {
+    puntos.push(l.coords);
+    L.circleMarker(l.coords, {
+      radius: 11, color: "#fffdf9", weight: 3, fillColor: l.color, fillOpacity: 1
+    }).addTo(mapa)
+      .bindPopup(`<h4>${l.nombre}</h4><p>${l.texto}</p><p><strong>Mi familia:</strong> ${l.familia}</p>`)
+      .bindTooltip(l.nombre, { permanent: true, direction: "right", offset: [12, 0] });
+  });
+  L.polyline(puntos, { color: "#a4512b", weight: 3, dashArray: "8 8", opacity: .85 }).addTo(mapa);
+  mapa.fitBounds(puntos, { padding: [60, 60] });
+})();
+
+// ---------- Gráficas ----------
+if (typeof Chart !== "undefined") {
+  Chart.defaults.font.family = "'Source Sans 3', sans-serif";
+  Chart.defaults.font.size = 14;
+  Chart.defaults.color = "#5e5249";
+
+  const fmt = n => n.toLocaleString("es-CO");
+
+  // Plugin: franja del periodo de traslado familiar
+  const franjaTraslado = {
+    id: "franjaTraslado",
+    beforeDatasetsDraw(chart) {
+      const [ini, fin] = DATOS.periodoTraslado || [];
+      if (ini == null) return;
+      const x = chart.scales.x, a = chart.chartArea, c = chart.ctx;
+      const i0 = DATOS.censos.indexOf(ini), i1 = DATOS.censos.indexOf(fin);
+      if (i0 < 0 || i1 < 0) return;
+      const x0 = x.getPixelForValue(i0), x1 = x.getPixelForValue(i1);
+      c.save();
+      c.fillStyle = "rgba(184,137,46,.13)";
+      c.fillRect(x0, a.top, x1 - x0, a.bottom - a.top);
+      c.fillStyle = "#8a6620";
+      c.font = "600 12px 'Source Sans 3'";
+      c.fillText("Traslado de la familia", x0 + 6, a.top + 16);
+      c.restore();
+    }
+  };
+
+  // 1. Población
+  const indice = serie => serie.map(v => +(v / serie[0] * 100).toFixed(1));
+  const datasetsPob = modo => Object.entries(DATOS.poblacion).map(([nom, serie]) => ({
+    label: nom,
+    data: modo === "indice" ? indice(serie) : serie,
+    borderColor: COLORES[nom], backgroundColor: COLORES[nom],
+    borderWidth: 3, pointRadius: 5, tension: .2
+  }));
+  const gPob = new Chart(document.getElementById("graficaPoblacion"), {
+    type: "line",
+    data: { labels: DATOS.censos, datasets: datasetsPob("indice") },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { position: "bottom" },
+        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${fmt(c.parsed.y)}` } }
+      },
+      scales: {
+        y: { title: { display: true, text: "Índice (primer censo = 100)" }, ticks: { callback: v => fmt(v) } },
+        x: { grid: { display: false } }
+      }
+    },
+    plugins: [franjaTraslado]
+  });
+  document.querySelectorAll("#controles-poblacion button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll("#controles-poblacion button").forEach(x => x.classList.remove("activo"));
+    b.classList.add("activo");
+    const modo = b.dataset.modo;
+    gPob.data.datasets = datasetsPob(modo);
+    gPob.options.scales.y.title.text = modo === "indice" ? "Índice (primer censo = 100)" : "Habitantes";
+    gPob.update();
+  }));
+
+  // 2. Urbanización
+  new Chart(document.getElementById("graficaUrbana"), {
+    type: "bar",
+    data: {
+      labels: DATOS.censos,
+      datasets: Object.entries(DATOS.porcentajeCabecera).map(([nom, serie]) => ({
+        label: nom, data: serie, backgroundColor: COLORES[nom], borderRadius: 4
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "bottom" },
+        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y}%` } }
+      },
+      scales: {
+        y: { min: 0, max: 100, title: { display: true, text: "% en cabecera" }, ticks: { callback: v => v + "%" } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // 3. Educación por sexo
+  const datasetsEdu = zona => [
+    { label: "Hombres", data: DATOS.alfabetismo[zona].hombres, borderColor: "#33302d", backgroundColor: "#33302d", borderWidth: 3, pointRadius: 5, tension: .2 },
+    { label: "Mujeres", data: DATOS.alfabetismo[zona].mujeres, borderColor: "#a4512b", backgroundColor: "#a4512b", borderWidth: 3, pointRadius: 5, tension: .2 }
+  ];
+  const gEdu = new Chart(document.getElementById("graficaEducacion"), {
+    type: "line",
+    data: { labels: DATOS.censos, datasets: datasetsEdu("total") },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { position: "bottom" },
+        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y}%` } }
+      },
+      scales: {
+        y: { min: 0, max: 100, title: { display: true, text: "% alfabeta" }, ticks: { callback: v => v + "%" } },
+        x: { grid: { display: false } }
+      }
+    },
+    plugins: [franjaTraslado]
+  });
+  document.querySelectorAll("#controles-educacion button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll("#controles-educacion button").forEach(x => x.classList.remove("activo"));
+    b.classList.add("activo");
+    gEdu.data.datasets = datasetsEdu(b.dataset.zona);
+    gEdu.update();
+  }));
+}
+
+// ---------- Barra de progreso y menú activo ----------
+const barra = document.getElementById("progreso");
+const enlaces = [...document.querySelectorAll("nav a")];
+const secciones = enlaces.map(a => document.querySelector(a.getAttribute("href")));
+window.addEventListener("scroll", () => {
+  const h = document.documentElement;
+  barra.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + "%";
+  let actual = 0;
+  secciones.forEach((s, i) => { if (s && s.getBoundingClientRect().top < 140) actual = i; });
+  enlaces.forEach((a, i) => a.classList.toggle("activo", i === actual && h.scrollTop > 300));
+}, { passive: true });
+
+// ---------- Aparición suave al hacer scroll ----------
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); }
+}), { threshold: .08 });
+document.querySelectorAll(".aparecer").forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
