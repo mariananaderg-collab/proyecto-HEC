@@ -1,0 +1,13 @@
+municipio,censo,poblacion,tipo_cifra,fuente_id,indice_1938_100,cambio_absoluto,tasa_anual_pct,anios_intervalo,pct_cabecera
+Medellín,1938,168266,censada_secundaria,WIKI_HIST,100.0,,,,
+Medellín,1951,358189,censada,DANE2006_MED,212.9,189923,6.06,12.84,
+Medellín,1964,772887,censada,DANE2006_MED,459.3,414698,6.01,13.19,92.9
+Medellín,1973,1071252,censada,DANE2006_MED,636.6,298365,3.58,9.28,96.4
+Amagá,1938,11033,censada_secundaria,WIKI_HIST,100.0,,,,
+Amagá,1951,12436,censada_secundaria,WIKI_HIST,112.7,1403,0.94,12.84,
+Amagá,1964,17455,ajustada,ANUARIO_ANT_2014,158.2,5019,2.6,13.19,25.7
+Amagá,1973,19068,ajustada,ANUARIO_ANT_2014,172.8,1613,0.96,9.28,28.5
+Titiribí,1938,14433,censada_secundaria,WIKI_HIST,100.0,,,,
+Titiribí,1951,14450,censada_secundaria,WIKI_HIST,100.1,17,0.01,12.84,
+Titiribí,1964,16439,ajustada,ANUARIO_ANT_2014,113.9,1989,0.98,13.19,26.3
+Titiribí,1973,13752,ajustada,ANUARIO_ANT_2014,95.3,-2687,-1.91,9.28,27.6

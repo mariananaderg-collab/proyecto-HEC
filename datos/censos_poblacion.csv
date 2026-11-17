@@ -1,0 +1,25 @@
+municipio,codigo_dane,censo,fecha_censo,variable,valor,tipo_cifra,fuente_id,nota
+Medellín,05001,1938,1938-07-05,poblacion_total,168266,censada_secundaria,WIKI_HIST,Conteo del censo de 1938 tomado de fuente secundaria; pendiente de cotejo con el tomo de Antioquia
+Medellín,05001,1951,1951-05-09,poblacion_total,358189,censada,DANE2006_MED,
+Medellín,05001,1964,1964-07-15,poblacion_total,772887,censada,DANE2006_MED,
+Medellín,05001,1973,1973-10-24,poblacion_total,1071252,censada,DANE2006_MED,
+Medellín,05001,1964,1964-07-15,poblacion_total_ajustada,791589,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Medellín,05001,1973,1973-10-24,poblacion_total_ajustada,1163868,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Medellín,05001,1964,1964-07-15,poblacion_cabecera_ajustada,735236,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Medellín,05001,1973,1973-10-24,poblacion_cabecera_ajustada,1122099,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Amagá,05030,1938,1938-07-05,poblacion_total,11033,censada_secundaria,WIKI_HIST,Pendiente de cotejo con el tomo de 1938
+Amagá,05030,1951,1951-05-09,poblacion_total,12436,censada_secundaria,WIKI_HIST,Pendiente de cotejo con el tomo de 1951
+Amagá,05030,1964,1964-07-15,poblacion_total_ajustada,17455,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Amagá,05030,1973,1973-10-24,poblacion_total_ajustada,19068,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Amagá,05030,1964,1964-07-15,poblacion_cabecera_ajustada,4487,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Amagá,05030,1973,1973-10-24,poblacion_cabecera_ajustada,5436,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Titiribí,05809,1938,1938-07-05,poblacion_total,14433,censada_secundaria,WIKI_HIST,Pendiente de cotejo con el tomo de 1938
+Titiribí,05809,1951,1951-05-09,poblacion_total,14450,censada_secundaria,WIKI_HIST,Pendiente de cotejo con el tomo de 1951
+Titiribí,05809,1964,1964-07-15,poblacion_total_ajustada,16439,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Titiribí,05809,1973,1973-10-24,poblacion_total_ajustada,13752,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Titiribí,05809,1964,1964-07-15,poblacion_cabecera_ajustada,4317,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Titiribí,05809,1973,1973-10-24,poblacion_cabecera_ajustada,3798,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Antioquia,05,1964,1964-07-15,poblacion_total_ajustada,2537250,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Antioquia,05,1973,1973-10-24,poblacion_total_ajustada,3176695,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Antioquia,05,1964,1964-07-15,poblacion_cabecera_ajustada,1393307,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
+Antioquia,05,1973,1973-10-24,poblacion_cabecera_ajustada,2001910,ajustada,ANUARIO_ANT_2014,Incluye ajuste por cobertura
