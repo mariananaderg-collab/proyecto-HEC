@@ -541,6 +541,365 @@ window.DATOS_PROYECTO = {
    "fuente_id": "TESTIMONIOS"
   }
  ],
+ "alfabetismoDNP": [
+  {
+   "censo": 1951,
+   "zona": "Total nacional",
+   "hombres_pct": 58.9,
+   "mujeres_pct": 56.0,
+   "brecha_pp": 2.9
+  },
+  {
+   "censo": 1951,
+   "zona": "Urbano",
+   "hombres_pct": 78.0,
+   "mujeres_pct": 72.8,
+   "brecha_pp": 5.2
+  },
+  {
+   "censo": 1951,
+   "zona": "Rural",
+   "hombres_pct": 47.8,
+   "mujeres_pct": 42.8,
+   "brecha_pp": 5.0
+  },
+  {
+   "censo": 1964,
+   "zona": "Total nacional",
+   "hombres_pct": 64.8,
+   "mujeres_pct": 63.7,
+   "brecha_pp": 1.1
+  },
+  {
+   "censo": 1964,
+   "zona": "Urbano",
+   "hombres_pct": 77.8,
+   "mujeres_pct": 75.7,
+   "brecha_pp": 2.1
+  },
+  {
+   "censo": 1964,
+   "zona": "Rural",
+   "hombres_pct": 51.9,
+   "mujeres_pct": 48.7,
+   "brecha_pp": 3.2
+  }
+ ],
+ "empresas1945": [
+  {
+   "departamento": "Antioquia",
+   "periodo": "Hasta 1880",
+   "orden": 1,
+   "empresas": 15,
+   "pct_del_departamento": 1.2
+  },
+  {
+   "departamento": "Antioquia",
+   "periodo": "1881-1900",
+   "orden": 2,
+   "empresas": 24,
+   "pct_del_departamento": 1.9
+  },
+  {
+   "departamento": "Antioquia",
+   "periodo": "1901-1910",
+   "orden": 3,
+   "empresas": 32,
+   "pct_del_departamento": 2.5
+  },
+  {
+   "departamento": "Antioquia",
+   "periodo": "1911-1920",
+   "orden": 4,
+   "empresas": 94,
+   "pct_del_departamento": 7.3
+  },
+  {
+   "departamento": "Antioquia",
+   "periodo": "1921-1930",
+   "orden": 5,
+   "empresas": 191,
+   "pct_del_departamento": 14.8
+  },
+  {
+   "departamento": "Antioquia",
+   "periodo": "1931-1940",
+   "orden": 6,
+   "empresas": 501,
+   "pct_del_departamento": 38.9
+  },
+  {
+   "departamento": "Antioquia",
+   "periodo": "1941-1945",
+   "orden": 7,
+   "empresas": 430,
+   "pct_del_departamento": 33.4
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "Hasta 1880",
+   "orden": 1,
+   "empresas": 3,
+   "pct_del_departamento": 1.2
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "1881-1900",
+   "orden": 2,
+   "empresas": 5,
+   "pct_del_departamento": 2.0
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "1901-1910",
+   "orden": 3,
+   "empresas": 6,
+   "pct_del_departamento": 2.4
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "1911-1920",
+   "orden": 4,
+   "empresas": 12,
+   "pct_del_departamento": 4.8
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "1921-1930",
+   "orden": 5,
+   "empresas": 40,
+   "pct_del_departamento": 16.0
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "1931-1940",
+   "orden": 6,
+   "empresas": 98,
+   "pct_del_departamento": 39.2
+  },
+  {
+   "departamento": "Norte de Santander",
+   "periodo": "1941-1945",
+   "orden": 7,
+   "empresas": 86,
+   "pct_del_departamento": 34.4
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "Hasta 1880",
+   "orden": 1,
+   "empresas": 35,
+   "pct_del_departamento": 0.4
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "1881-1900",
+   "orden": 2,
+   "empresas": 91,
+   "pct_del_departamento": 1.2
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "1901-1910",
+   "orden": 3,
+   "empresas": 171,
+   "pct_del_departamento": 2.2
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "1911-1920",
+   "orden": 4,
+   "empresas": 454,
+   "pct_del_departamento": 5.8
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "1921-1930",
+   "orden": 5,
+   "empresas": 1153,
+   "pct_del_departamento": 14.8
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "1931-1940",
+   "orden": 6,
+   "empresas": 3026,
+   "pct_del_departamento": 38.7
+  },
+  {
+   "departamento": "Colombia",
+   "periodo": "1941-1945",
+   "orden": 7,
+   "empresas": 2880,
+   "pct_del_departamento": 36.9
+  }
+ ],
+ "industriaCiudades1945": [
+  {
+   "ciudad": "Medellín",
+   "pct_empleo_industrial_nacional": 17.3,
+   "pct_establecimientos_nacional": 10.05,
+   "pct_capital_nacional": 18.62
+  },
+  {
+   "ciudad": "Bogotá",
+   "pct_empleo_industrial_nacional": 15.68,
+   "pct_establecimientos_nacional": 13.5,
+   "pct_capital_nacional": 23.92
+  },
+  {
+   "ciudad": "Barranquilla",
+   "pct_empleo_industrial_nacional": 10.54,
+   "pct_establecimientos_nacional": 7.39,
+   "pct_capital_nacional": 12.6
+  },
+  {
+   "ciudad": "Cali",
+   "pct_empleo_industrial_nacional": 7.1,
+   "pct_establecimientos_nacional": 4.92,
+   "pct_capital_nacional": 6.37
+  },
+  {
+   "ciudad": "Bucaramanga",
+   "pct_empleo_industrial_nacional": 3.36,
+   "pct_establecimientos_nacional": 3.59,
+   "pct_capital_nacional": 0.98
+  },
+  {
+   "ciudad": "Cartagena",
+   "pct_empleo_industrial_nacional": 2.12,
+   "pct_establecimientos_nacional": 1.73,
+   "pct_capital_nacional": 1.64
+  },
+  {
+   "ciudad": "Santa Marta",
+   "pct_empleo_industrial_nacional": 0.41,
+   "pct_establecimientos_nacional": 0.6,
+   "pct_capital_nacional": 0.19
+  }
+ ],
+ "empleoTextilAntioquia": [
+  {
+   "anio": 1945,
+   "pct": 54.3
+  },
+  {
+   "anio": 1970,
+   "pct": 56.8
+  }
+ ],
+ "creditosFotos": [
+  {
+   "archivo": "assets/lugares/estacion-medellin-1920.jpg",
+   "tipo": "historica",
+   "descripcion": "Estación Medellín del Ferrocarril de Antioquia, hacia 1920.",
+   "titulo_original": "Estación Medellín, Ferrocarril de Antioquia. 1920.jpg",
+   "autor": "Gonzalo Escovar Gaviria",
+   "fecha": "1920",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Medell%C3%ADn,_Ferrocarril_de_Antioquia._1920.jpg",
+   "procedencia": "https://www.bibliotecapiloto.gov.co/foto-antioquia/resources/pics/BPP-F-002-0312.jpg"
+  },
+  {
+   "archivo": "assets/lugares/fabricato-bello-1920.jpg",
+   "tipo": "historica",
+   "descripcion": "Fábrica de Fabricato en Bello, en el valle de Aburrá, hacia 1920.",
+   "titulo_original": "Fabricato de Bello, 1920.jpg",
+   "autor": "Gonzalo Escovar Gaviria",
+   "fecha": "1920",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Fabricato_de_Bello,_1920.jpg",
+   "procedencia": "https://www.bibliotecapiloto.gov.co/foto-antioquia/preview.php?filter=autors&subtopic=3&photo=BPP-F-019-0179#"
+  },
+  {
+   "archivo": "assets/lugares/feria-ganado-medellin-1920.jpg",
+   "tipo": "historica",
+   "descripcion": "Feria de ganado en Medellín, hacia 1920.",
+   "titulo_original": "Feria de Ganado. Medellín, 1920.jpg",
+   "autor": "Gonzalo Escovar Gaviria",
+   "fecha": "1920",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Feria_de_Ganado._Medell%C3%ADn,_1920.jpg",
+   "procedencia": "https://www.bibliotecapiloto.gov.co/foto-antioquia/resources/pics/BPP-F-002-0208.jpg"
+  },
+  {
+   "archivo": "assets/lugares/plano-medellin-1932.jpg",
+   "tipo": "historica",
+   "descripcion": "Plano de Medellín levantado en 1932 por Guillermo Palacio & Cía.",
+   "titulo_original": "Plano de Medellín 1932.jpg",
+   "autor": "Guillermo Palacio & Compañía Ingenieros",
+   "fecha": "1932",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Plano_de_Medell%C3%ADn_1932.jpg",
+   "procedencia": ""
+  },
+  {
+   "archivo": "assets/lugares/carrera-junin-1923.jpg",
+   "tipo": "historica",
+   "descripcion": "Carrera Junín, en el centro de Medellín, 1923.",
+   "titulo_original": "Carrera Junín. Medellín, 1923.jpg",
+   "autor": "Gonzalo Escovar Gaviria",
+   "fecha": "1923",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Carrera_Jun%C3%ADn._Medell%C3%ADn,_1923.jpg",
+   "procedencia": "https://www.bibliotecapiloto.gov.co/foto-antioquia/resources/pics/BPP-F-012-0649.jpg"
+  },
+  {
+   "archivo": "assets/lugares/universidad-antioquia-1928.jpg",
+   "tipo": "historica",
+   "descripcion": "Edificio San Ignacio de la Universidad de Antioquia, 1928.",
+   "titulo_original": "Edificio San Ignacio-01-01-1928.JPG",
+   "autor": "Melitón Rodriguez",
+   "fecha": "1928-01-01",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Edificio_San_Ignacio-01-01-1928.JPG",
+   "procedencia": "Archivo Fotográfico Biblioteca Publica Piloto, Medellín"
+  },
+  {
+   "archivo": "assets/lugares/locomotora-ferrocarril-antioquia-1936.jpg",
+   "tipo": "historica",
+   "descripcion": "Locomotora Henschel fabricada para el Ferrocarril de Antioquia, hacia 1936.",
+   "titulo_original": "Henschel 2-8-2 Superheated Locomotive for the Antioquia Railway (Columbia) equipped with Henschel open type feedwater, Oil-fired, 3ft Gauge, Axle Load 12 tons.jpg",
+   "autor": "Henschel works photo",
+   "fecha": "ca 1936",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Henschel_2-8-2_Superheated_Locomotive_for_the_Antioquia_Railway_(Columbia)_equipped_with_Henschel_open_type_feedwater,_Oil-fired,_3ft_Gauge,_Axle_Load_12_tons.jpg",
+   "procedencia": "https://www.facebook.com/groups/rslfc/permalink/36857861837195280/"
+  },
+  {
+   "archivo": "assets/lugares/bus-cucuta-1920.jpg",
+   "tipo": "historica",
+   "descripcion": "Bus de pasajeros en Cúcuta, hacia 1920.",
+   "titulo_original": "Bus Cúcuta - 1920.jpg",
+   "autor": "CúcutaNuestra.com",
+   "fecha": "1920",
+   "licencia": "Public domain",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Bus_C%C3%BAcuta_-_1920.jpg",
+   "procedencia": ""
+  },
+  {
+   "archivo": "assets/lugares/amaga-desde-angelopolis-2020.jpg",
+   "tipo": "actual",
+   "descripcion": "Vista de Amagá desde Angelópolis, 2020. Fotografía actual.",
+   "titulo_original": "Amagá desde Angelópolis.jpg",
+   "autor": "XalD",
+   "fecha": "2020-09-27",
+   "licencia": "CC BY-SA 4.0",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Amag%C3%A1_desde_Angel%C3%B3polis.jpg",
+   "procedencia": ""
+  },
+  {
+   "archivo": "assets/lugares/titiribi-panoramica-2010.jpg",
+   "tipo": "actual",
+   "descripcion": "Panorámica de Titiribí, centrada en la iglesia y el parque principal, 2010. Fotografía actual.",
+   "titulo_original": "Titiribí-panorámica1.jpg",
+   "autor": "I.D. R.J.",
+   "fecha": "2010-01-01",
+   "licencia": "CC BY-SA 2.0",
+   "pagina_commons": "https://commons.wikimedia.org/wiki/File:Titirib%C3%AD-panor%C3%A1mica1.jpg",
+   "procedencia": "Flickr: TITIRIBí - ANTIOQUIA"
+  }
+ ],
  "fuentes": {
   "DANE2006_MED": {
    "fuente_id": "DANE2006_MED",
@@ -592,6 +951,24 @@ window.DATOS_PROYECTO = {
    "referencia": "Comunicaciones familiares (notas de voz de mi mamá y de mi abuela materna), noviembre de 2026. Archivo privado de la familia.",
    "url": "",
    "como_se_consulto": "Fuente oral; no se publica el audio"
+  },
+  "JMR2016": {
+   "fuente_id": "JMR2016",
+   "referencia": "Jaramillo-Echeverri, J., Meisel-Roca, A. y Ramírez-Giraldo, M. T. (2016). La Gran Depresión en Colombia: un estímulo a la industrialización, 1930-1953. Cuadernos de Historia Económica y Empresarial n.º 39, Banco de la República. Apéndice A: cuadros A1 y A2, con base en el Primer Censo Industrial de Colombia, 1945.",
+   "url": "https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/chee_39.pdf",
+   "como_se_consulto": "Texto completo (PDF institucional)"
+  },
+  "ESPANA_SANCHEZ": {
+   "fuente_id": "ESPANA_SANCHEZ",
+   "referencia": "España Eljaiek, I. R. y Sánchez Torres, F. Industrialización regional, café y capital humano en Colombia en la primera mitad del siglo XX. Documento de trabajo, Universidad de los Andes (con base en los censos industriales de 1945 y 1970).",
+   "url": "https://economia.uniandes.edu.co/sites/default/files/imagenes/eventos/Industrializacionregional-IrinaEspana-FSanchez.pdf",
+   "como_se_consulto": "Texto completo (PDF)"
+  },
+  "DNP1016": {
+   "fuente_id": "DNP1016",
+   "referencia": "Departamento Nacional de Planeación. Documento 1016, cuadros B.6 (1 y 2): porcentaje de población alfabeta mayor de siete años por sexo y zona, censos de 1951 y 1964.",
+   "url": "https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/1016.pdf",
+   "como_se_consulto": "Cifras transcritas por la autora del documento original; el servidor del DNP no respondió durante la preparación de la página para un segundo cotejo"
   }
  },
  "claves": {
@@ -614,6 +991,17 @@ window.DATOS_PROYECTO = {
    "1985": 0.8,
    "1993": 0.0,
    "2005": -0.5
+  },
+  "brecha_dnp_nacional": {
+   "1951": 2.9,
+   "1964": 1.1
+  },
+  "empresas_antioquia_1931_1945_pct": 72.3,
+  "empresas_nds_1931_1945_pct": 73.6,
+  "empresas_total": {
+   "Antioquia": 1287,
+   "Norte de Santander": 250,
+   "Colombia": 7810
   }
  }
 };

@@ -6,7 +6,9 @@ Uso (desde la raíz del repositorio):
 
 Entradas (datos/):
     censos_poblacion.csv, participacion_medellin_antioquia.csv,
-    alfabetismo_colombia_15mas.csv, macro_colombia_1925_1945.csv,
+    alfabetismo_colombia_15mas.csv, alfabetismo_colombia_7mas_dnp.csv,
+    macro_colombia_1925_1945.csv, empresas_industriales_1945.csv,
+    industria_ciudades_1945.csv, empleo_textil_antioquia.csv,
     presupuesto_educacion_primaria_antioquia.csv, familia_educacion.csv,
     fuentes.csv
 
@@ -128,6 +130,26 @@ def main():
     part = [{k: (int(v) if k == "censo" else num(v)) for k, v in r.items() if k != "fuente_id"}
             for r in leer("participacion_medellin_antioquia.csv")]
     familia = leer("familia_educacion.csv")
+
+    # --- Alfabetismo 1951-1964 (DNP, población mayor de siete años) ---------
+    alf_dnp = []
+    for r in leer("alfabetismo_colombia_7mas_dnp.csv"):
+        h, mu = float(r["hombres_pct"]), float(r["mujeres_pct"])
+        alf_dnp.append({"censo": int(r["censo"]), "zona": r["zona"], "hombres_pct": h, "mujeres_pct": mu,
+                        "brecha_pp": round(h - mu, 1)})
+
+    # --- Industria 1945 --------------------------------------------------------
+    empresas = [{"departamento": r["departamento"], "periodo": r["periodo_fundacion"], "orden": int(r["orden"]),
+                 "empresas": int(r["empresas"])} for r in leer("empresas_industriales_1945.csv")]
+    total_dep = {}
+    for r in empresas:
+        total_dep[r["departamento"]] = total_dep.get(r["departamento"], 0) + r["empresas"]
+    for r in empresas:
+        r["pct_del_departamento"] = round(r["empresas"] / total_dep[r["departamento"]] * 100, 1)
+    ciudades = [{k: (v if k in ("ciudad", "fuente_id") else float(v)) for k, v in r.items() if k != "fuente_id"}
+                for r in leer("industria_ciudades_1945.csv")]
+    textil = [{"anio": int(r["anio"]), "pct": float(r["pct_empleo_textil_nacional_en_antioquia"])}
+              for r in leer("empleo_textil_antioquia.csv")]
     fuentes = {r["fuente_id"]: r for r in leer("fuentes.csv")}
 
     # --- Cifras clave para el texto (se imprimen para revisión) ---------------
@@ -149,6 +171,10 @@ def main():
         "reservas_caida_pct_1928_1931": round((14.0 / m1928["reservas_musd"] - 1) * 100, 1),
         "presupuesto_rural_promedio_1932_1936": round(sum(r["rural_pct"] for r in presu) / len(presu), 2),
         "brecha_alfabetismo": {r["censo"]: r["brecha_h_menos_m_pp"] for r in filas_alf},
+        "brecha_dnp_nacional": {r["censo"]: r["brecha_pp"] for r in alf_dnp if r["zona"] == "Total nacional"},
+        "empresas_antioquia_1931_1945_pct": round(sum(r["empresas"] for r in empresas if r["departamento"] == "Antioquia" and r["orden"] >= 6) / total_dep["Antioquia"] * 100, 1),
+        "empresas_nds_1931_1945_pct": round(sum(r["empresas"] for r in empresas if r["departamento"] == "Norte de Santander" and r["orden"] >= 6) / total_dep["Norte de Santander"] * 100, 1),
+        "empresas_total": total_dep,
     }
 
     salida = {
@@ -162,6 +188,11 @@ def main():
         "macro": macro,
         "presupuestoEducacionAntioquia": presu,
         "familiaEducacion": familia,
+        "alfabetismoDNP": alf_dnp,
+        "empresas1945": empresas,
+        "industriaCiudades1945": ciudades,
+        "empleoTextilAntioquia": textil,
+        "creditosFotos": json.loads((RAIZ / "assets" / "lugares" / "creditos.json").read_text(encoding="utf-8")),
         "fuentes": fuentes,
         "claves": claves,
     }
@@ -177,6 +208,8 @@ def main():
                 assert g["poblacion_cabecera_ajustada"] < g["poblacion_total_ajustada"], (m, c)
     for r in filas_alf:
         assert min(r["hombres_pct"], r["mujeres_pct"]) <= r["total_pct"] <= max(r["hombres_pct"], r["mujeres_pct"]), r
+    for e in [r for r in empresas if r["departamento"] != "Colombia"]:
+        assert e["empresas"] <= next(c["empresas"] for c in empresas if c["departamento"] == "Colombia" and c["orden"] == e["orden"]), e
     for r in presu:
         assert abs(r["rural_pct"] + r["urbano_pct"] - 100) < 0.05, r
 

@@ -13,9 +13,13 @@ Página publicada: https://mariananaderg-collab.github.io/proyecto-HEC/
 ## Estructura
 
 ```
-index.html                 Página (contenido)
-estilos.css                Estilos
-js/app.js                  Mapa, gráficas, filtros e interacción
+index.html                 Página: portada, siete capítulos y fuentes
+estilos.css                Diseño editorial (paleta, tipografías, responsive)
+js/app.js                  Mapa, gráficas, visor de fotografías e interacción
+assets/archivo-familiar/   Cuatro fotografías familiares (versiones web recortadas)
+assets/archivo-familiar/originales/  Archivos originales sin alterar
+assets/lugares/            Fotografías regionales e históricas (Wikimedia Commons)
+assets/lugares/creditos.csv  Autor, fecha, licencia y procedencia de cada imagen
 datos/*.csv                Datos crudos con su fuente
 datos/fuentes.csv          Referencias completas de cada fuente
 datos/diccionario_variables.csv
@@ -44,6 +48,10 @@ python3 scripts/procesar_datos.py
 ```
 
 El script lee los CSV de `datos/`, calcula índices, tasas anuales, porcentajes en cabecera y brechas de género, comprueba la consistencia de los datos y regenera `datos/indicadores_poblacion.csv`, `datos/indicadores_alfabetismo.csv` y `datos/datos.js`. Las gráficas y las cifras calculadas del texto se actualizan automáticamente.
+
+## Versión anterior
+
+La versión publicada antes del rediseño corresponde al commit `711860b` de `main` y se puede recuperar con `git checkout 711860b`.
 
 ## Publicación
 

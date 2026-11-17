@@ -4,1066 +4,656 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Del carbón a la universidad</title>
-<meta name="description" content="Microhistoria de una familia entre Amagá, Titiribí, Medellín y Cúcuta, contrastada con censos y con la historia económica de Colombia, 1930–1970.">
-
+<meta name="description" content="Una historia familiar entre Antioquia y Cúcuta, 1930–1970: de las fincas y el carbón de Amagá y Titiribí a Medellín, el empleo público y la universidad. Por Mariana Nader.">
+<meta name="author" content="Mariana Nader">
+<meta property="og:title" content="Del carbón a la universidad">
+<meta property="og:description" content="Una historia familiar entre Antioquia y Cúcuta, 1930–1970.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/lugares/estacion-medellin-1920.jpg">
+<meta name="theme-color" content="#284A40">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<a class="saltar" href="#motivacion">Saltar al contenido</a>
+<a class="saltar" href="#introduccion">Saltar al contenido</a>
 <div id="progreso" aria-hidden="true"></div>
 
-<!-- ============ PORTADA ============ -->
-<header class="portada">
-  <div class="contenido">
-    <p class="antetitulo">Historia Económica de Colombia · Microhistoria familiar</p>
-    <h1>Del carbón a la universidad</h1>
-    <p class="subtitulo">Una historia familiar de transformación económica en Colombia</p>
-    <p class="bajada">
-      Una rama de mi familia salió de las fincas y las minas de Amagá y Titiribí hacia Medellín; otra comerciaba
-      telas en Cúcuta. Reconstruyo esa historia con la memoria de mi mamá y de mi abuela y la contrasto con censos,
-      cifras macroeconómicas y las lecturas del curso, entre 1930 y 1970.
-    </p>
-    <p class="autora">Mariana Nader · 202321094 · Noviembre de 2026</p>
+<nav class="barra" aria-label="Capítulos">
+  <div class="interior">
+    <a class="marca" href="#inicio">Del carbón a la universidad</a>
+    <ul>
+      <li><a class="cap" href="#antes">1 · Antes de Medellín</a></li>
+      <li><a class="cap" href="#ciudad">2 · Una ciudad que crecía</a></li>
+      <li><a class="cap" href="#medellin">3 · Medellín</a></li>
+      <li><a class="cap" href="#cucuta">4 · Cúcuta</a></li>
+      <li><a class="cap" href="#universidad">5 · La universidad</a></li>
+      <li><a class="cap" href="#documentos">6 · Los documentos</a></li>
+      <li><a class="cap" href="#cierre">7 · Lo que queda</a></li>
+      <li><a class="cap" href="#fuentes">Fuentes</a></li>
+    </ul>
   </div>
-</header>
-
-<nav aria-label="Secciones">
-  <ul>
-    <li><a href="#motivacion">Motivación</a></li>
-    <li><a href="#lugares">Los lugares</a></li>
-    <li><a href="#contexto">Contexto</a></li>
-    <li><a href="#poblacion">Urbanización</a></li>
-    <li><a href="#tiempo">Línea de tiempo</a></li>
-    <li><a href="#capital">Capital humano</a></li>
-    <li><a href="#contraste">Memoria vs. datos</a></li>
-    <li><a href="#archivo">Archivo familiar</a></li>
-    <li><a href="#datos">Sobre los datos</a></li>
-    <li><a href="#conclusiones">Conclusiones</a></li>
-    <li><a href="#fuentes">Fuentes</a></li>
-  </ul>
 </nav>
 
+<!-- ================= PORTADA ================= -->
+<header class="portada" id="inicio">
+  <div class="texto-portada">
+    <p class="sobre">Historia Económica de Colombia · Una historia familiar</p>
+    <h1>Del carbón <em>a la universidad</em></h1>
+    <p class="bajada">Una familia entre Antioquia y Cúcuta: de las fincas y las minas del suroeste a la ciudad, el empleo público y las aulas, 1930–1970.</p>
+    <div class="firma">
+      <div><span>Autora</span><strong>Mariana Nader</strong></div>
+      <div><span>Periodo</span><strong>1930–1970</strong></div>
+      <div><span>Lugares</span><strong>Amagá · Titiribí · Medellín · Cúcuta</strong></div>
+    </div>
+  </div>
+  <figure>
+    <img src="assets/lugares/estacion-medellin-1920.jpg" alt="Fachada de la Estación Medellín del Ferrocarril de Antioquia hacia 1920, un edificio de dos pisos con mansardas y carruajes al frente." width="1280" height="823">
+    <figcaption><span class="mono">Estación Medellín, Ferrocarril de Antioquia · c. 1920</span>Fotografía de Gonzalo Escovar Gaviria. Dominio público, vía Wikimedia Commons (Biblioteca Pública Piloto). Fotografía histórica regional; no es del archivo familiar.</figcaption>
+  </figure>
+</header>
+
 <main>
-<!-- ============ 1. MOTIVACIÓN ============ -->
-<section id="motivacion">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">1 · Motivación</span>
-    <h2>Una familia, cuatro lugares, cuatro décadas</h2>
-
-    <div class="pitch" role="note" aria-label="Resumen del proyecto">
-      <span class="rotulo">El proyecto en una oración</span>
-      <p class="una">Reconstruyo cómo una rama de mi familia pasó de la tierra y el carbón del suroeste antioqueño a la vida urbana
-        de Medellín y a la universidad, y la comparo con otra rama comerciante de Cúcuta, para entender cómo la
-        industrialización, la urbanización y la expansión educativa de Colombia entre 1930 y 1970 se vivieron de forma
-        desigual dentro de una misma familia.</p>
-      <span class="rotulo">El proyecto en un párrafo</span>
-      <p>A partir de notas de voz de mi mamá y de mi abuela, reconstruyo dos trayectorias. En Antioquia, los antepasados de
-        mi abuela vivieron de fincas, ganado y minería de carbón en Amagá y Titiribí; la familia se estableció en Medellín
-        antes de 1947, un antepasado trabajó en cargos públicos y, de cuatro hijos, solo los dos hombres llegaron a la
-        universidad. En Cúcuta, un antepasado comerciante de telas dejó negocios a sus descendientes y los siete hijos de
-        esa rama, incluidas mujeres, fueron universitarios. Contrasto estos recuerdos con los censos de población, con
-        las cifras macroeconómicas de la Gran Depresión y con las lecturas del curso sobre ferrocarriles, crisis,
-        instituciones y capital humano. El resultado muestra una transformación intergeneracional real, pero también
-        que las oportunidades no se repartieron igual entre regiones, generaciones y géneros, y que la memoria familiar
-        necesita contrastarse con documentos.</p>
-    </div>
-
-    <div class="texto">
-      <p class="entrada">
-        Empecé este proyecto con una pregunta sencilla a mi mamá y a mi abuela: ¿de dónde venimos y de qué vivían
-        nuestros antepasados? Las respuestas mezclaron fincas, ganado y carbón en Amagá y Titiribí; una casa en el
-        barrio Laureles de Medellín; un antepasado que fue alcalde y tesorero; dos tíos abuelos que fueron a la
-        universidad y dos mujeres, entre ellas mi abuela, que se dedicaron al hogar. Por el lado de mi abuelo apareció
-        otra historia: un comerciante de telas en Cúcuta y siete hijos universitarios.
-      </p>
-      <p>
-        Una sola familia no representa a Colombia. Pero una <strong>microhistoria</strong> permite ver de cerca cómo
-        procesos que normalmente se miden con promedios nacionales (el ferrocarril, la crisis de 1929, el crecimiento
-        de las ciudades, la expansión de la escuela) se convirtieron en decisiones concretas de un hogar: dónde vivir,
-        de qué trabajar y a qué hijos educar. Mi objetivo no es probar que la historia nacional <em>determinó</em> lo que
-        hizo mi familia, sino contrastar lo que recordamos con lo que muestran los datos y la literatura, y separar con
-        cuidado lo que sabemos de lo que solo podemos suponer.
-      </p>
-    </div>
-
-    <p class="pregunta"><small>Pregunta principal</small>
-      ¿Cómo se relaciona la transición de una rama de mi familia desde las actividades rurales y mineras de Amagá y
-      Titiribí hacia Medellín, y su posterior acceso desigual a la educación universitaria, con los procesos de
-      industrialización, urbanización y transformación económica de Colombia entre 1930 y 1970?
-    </p>
-    <p class="pregunta secundaria"><small>Pregunta complementaria</small>
-      ¿Por qué dos ramas de una misma historia familiar, una vinculada al empleo público en Antioquia y otra al comercio
-      privado en Cúcuta, recuerdan trayectorias educativas tan diferentes para las mujeres?
-    </p>
-
-    <div class="tesis">
-      <strong>Tesis</strong>
-      La historia familiar sugiere una transformación intergeneracional en las formas de obtener ingresos y construir
-      oportunidades: de actividades rurales y mineras a empleos urbanos, actividad comercial y educación superior. Esa
-      transformación ocurrió dentro de procesos más amplios de integración de mercados, expansión urbana y mejora del
-      capital humano en Colombia. Sin embargo, las oportunidades no se distribuyeron de manera uniforme entre regiones,
-      generaciones y géneros.
-    </div>
-
-    <h3 class="subseccion">Tres conceptos para leer la historia</h3>
-    <div class="rejilla">
-      <div class="tarjeta">
-        <div class="icono" aria-hidden="true">⛏️</div>
-        <h4>Cambio estructural</h4>
-        <p>La transformación de la distribución del trabajo y la producción entre sectores: de la agricultura, la
-          ganadería y la minería hacia la industria, el comercio y los servicios, incluido el Estado.</p>
-      </div>
-      <div class="tarjeta">
-        <div class="icono" aria-hidden="true">🏙️</div>
-        <h4>Urbanización</h4>
-        <p>La concentración de la población en centros urbanos, que cambia las oportunidades económicas: más empleos
-          asalariados, más escuelas y universidades, más información y redes.</p>
-      </div>
-      <div class="tarjeta">
-        <div class="icono" aria-hidden="true">🎓</div>
-        <h4>Movilidad social</h4>
-        <p>Los cambios en la posición económica o educativa de una generación a la siguiente. Aquí la observo sobre todo
-          en el acceso a la universidad, y separo a hombres y mujeres.</p>
-      </div>
-    </div>
-
-    <h3 class="subseccion">Cómo leer las afirmaciones de esta página</h3>
-    <div class="texto">
-      <p>Cada afirmación importante lleva una marca según el tipo de evidencia que la respalda. Así el lector puede saber
-        en todo momento qué está demostrado, qué es un recuerdo, qué es una deducción y qué es una recreación.</p>
-    </div>
-    <div class="leyenda-niveles">
-      <div><span class="nivel nivel-a">A · Documentado</span><br>Respaldado por censo, ley, publicación académica o documento identificable.</div>
-      <div><span class="nivel nivel-b">B · Testimonio</span><br>Lo afirman mi mamá o mi abuela. Es una fuente oral válida, pero no una verificación independiente.</div>
-      <div><span class="nivel nivel-c">C · Inferencia</span><br>Deducción razonable al cruzar testimonios, fechas y contexto económico.</div>
-      <div><span class="nivel nivel-d">D · Recreación</span><br>Escena plausible de la época escrita con fines narrativos. No es un episodio comprobado.</div>
-    </div>
-
-    <blockquote class="testimonio">
-      <p>Mis abuelos maternos venían de familias con tierras feudales, ganadería y, sobre todo, minería, carbón, sobre todo en el municipio de Amagá.</p>
-      <cite>— Mi mamá, nota de voz, noviembre de 2026 <span class="nivel nivel-b">B</span>. «Tierras feudales» es una expresión de la memoria familiar, no una clasificación histórica o jurídica demostrada.</cite>
-    </blockquote>
-
-    <h3 class="subseccion">¿Quién es quién?</h3>
-    <div class="texto">
-      <p>Los parentescos se cuentan desde mí. Cuando el testimonio no permite saber con exactitud de quién se habla, uso
-        «antepasado de la rama antioqueña» o «antepasado de la rama cucuteña» en vez de adivinar si era bisabuelo o tatarabuelo.</p>
-    </div>
-    <div class="generaciones">
-      <div class="gen rama-antioquia">
-        <div class="quien">Antepasados de la rama antioqueña<small>Titiribí y Amagá · antes de 1947</small></div>
-        <div>
-          <p>Familias con propiedad rural, agricultura, ganadería y minería, en especial de carbón en Amagá <span class="nivel nivel-b">B</span>.</p>
-          <p>Un antepasado se dedicó a la política y fue funcionario público, con cargos de alcalde y tesorero en distintas localidades; mi mamá recuerda ese empleo como estable y bien pagado <span class="nivel nivel-b">B</span>. La familia recuerda además a un antepasado liberal y a otro conservador que fue capitán de policía; el parentesco exacto de cada uno no está claro.</p>
-        </div>
-      </div>
-      <div class="gen rama-antioquia">
-        <div class="quien">Mi abuela materna y sus hermanos<small>Medellín · desde 1947</small></div>
-        <div>
-          <p>«Yo nací en 1947 en Medellín», me dijo mi abuela <span class="nivel nivel-b">B</span>. Vivió en el barrio Laureles. Eran cuatro hijos: los dos hombres fueron a la universidad y las dos mujeres, entre ellas mi abuela, se dedicaron principalmente al hogar <span class="nivel nivel-b">B</span>.</p>
-          <p>Mi abuela recuerda que su familia estuvo relacionada con una finca y con minas, y que «la mina la dejaron» y otros «se adueñaron de la finca» <span class="nivel nivel-b">B</span>.</p>
-        </div>
-      </div>
-      <div class="gen rama-cucuta">
-        <div class="quien">Rama de Cúcuta<small>Familia de mi abuelo materno</small></div>
-        <div>
-          <p>Mi abuelo nació en 1943 y era de Cúcuta, según mi abuela <span class="nivel nivel-b">B</span>. Un antepasado de esta rama fue un comerciante próspero de telas hacia 1910–1920 (fechas aproximadas) que desarrolló varios negocios que después continuaron sus descendientes <span class="nivel nivel-b">B</span>. La familia recuerda antepasados inmigrantes de España e Italia.</p>
-          <p>En esta rama hubo siete hijos y los siete fueron universitarios, incluidas mujeres: se mencionan contadoras y tres abogadas <span class="nivel nivel-b">B</span>.</p>
-        </div>
-      </div>
-      <div class="gen">
-        <div class="quien">Mi mamá y yo<small>Hoy</small></div>
-        <div><p>Mi mamá une las dos ramas. Yo reconstruyo esta historia a partir de lo que ella y mi abuela recuerdan y la contrasto con fuentes históricas.</p></div>
-      </div>
+<!-- ================= INTRODUCCIÓN ================= -->
+<section class="capitulo papel" id="introduccion">
+  <div class="envoltura">
+    <div class="lectura centrada revelar">
+      <p class="entradilla letra-capital">En mi familia, la historia económica empieza mucho antes de que alguien llegara a la universidad. Empieza en el suroeste antioqueño, entre las tierras de Titiribí y las minas de carbón de Amagá.</p>
+      <p>Allí estuvieron parte de las raíces que mi mamá y mi abuela todavía recuerdan: fincas, ganado y carbón. Con el tiempo, esa historia se trasladó a Medellín. Mi abuela Gloria nació allí en 1947, cuando la ciudad atravesaba una transformación profunda: las fábricas crecían, la población se multiplicaba y el trabajo se concentraba en la ciudad. Un antepasado de la familia hizo su vida laboral en el sector público, como alcalde y tesorero de municipios antioqueños. De los cuatro hijos de la casa de Gloria, los dos hombres fueron a la universidad; las dos mujeres, entre ellas mi abuela, se dedicaron al hogar.</p>
+      <p>La otra parte de la historia viene de Cúcuta. Mi abuelo Miguel nació allí en 1943, en una familia que recuerda el comercio de telas, los negocios propios y antepasados llegados de España e Italia. En esa rama, siete hijos fueron a la universidad, y entre ellos había mujeres: contadoras y tres abogadas.</p>
+      <p>Al reunir las dos historias encontré dos caminos económicos distintos. Uno pasa por la tierra, la minería y el empleo público; el otro, por el comercio y la continuidad de un negocio. Los dos ocurrieron en una Colombia que cambiaba rápido. Este proyecto cuenta cómo esas transformaciones se reflejaron en mi familia, sobre todo en sus oportunidades de trabajo y de educación.</p>
+      <p class="cita-grande" style="margin-top:3rem">¿Cómo pasó una rama de mi familia del carbón y las fincas del suroeste a la ciudad y a la universidad, y por qué la universidad llegó a los hijos y no a las hijas?<cite>La pregunta de este trabajo</cite></p>
+      <p>Para responderla uso las entrevistas que les hice a mi mamá y a mi abuela en noviembre de 2026, cuatro fotografías del archivo familiar, los censos de población, cifras de la industria y la educación, y las lecturas del curso. Mi tesis es que la familia vivió una transformación entre generaciones (de la tierra y el carbón al trabajo urbano, al comercio y a la educación superior) dentro de procesos nacionales de integración de mercados, crecimiento urbano y expansión educativa, pero que esas oportunidades no llegaron igual a todas las regiones, generaciones y géneros.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ 2. LOS LUGARES ============ -->
-<section id="lugares" class="alterna">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">2 · Los lugares</span>
-    <h2>Del suroeste a la capital, y una frontera comercial</h2>
-    <div class="texto">
-      <p>
-        Amagá, Titiribí y Medellín están a menos de cuarenta kilómetros en línea recta, separados por montañas. A comienzos
-        del siglo XX representaban economías distintas: la finca y la mina frente a la ciudad que se industrializaba.
-        Cúcuta, a cientos de kilómetros, en la frontera con Venezuela, aparece como contraste: una economía comercial con
-        salida propia al exterior. El mapa no dibuja ninguna migración entre las dos ramas, porque no está documentada.
-      </p>
+<!-- ================= CAPÍTULO 1 ================= -->
+<section class="capitulo" id="antes">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">1</span>
+      <div><span class="rotulo">Capítulo 1 · Amagá y Titiribí</span><h2>Antes de Medellín</h2></div>
+    </header>
+
+    <div class="texto-y-foto revelar">
+      <div class="lectura">
+        <p class="entradilla">«Mis abuelos maternos venían de familias con tierras feudales, ganadería y, sobre todo, minería, carbón, sobre todo en el municipio de Amagá».</p>
+        <p class="fuente-de-relato">Mi mamá, nota de voz, noviembre de 2026</p>
+        <p>Así resume mi mamá el origen de la rama antioqueña. «Tierras feudales» es su manera de decir que eran familias propietarias, con tierra y trabajadores; no es una categoría legal. La familia recuerda fincas en Titiribí y en Amagá, agricultura, ganado y, por encima de todo, carbón.</p>
+        <p>En el suroeste antioqueño la tierra cumplía tres funciones a la vez: producía (pastos, cultivos, leña), daba ingresos por ventas y arriendos, y era el patrimonio que se heredaba. Tener finca, ganado y mina al mismo tiempo era una forma de repartir el riesgo: si caía el precio de una cosa, otra sostenía a la familia. Pero la tierra exigía estar presente. Malcolm Deas lo mostró con la correspondencia de una hacienda cafetera de Cundinamarca: un dueño que vive lejos depende de su administrador, y los conflictos políticos del país se sienten en la explotación <a class="ref" href="#ref-deas1976">Deas, 1976</a>.</p>
+      </div>
+      <figure class="foto">
+        <button class="boton-ampliar" type="button" data-foto="amaga"><img src="assets/lugares/amaga-desde-angelopolis-2020.jpg" alt="Vista de las montañas del suroeste antioqueño con el casco urbano de Amagá al fondo, desde Angelópolis." loading="lazy" width="1280" height="960"></button>
+        <figcaption><span class="mono">Fotografía actual · 2020</span>Amagá vista desde Angelópolis. El relieve explica por qué mover carbón hacia Medellín fue siempre un problema de transporte. Foto: XalD, CC BY-SA 4.0, Wikimedia Commons.</figcaption>
+      </figure>
     </div>
 
-    <div class="barra-controles" role="group" aria-label="Vista del mapa">
-      <span class="rotulo">Vista:</span>
-      <button type="button" data-vista="antioquia" aria-pressed="true">Suroeste antioqueño</button>
-      <button type="button" data-vista="colombia" aria-pressed="false">Colombia, con Cúcuta</button>
+    <div class="texto-y-foto invertido subtitulo revelar">
+      <figure class="foto">
+        <button class="boton-ampliar" type="button" data-foto="titiribi"><img src="assets/lugares/titiribi-panoramica-2010.jpg" alt="Panorámica del casco urbano de Titiribí con la iglesia en el centro, rodeado de montañas verdes." loading="lazy" width="1280" height="960"></button>
+        <figcaption><span class="mono">Fotografía actual · 2010</span>Titiribí, con la iglesia y el parque principal. Foto: I.D. R.J., CC BY-SA 2.0, Wikimedia Commons.</figcaption>
+      </figure>
+      <div class="lectura">
+        <h3>Dos municipios, dos ritmos</h3>
+        <p>Titiribí fue en el siglo XIX un pueblo minero: allí funcionó El Zancudo, una de las grandes minas de oro y plata de Antioquia. Amagá quedó asociada al carbón, el combustible que necesitaban los trenes y las fábricas de vapor del valle de Aburrá.</p>
+        <p>Los censos muestran lo que pasó después. Entre 1938 y 1973 Amagá creció un <span data-clave="amaga_crec_pct_1938_1973"></span> %, sobre todo en el campo y no en el pueblo. Titiribí terminó el periodo con menos gente que al comienzo: perdió <span data-clave="titiribi_perdida_1964_1973"></span> habitantes solo entre 1964 y 1973. En 1964, apenas uno de cada cuatro habitantes de cualquiera de los dos municipios vivía en la cabecera.</p>
+        <p>De ese mundo salió la familia de mi abuela. Ella recuerda que «la mina la dejaron» y que otros «se adueñaron de la finca». Mi mamá tiene otra versión: si era la finca de su abuelo, se vendió a un tercero. Las dos coinciden en lo importante: la familia dejó la tierra y la mina cuando su vida pasó a estar en Medellín.</p>
+      </div>
     </div>
-    <div class="barra-controles" role="group" aria-label="Censo usado para el tamaño de los círculos">
-      <span class="rotulo">Tamaño de los círculos según el censo de:</span>
+
+    <h3 class="subtitulo revelar">Los lugares de esta historia</h3>
+    <div class="lectura revelar"><p>El mapa sigue el recorrido que recuerda la familia. Los círculos crecen o se encogen según la población de cada censo, y Cúcuta aparece como la otra rama. Las dos ramas no se conectan con una línea porque la familia no recuerda ninguna migración entre ellas.</p></div>
+    <div class="barra-mapa revelar" role="group" aria-label="Controles del mapa">
+      <span>Vista</span>
+      <button type="button" data-vista="antioquia" aria-pressed="true">Suroeste antioqueño</button>
+      <button type="button" data-vista="colombia" aria-pressed="false">Con Cúcuta</button>
+      <span class="sep" aria-hidden="true"></span>
+      <span>Censo</span>
       <button type="button" data-i="0" aria-pressed="false">1938</button>
       <button type="button" data-i="1" aria-pressed="false">1951</button>
       <button type="button" data-i="2" aria-pressed="true">1964</button>
       <button type="button" data-i="3" aria-pressed="false">1973</button>
     </div>
-    <div class="mapa-panel">
+    <div class="mapa-envoltura revelar">
       <div id="mapa" role="region" aria-label="Mapa interactivo de Titiribí, Amagá, Medellín y Cúcuta"></div>
-      <aside class="mapa-lateral" id="relato" aria-live="polite"></aside>
+      <aside class="relato-mapa" id="relato" aria-live="polite"></aside>
     </div>
-    <p style="font-size:.85rem;color:var(--tinta-suave);margin-top:.6rem">
-      Recorra la historia con los botones del panel o seleccione cada punto. El área de los círculos es proporcional a la
-      población municipal en el censo elegido. La línea discontinua roja es la <strong>trayectoria familiar recordada</strong>,
-      no una ruta exacta ni una secuencia demostrada (no sabemos si la familia pasó de Titiribí a Amagá o vivió en ambos).
-      El trazado del Ferrocarril de Amagá y la ubicación de las minas son <strong>aproximados</strong> y no corresponden a
-      sitios históricos geolocalizados. El control de capas (arriba a la derecha) cambia el mapa base y muestra u oculta cada capa.
-    </p>
-
-    <div class="fichas-lugar">
-      <article class="ficha-lugar" style="--c:var(--verde)">
-        <h3>Titiribí</h3>
-        <dl>
-          <dt>Ubicación</dt><dd>Suroeste antioqueño, al occidente de Amagá.</dd>
-          <dt>Actividad económica</dt><dd>Economía rural y minera; la mina de oro El Zancudo fue una gran empresa del siglo XIX. Población casi estancada entre 1938 y 1973 <span class="nivel nivel-a">A</span>.</dd>
-          <dt>Relación con el testimonio</dt><dd>Uno de los lugares de origen de los antepasados maternos: tierras, agricultura y ganado <span class="nivel nivel-b">B</span>.</dd>
-          <dt>Periodo</dt><dd>Antes de 1947 (fecha de salida desconocida).</dd>
-          <dt>Fuente del contexto</dt><dd>Censos (<a class="cita" href="#ref-anuario2014">Anuario de Antioquia, 2014</a>).</dd>
-          <dt>Lo que no sabemos</dt><dd>Qué tierras tenía la familia, su extensión y su forma de propiedad.</dd>
-        </dl>
-      </article>
-      <article class="ficha-lugar" style="--c:var(--carbon)">
-        <h3>Amagá</h3>
-        <dl>
-          <dt>Ubicación</dt><dd>Suroeste antioqueño, en la ruta del Ferrocarril de Amagá desde Medellín.</dd>
-          <dt>Actividad económica</dt><dd>Cuenca carbonífera; el ferrocarril llegó a Amagá en 1914 <span class="nivel nivel-a">A</span> (<a class="cita" href="#ref-banrepfc">Banrep Cultural</a>).</dd>
-          <dt>Relación con el testimonio</dt><dd>Minería de carbón «sobre todo en el municipio de Amagá» <span class="nivel nivel-b">B</span>.</dd>
-          <dt>Periodo</dt><dd>Primeras décadas del siglo XX hasta antes de 1947.</dd>
-          <dt>Fuente del contexto</dt><dd><a class="cita" href="#ref-banrepfc">Banrep Cultural</a>; <a class="cita" href="#ref-wikifc">«Ferrocarril de Amagá»</a>.</dd>
-          <dt>Lo que no sabemos</dt><dd>Si la familia era dueña de una mina, socia, arrendataria o trabajaba en ella.</dd>
-        </dl>
-      </article>
-      <article class="ficha-lugar" style="--c:var(--terracota)">
-        <h3>Medellín</h3>
-        <dl>
-          <dt>Ubicación</dt><dd>Valle de Aburrá, capital de Antioquia.</dd>
-          <dt>Actividad económica</dt><dd>Industria, comercio, administración pública y educación superior. Pasó de 358.189 habitantes en 1951 a 1.071.252 en 1973 <span class="nivel nivel-a">A</span> (<a class="cita" href="#ref-dane2006">DANE</a>).</dd>
-          <dt>Relación con el testimonio</dt><dd>Nacimiento de mi abuela en 1947; vida en Laureles; universidad de los hijos hombres <span class="nivel nivel-b">B</span>.</dd>
-          <dt>Periodo</dt><dd>Antes de 1947 en adelante.</dd>
-          <dt>Fuente del contexto</dt><dd><a class="cita" href="#ref-dane2006">DANE (2006)</a>; <a class="cita" href="#ref-correa2012">Correa (2012)</a>.</dd>
-          <dt>Lo que no sabemos</dt><dd>El año del traslado y el motivo exacto.</dd>
-        </dl>
-      </article>
-      <article class="ficha-lugar" style="--c:var(--cucuta)">
-        <h3>Cúcuta</h3>
-        <dl>
-          <dt>Ubicación</dt><dd>Frontera con Venezuela, Norte de Santander.</dd>
-          <dt>Actividad económica</dt><dd>Plaza comercial. En el siglo XIX, «dos tercios de la mercancía extranjera que entró a Santander llegó por Cúcuta», vía Maracaibo, y los textiles estaban entre las importaciones principales <span class="nivel nivel-a">A</span> (<a class="cita" href="#ref-arevalo">Arévalo Meneses</a>).</dd>
-          <dt>Relación con el testimonio</dt><dd>Comerciante de telas hacia 1910–1920; siete hijos universitarios <span class="nivel nivel-b">B</span>.</dd>
-          <dt>Periodo</dt><dd>c. 1910–1920 (aproximado) y generaciones siguientes.</dd>
-          <dt>Fuente del contexto</dt><dd><a class="cita" href="#ref-arevalo">Arévalo Meneses</a> (estudio sobre 1860–1900, antecedente).</dd>
-          <dt>Lo que no sabemos</dt><dd>Nombre del negocio, sus proveedores y su tamaño; fechas exactas.</dd>
-        </dl>
-      </article>
-    </div>
+    <p class="nota-lateral" style="margin-top:.8rem">El trazado del Ferrocarril de Amagá y la zona carbonífera son aproximados. La línea roja sigue el orden en que la familia recuerda los lugares, no una ruta exacta. El control de capas permite cambiar el mapa base y ocultar elementos.</p>
   </div>
 </section>
 
-<!-- ============ 3. CONTEXTO ============ -->
-<section id="contexto">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">3 · Contexto histórico y económico</span>
-    <h2>Antioquia y Colombia entre 1900 y 1970</h2>
-    <div class="texto">
-      <p>
-        Mi familia no vivió su transición en el vacío. Entre 1900 y 1970 Colombia construyó ferrocarriles, vivió un auge
-        de crédito externo, sufrió la peor recesión de su historia, giró hacia la industrialización protegida, pasó por La
-        Violencia y expandió la educación. Este apartado recorre esos procesos en el orden en que tocan la historia
-        familiar y, al final, explica qué significan para ella.
-      </p>
-    </div>
+<!-- ================= CAPÍTULO 2 ================= -->
+<section class="capitulo papel" id="ciudad">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">2</span>
+      <div><span class="rotulo">Capítulo 2 · Ferrocarril, industria y crisis</span><h2>Una ciudad que crecía</h2></div>
+    </header>
 
-    <!-- A -->
-    <div class="subseccion">
-      <h3><span class="letra">A</span>La economía rural del suroeste antioqueño</h3>
-      <div class="texto">
-        <p>
-          En el suroeste antioqueño la tierra cumplía tres funciones a la vez. Era un <strong>activo productivo</strong>
-          (pastos para el ganado, cultivos, bosques), una <strong>fuente de ingresos</strong> (ventas, arriendos) y un
-          <strong>patrimonio familiar</strong> que se heredaba y servía de respaldo. Combinar finca, ganado y mina, como
-          recuerda mi familia, era una forma de <strong>diversificación</strong>: si caía el precio de un producto, otro
-          podía sostener el ingreso <span class="nivel nivel-c">C</span>.
-        </p>
-        <p>
-          La propiedad rural tenía además un problema de gestión. Deas estudió una hacienda cafetera de Cundinamarca a
-          través de la correspondencia entre el propietario y su administrador, y muestra cómo esa relación, la de ambos
-          con arrendatarios y peones, y los conflictos políticos del país afectaban la explotación
-          (<a class="cita" href="#ref-deas1976">Deas, 1976</a>). Su caso no es el de mi familia ni es antioqueño, pero me
-          da un método: las propiedades rurales se entienden mejor con documentos (cartas, escrituras, cuentas) que con
-          recuerdos, y un propietario que vive lejos depende de quien administra su tierra.
-        </p>
-        <p>
-          No sé qué tan grandes eran las tierras de mi familia ni cómo estaban registradas. La expresión «tierras feudales»
-          de mi mamá transmite la idea de una familia propietaria con trabajadores a su cargo, pero no prueba ninguna forma
-          jurídica de propiedad <span class="nivel nivel-b">B</span>.
-        </p>
-      </div>
-    </div>
-
-    <!-- B -->
-    <div class="subseccion">
-      <h3><span class="letra">B</span>El ferrocarril y los costos de transporte</h3>
-      <div class="texto">
-        <p>
-          El <strong>Ferrocarril de Antioquia</strong> se contrató en 1874 con el ingeniero cubano Francisco Javier Cisneros
-          para unir Medellín con el río Magdalena en Puerto Berrío. La guerra civil de 1885 suspendió las obras durante
-          años; el tren llegó al valle de Aburrá el 9 de marzo de 1914, pero la línea quedó partida en La Quiebra, una
-          montaña que solo se cruzó con un túnel inaugurado el 7 de agosto de 1929, que dejó una línea continua de 193
-          kilómetros entre Puerto Berrío y Medellín <span class="nivel nivel-a">A</span>
-          (<a class="cita" href="#ref-correa2012">Correa, 2012, pp. 159–163</a>; <a class="cita" href="#ref-banrepfc">Banrep Cultural</a>).
-        </p>
-        <p>
-          El <strong>Ferrocarril de Amagá</strong> fue otra obra: iniciada en 1909, llegó a Amagá en 1914 y a Angelópolis
-          en 1917. En 1923 el Ferrocarril de Antioquia compró casi todas sus acciones, en 1927 lo incorporó totalmente y
-          hacia 1933 la línea llegó al río Cauca, en la estación Alejandro López; en 1942 el Ferrocarril del Pacífico
-          empalmó en La Pintada y Medellín quedó conectada con Cali y Buenaventura <span class="nivel nivel-a">A</span>
-          (<a class="cita" href="#ref-banrepfc">Banrep Cultural</a>; <a class="cita" href="#ref-wikifc">«Ferrocarril de Amagá»</a>).
-          La línea movía carbón, café y productos agropecuarios del suroeste; el carbón de Amagá alimentaba las máquinas de
-          vapor de los ferrocarriles y de las industrias de Medellín (<a class="cita" href="#ref-wikifc">«Ferrocarril de Amagá»</a>,
-          fuente secundaria).
-        </p>
-        <p>
-          El mecanismo económico es claro. Correa documenta que la ruta Puerto Berrío–Medellín era un 22 % más barata que el
-          antiguo camino de Nare, lo que abarató la exportación de café y la importación de maquinaria «para café, minería
-          e industria»; también muestra que las tierras por donde iba a pasar la línea se valorizaron: una fanegada cerca de
-          La Quiebra valía unos 20 pesos y en Medellín, sobre la ruta, se llegó a negociar a 150
-          (<a class="cita" href="#ref-correa2012">Correa, 2012, pp. 160–161</a>).
-        </p>
-      </div>
-      <div class="lectura" aria-label="Mecanismo del transporte">
-        <div><h4>1 · Menor costo de transporte</h4><p>Mover una carga cuesta menos y toma menos tiempo.</p></div>
-        <div><h4>2 · Mercados más amplios</h4><p>El carbón, el café y el ganado del suroeste llegan a compradores que antes eran inalcanzables.</p></div>
-        <div><h4>3 · Nuevas oportunidades</h4><p>Cambia la rentabilidad de minas y fincas; sube el valor de la tierra cerca de la vía.</p></div>
-        <div><h4>4 · Integración regional</h4><p>El suroeste y Medellín se vuelven una sola economía; cambian los incentivos para invertir, trabajar y migrar.</p></div>
-      </div>
-      <div class="texto" style="margin-top:1.2rem">
-        <p>
-          Correa también advierte contra una lectura demasiado optimista: los efectos «se sintieron lentamente» porque la
-          conexión con los mercados locales seguía dependiendo de caminos de herradura, y las tarifas se fijaron en medio de
-          presiones de intereses comerciales y políticos (<a class="cita" href="#ref-correa2012">Correa, 2012, p. 161</a>).
-          El ferrocarril integró la región, pero no benefició a todos por igual. Nada en las entrevistas indica que mi familia
-          transportara carbón por el tren; lo que sí puedo afirmar es que su región de origen quedó conectada con Medellín
-          justo en las décadas en que la familia se trasladó <span class="nivel nivel-c">C</span>.
-        </p>
-      </div>
-    </div>
-
-    <!-- C -->
-    <div class="subseccion">
-      <h3><span class="letra">C</span>La industrialización de Medellín</h3>
-      <div class="texto">
-        <p>
-          En la primera mitad del siglo XX Medellín se volvió uno de los principales centros manufactureros del país, con
-          fábricas textiles y de bienes de consumo. El ferrocarril trajo maquinaria importada y el carbón del suroeste aportó
-          energía; los propios industriales presionaban por fletes más bajos para sus productos, como muestran las peticiones
-          de fabricantes de fósforos y cerveza ante la junta del ferrocarril en 1914
-          (<a class="cita" href="#ref-correa2012">Correa, 2012, p. 162</a>).
-        </p>
-        <p>
-          La industria explica una parte del crecimiento urbano, pero la ciudad no solo ofrecía empleo fabril: concentraba
-          comercio, bancos, oficinas públicas, colegios y universidades. Por eso la industrialización ayuda a entender por
-          qué Medellín atraía población <em>aunque</em> el antepasado de mi familia trabajara para el Estado y no en una fábrica
-          <span class="nivel nivel-c">C</span>. Hay que distinguir dos cosas: la relación económica regional entre el carbón
-          de Amagá y la industria de Medellín, que está documentada, y una relación comercial de mi familia con esas fábricas,
-          que no lo está.
-        </p>
-      </div>
-    </div>
-
-    <!-- D -->
-    <div class="subseccion">
-      <h3><span class="letra">D</span>Del auge de los veinte a la Gran Depresión (1923–1934)</h3>
-      <div class="texto">
-        <p>
-          Entre 1923 y 1928 Colombia creció rápido gracias al auge del café, el banano y el petróleo, la indemnización de
-          Estados Unidos por Panamá y un acceso masivo al crédito externo que financió obras públicas, la llamada «danza de
-          los millones» (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023, p. 15</a>). El título del capítulo de
-          Junguito, «la prosperidad al debe», resume el problema: buena parte de ese auge se financió con deuda
-          (<a class="cita" href="#ref-junguito2016a">Junguito, 2016</a>). El Ferrocarril de Antioquia es un ejemplo: su deuda
-          pasó de unos 3,5 a 23,8 millones de pesos hacia 1928, un aumento del 677 %, que «habría de pagarse con creces en
-          la década de los treinta» (<a class="cita" href="#ref-correa2012">Correa, 2012, pp. 163–164</a>).
-        </p>
-        <p>
-          Cuando el crédito externo se cortó en 1928–1929 y los precios del café cayeron, el Gobierno y el Banco de la
-          República se mantuvieron dentro de las reglas del patrón oro. El resultado fue una severa contracción: el país
-          perdió casi cuatro quintas partes de sus reservas internacionales entre 1928 y 1931 y casi la mitad de los medios de
-          pago; los precios internos cayeron y el PIB se contrajo un 7,6 % en 1930. Para reducir el déficit, el Gobierno
-          <strong>redujo los salarios públicos</strong> y paralizó las obras públicas a comienzos de 1931
-          (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023, pp. 15–17</a>).
-        </p>
-        <p>
-          El giro llegó cuando el Reino Unido abandonó el patrón oro el 4 de septiembre de 1931: el 24 de septiembre el
-          gobierno de Olaya Herrera impuso el control de cambios, el Banco de la República prestó al Gobierno y la economía
-          se reactivó desde 1932, «en especial el sector manufacturero». En marzo y abril de 1932 los departamentos y los
-          municipios suspendieron el pago de sus deudas externas (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023, pp. 18–20</a>).
-          Ocampo señala que, salvo los bancos hipotecarios, no hubo quiebras bancarias; Caballero y Urrutia
-          (<a class="cita" href="#ref-caballero2006">2006</a>) analizan esas crisis financieras con más detalle.
-        </p>
-      </div>
-
-      <div class="grafica" id="caja-macro">
-        <h3>La Gran Depresión en Colombia, 1925–1945</h3>
-        <p class="bajada-graf">Comercio exterior, crecimiento e inflación. Valores anuales.</p>
-        <div class="controles" role="group" aria-label="Variable de la gráfica macroeconómica">
-          <button type="button" data-modo="comercio" aria-pressed="true">Exportaciones e importaciones</button>
-          <button type="button" data-modo="pib" aria-pressed="false">Crecimiento del PIB e inflación</button>
-          <button type="button" data-modo="reservas" aria-pressed="false">Reservas internacionales</button>
-        </div>
-        <div class="lienzo"><canvas id="graficaMacro" role="img" aria-label="Gráfica de variables macroeconómicas de Colombia, 1925 a 1945"></canvas></div>
-        <p class="nota">Fuente: <a class="cita" href="#ref-ocampo2023">Ocampo (2023)</a>, cuadro 1.1, con datos de su anexo. Exportaciones, importaciones y reservas en millones de dólares corrientes; PIB e inflación en porcentaje anual. La franja marca 1929–1932. Archivo: <a href="datos/macro_colombia_1925_1945.csv">datos/macro_colombia_1925_1945.csv</a>.</p>
-        <details class="datos-tabla"><summary>Ver los datos en tabla</summary><div class="tabla-contenedor" id="tabla-macro"></div></details>
+    <div class="dos-columnas revelar">
+      <div class="lectura">
+        <p class="entradilla">Para que el carbón de Amagá llegara a Medellín hacía falta un tren. Y para que Medellín creciera hacía falta que la región entera pudiera llegar a ella.</p>
+        <p>El Ferrocarril de Antioquia se contrató en 1874 con el ingeniero Francisco Javier Cisneros para unir Medellín con el río Magdalena. Tardó cuarenta años: el tren llegó al valle de Aburrá el 9 de marzo de 1914, y la montaña de La Quiebra solo se cruzó con un túnel inaugurado el 7 de agosto de 1929, que dejó 193 kilómetros de vía continua hasta Puerto Berrío <a class="ref" href="#ref-correa2012">Correa, 2012, pp. 160–163</a>.</p>
+        <p>Hacia el suroeste corría otra línea, el Ferrocarril de Amagá: sus obras empezaron en 1909, llegó a Amagá en 1914 y en 1927 se incorporó al de Antioquia; hacia 1933 alcanzó el río Cauca <a class="ref" href="#ref-banrepfc">Banrep Cultural</a>. Por ella bajaban carbón, café y ganado del suroeste, y el carbón alimentaba las locomotoras y las máquinas de vapor de las fábricas.</p>
       </div>
       <div class="lectura">
-        <div><h4>Qué muestran los datos</h4><p>Entre 1928 y 1932 las importaciones cayeron un <span data-clave="importaciones_caida_pct_1928_1932"></span> % y, entre 1928 y 1933, las exportaciones un <span data-clave="exportaciones_caida_pct_1928_1933"></span> %. La recuperación de la producción empezó en 1931–1932, antes que la del comercio exterior.</p></div>
-        <div><h4>Relación con mi familia</h4><p>La crisis golpeó al Estado: bajaron los ingresos de aduanas, se recortaron salarios públicos y los municipios dejaron de pagar deuda. Un empleo de alcalde o tesorero daba estabilidad <em>relativa</em>, no inmunidad <span class="nivel nivel-c">C</span>.</p></div>
-        <div><h4>Qué no permiten concluir</h4><p>No sé qué cargo tenía mi antepasado entre 1929 y 1933, ni si su salario se redujo. Las cifras son nacionales, no de Antioquia ni de mi familia.</p></div>
+        <p>Juan Santiago Correa explica el mecanismo con números. La ruta de Puerto Berrío a Medellín era un 22 % más barata que el antiguo camino de Nare, lo que abarató la exportación de café y la importación de maquinaria «para café, minería e industria». Las tierras cercanas a la vía se valorizaron: una fanegada cerca de La Quiebra valía unos 20 pesos, y en Medellín, sobre la ruta, se llegó a negociar a 150 <a class="ref" href="#ref-correa2012">Correa, 2012, pp. 160–161</a>.</p>
+        <p>Cuando mover mercancías cuesta menos, un productor puede vender más lejos, la mina y la finca valen distinto y la ciudad se vuelve el centro de una región más grande. Correa también advierte que el efecto fue lento y desigual: los caminos de herradura seguían conectando a los pueblos con las estaciones, y las tarifas se fijaban entre presiones de comerciantes y políticos.</p>
       </div>
     </div>
 
-    <!-- E -->
-    <div class="subseccion">
-      <h3><span class="letra">E</span>Estado, política y empleo público</h3>
-      <div class="texto">
-        <p>
-          En 1930 terminó la Hegemonía Conservadora y comenzó la República Liberal (1930–1946). La competencia entre liberales
-          y conservadores era antigua: Mazzuca y Robinson estudian cómo, entre 1850 y 1950, los dos partidos buscaron reglas
-          creíbles para repartir el poder y evitar la guerra civil; primero el «voto incompleto» de 1905, que daba dos tercios
-          de los escaños al ganador y un tercio al perdedor, y luego la representación proporcional
-          (<a class="cita" href="#ref-mazzuca2009">Mazzuca y Robinson, 2009</a>). Su artículo trata de instituciones electorales
-          nacionales; no estudia nombramientos municipales ni el Frente Nacional, y no lo uso como evidencia de esos temas.
-        </p>
-        <p>
-          En la administración territorial de la época los alcaldes no se elegían: los nombraba el gobernador, que a su vez
-          dependía del Gobierno nacional. La elección popular de alcaldes solo llegó con la reforma de 1986. Eso hacía que un
-          cargo como alcalde o tesorero municipal fuera a la vez una fuente de ingreso, de prestigio y de pertenencia a una red
-          política. Correa encuentra algo parecido en el ferrocarril: sus directivos ocupaban o venían de cargos públicos, y la
-          empresa transportaba gratis a los empleados públicos en asuntos oficiales
-          (<a class="cita" href="#ref-correa2012">Correa, 2012, pp. 161, 164</a>).
-        </p>
-        <p>
-          Es plausible que las redes partidistas influyeran en las oportunidades laborales del antepasado de mi familia que fue
-          alcalde y tesorero <span class="nivel nivel-c">C</span>. Pero no sé en qué años tuvo esos cargos, ni si fue el
-          antepasado liberal, ni cómo le afectaron los cambios de gobierno de 1930, 1946 o 1958. No atribuyo sus nombramientos a
-          su partido sin los decretos que lo demuestren.
-        </p>
-        <p>
-          Después de La Violencia y del gobierno militar, el Frente Nacional (1958–1974), refrendado en el plebiscito del 1 de
-          diciembre de 1957, alternó la presidencia y repartió por mitades los cargos públicos entre los dos partidos
-          (paridad). Ese plebiscito fue también la primera vez que las mujeres votaron en una elección nacional; el derecho se
-          había aprobado en 1954 <span class="nivel nivel-a">A</span>.
-        </p>
+    <div class="mosaico revelar">
+      <figure class="foto historica">
+        <button class="boton-ampliar" type="button" data-foto="locomotora"><img src="assets/lugares/locomotora-ferrocarril-antioquia-1936.jpg" alt="Locomotora de vapor negra con la inscripción Ferrocarril de Antioquia, fotografiada de perfil en la fábrica." loading="lazy" width="1280" height="792"></button>
+        <figcaption><span class="mono">Fotografía histórica · c. 1936</span>Locomotora Henschel construida para el Ferrocarril de Antioquia, de trocha de tres pies. Foto de fábrica Henschel, dominio público.</figcaption>
+      </figure>
+      <figure class="foto historica">
+        <button class="boton-ampliar" type="button" data-foto="fabricato"><img src="assets/lugares/fabricato-bello-1920.jpg" alt="Edificio largo de una planta de la fábrica Fabricato en Bello, con trabajadores frente a la entrada." loading="lazy" width="1280" height="746"></button>
+        <figcaption><span class="mono">Fotografía histórica · c. 1920</span>Fabricato, en Bello, valle de Aburrá. Foto: Gonzalo Escovar Gaviria, dominio público (Biblioteca Pública Piloto).</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="subtitulo revelar">La crisis que empujó a la industria</h3>
+    <div class="dos-columnas revelar">
+      <div class="lectura">
+        <p>Entre 1923 y 1928 el país vivió la «danza de los millones»: café, banano, petróleo, la indemnización por Panamá y préstamos externos que pagaron obras públicas. Junguito resume el problema en el título de su capítulo: fue una «prosperidad al debe» <a class="ref" href="#ref-junguito2016a">Junguito, 2016</a>. El Ferrocarril de Antioquia lo muestra: su deuda subió un 677 % hasta 1928 <a class="ref" href="#ref-correa2012">Correa, 2012, p. 164</a>.</p>
+        <p>Cuando el crédito se cortó y llegó la Gran Depresión, el Gobierno se ajustó a las reglas del patrón oro. Colombia perdió casi cuatro quintas partes de sus reservas, el PIB cayó un 7,6 % en 1930 y el Estado <strong>recortó los salarios públicos</strong> y paralizó las obras <a class="ref" href="#ref-ocampo2023">Ocampo, 2023, pp. 15–17</a>.</p>
+      </div>
+      <div class="lectura">
+        <p>El giro llegó en septiembre de 1931, con el control de cambios. Desde 1932 la economía se recuperó, «en especial el sector manufacturero» <a class="ref" href="#ref-ocampo2023">Ocampo, 2023, pp. 18–20</a>. Con las importaciones caras y escasas, producir en el país se volvió rentable: Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo describen la Gran Depresión como un «estímulo a la industrialización» <a class="ref" href="#ref-jmr2016">2016</a>. La protección arancelaria y cambiaria siguió durante décadas, hasta el Decreto-Ley 444 de 1967.</p>
+        <p>Para la rama antioqueña de mi familia esto tiene un detalle importante: el empleo público daba un ingreso regular, pero en 1931 también se recortó. Era estable comparado con el precio del café o del carbón, no inmune a la crisis.</p>
       </div>
     </div>
 
-    <!-- F -->
-    <div class="subseccion">
-      <h3><span class="letra">F</span>La tierra, la Ley 200 de 1936 y La Violencia</h3>
-      <div class="texto">
-        <p>
-          La Ley 200 del 30 de diciembre de 1936, «sobre régimen de tierras», presumió de propiedad privada los fundos
-          poseídos con «explotación económica del suelo» (cultivos, ganado y otros hechos propios de dueño); en su texto
-          original estableció la extinción del dominio a favor de la Nación sobre predios rurales sin esa explotación durante
-          diez años continuos; creó una prescripción de cinco años a favor de quien ocupara de buena fe tierras privadas no
-          explotadas creyéndolas baldías; y estableció jueces de tierras. Su artículo 5 aclara que se refiere «exclusivamente a
-          la propiedad territorial superficiaria» y que no se aplica al subsuelo <span class="nivel nivel-a">A</span>
-          (<a class="cita" href="#ref-ley200">Ley 200 de 1936</a>).
-        </p>
-        <p>
-          A partir de 1948, tras el asesinato de Jorge Eliécer Gaitán, se intensificó una violencia política que ya venía de
-          antes y que en muchas regiones rurales produjo despojo y migración hacia las ciudades.
-        </p>
-        <p>
-          Estos procesos <strong>pudieron</strong> afectar a propietarios ausentes, pero no tengo ningún documento que los
-          relacione con la finca de mi familia. Además, las dos versiones familiares sobre la finca no coinciden (ver la
-          sección 7), y la Ley 200 no regulaba las minas. Por eso no atribuyo la pérdida de la finca ni a la ley ni a La Violencia.
-        </p>
+    <div class="grafica revelar" id="caja-macro">
+      <span class="antetitulo">Gráfica 1 · Colombia, 1925–1945</span>
+      <h3>Cuando dejó de llegar dinero de afuera</h3>
+      <p class="bajada-graf">Exportaciones, importaciones, crecimiento, inflación y reservas internacionales, valores anuales.</p>
+      <div class="controles" role="group" aria-label="Variable de la gráfica">
+        <button type="button" data-modo="comercio" aria-pressed="true">Comercio exterior</button>
+        <button type="button" data-modo="pib" aria-pressed="false">PIB e inflación</button>
+        <button type="button" data-modo="reservas" aria-pressed="false">Reservas</button>
       </div>
+      <div class="lienzo"><canvas id="graficaMacro" role="img" aria-label="Gráfica de variables macroeconómicas de Colombia entre 1925 y 1945"></canvas></div>
+      <p class="fuente">Fuente: <a href="#ref-ocampo2023">Ocampo (2023)</a>, cuadro 1.1. Millones de dólares corrientes; PIB e inflación en % anual. La franja marca 1929–1932. Datos: <a href="datos/macro_colombia_1925_1945.csv">macro_colombia_1925_1945.csv</a>.</p>
+      <details class="tabla-datos"><summary>Ver la tabla</summary><div class="tabla-contenedor" id="tabla-macro"></div></details>
+    </div>
+    <div class="interpretacion revelar">
+      <div><h4>Lo que muestra</h4><p>Entre 1928 y 1932 las importaciones cayeron un <span data-clave="importaciones_caida_pct_1928_1932"></span> % y, entre 1928 y 1933, las exportaciones un <span data-clave="exportaciones_caida_pct_1928_1933"></span> %. La producción se recuperó antes que el comercio.</p></div>
+      <div><h4>Para mi familia</h4><p>La crisis llegó al Estado: menos aduanas, salarios recortados y municipios que dejaron de pagar su deuda en 1932. Un cargo público ofrecía una estabilidad relativa.</p></div>
+      <div><h4>Lo que no muestra</h4><p>Son cifras nacionales. No dicen qué cargo tenía mi antepasado en esos años ni cómo le afectó.</p></div>
     </div>
 
-    <!-- G -->
-    <div class="subseccion">
-      <h3><span class="letra">G</span>La Segunda Guerra Mundial y la posguerra</h3>
-      <div class="texto">
-        <p>
-          La guerra volvió a cerrar mercados en 1940 y causó una nueva recesión; el Acuerdo Interamericano de Café de
-          noviembre de 1940 y la recuperación de las exportaciones desde 1942 reactivaron la economía, mientras el
-          racionamiento de los países en guerra limitaba las importaciones. Después de la guerra el país profundizó el
-          intervencionismo: más proteccionismo, creación del Instituto de Fomento Industrial (1940) y una política de
-          industrialización dirigida por el Estado (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023, pp. 21–22</a>).
-          Para Medellín esto significó dos décadas de protección a la industria nacional, el telón de fondo del crecimiento
-          urbano que muestran los censos de 1951 y 1964.
-        </p>
+    <div class="grafica revelar" id="caja-industria">
+      <span class="antetitulo">Gráfica 2 · Primer Censo Industrial, 1945</span>
+      <h3>Medellín no solo creció: cambió su economía</h3>
+      <p class="bajada-graf">Empresas industriales que existían en 1945, según el periodo en que se fundaron. Antioquia frente a Norte de Santander, el departamento de Cúcuta.</p>
+      <div class="controles" role="group" aria-label="Unidad de la gráfica industrial">
+        <button type="button" data-modo="numero" aria-pressed="true">Número de empresas</button>
+        <button type="button" data-modo="pct" aria-pressed="false">% de las empresas de cada departamento</button>
       </div>
+      <div class="lienzo"><canvas id="graficaIndustria" role="img" aria-label="Gráfica de barras de las empresas industriales existentes en 1945 por periodo de fundación, Antioquia y Norte de Santander"></canvas></div>
+      <p class="fuente">Fuente: <a href="#ref-jmr2016">Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo (2016)</a>, cuadros A1 y A2, con base en el Primer Censo Industrial de Colombia, 1945; empleo textil: <a href="#ref-espana">España y Sánchez</a>, con base en los censos industriales de 1945 y 1970. Son empresas que seguían funcionando en 1945: las que cerraron antes no aparecen. Datos: <a href="datos/empresas_industriales_1945.csv">empresas_industriales_1945.csv</a>.</p>
+      <details class="tabla-datos"><summary>Ver la tabla</summary><div class="tabla-contenedor" id="tabla-industria"></div></details>
+    </div>
+    <div class="cifras revelar">
+      <div><div class="valor"><span data-clave="empresas_antioquia_1931_1945_pct"></span> %</div><div class="que">de las empresas industriales antioqueñas de 1945 se fundó entre 1931 y 1945</div></div>
+      <div><div class="valor">17,3 %</div><div class="que">del empleo industrial de Colombia estaba en Medellín en 1945, más que en Bogotá (15,7 %)</div></div>
+      <div><div class="valor">54 → 57 %</div><div class="que">del empleo textil del país estaba en Antioquia en 1945 y en 1970</div></div>
+    </div>
+    <div class="interpretacion revelar">
+      <div><h4>Lo que muestra</h4><p>Casi tres de cada cuatro fábricas antioqueñas de 1945 nacieron después de la crisis de 1929. Antioquia tenía <span data-clave="empresas_ant"></span> empresas; Norte de Santander, <span data-clave="empresas_nds"></span>. El impulso fue nacional, pero su tamaño fue muy distinto según la región.</p></div>
+      <div><h4>Para mi familia</h4><p>Cuando Gloria nació, en 1947, Medellín era la ciudad con más empleo industrial del país. Cúcuta seguía siendo, ante todo, una plaza comercial: allí la oportunidad estaba en el comercio, que es justo lo que recuerda la rama de Miguel.</p></div>
+      <div><h4>Lo que no muestra</h4><p>El cuadro es departamental y no cuenta las empresas que cerraron antes de 1945. En las fuentes que pude consultar no hay cifras de 1970 comparables por ciudad.</p></div>
     </div>
 
-    <!-- H -->
-    <div class="subseccion">
-      <h3><span class="letra">H</span>Educación, mujeres y movilidad social</h3>
-      <div class="texto">
-        <p>
-          Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo construyen un índice histórico de desarrollo humano para Colombia
-          y encuentran que en el siglo XIX casi no hubo avances, mientras que en el siglo XX los niveles de vida mejoraron
-          mucho, «especialmente en las mujeres». En la primera mitad del siglo las mejoras vinieron sobre todo del ingreso; desde
-          los años cincuenta, de la inversión pública en educación y salud (<a class="cita" href="#ref-jmr2019">Jaramillo-Echeverri et al., 2019</a>).
-          Ramírez y Téllez muestran el mismo ritmo en la escuela: la expansión fue «muy lenta» en la primera mitad del siglo, el
-          analfabetismo pasó del 66 % en 1900 al 38 % en 1950, y solo desde 1950 los indicadores educativos crecieron «a un
-          ritmo nunca antes visto» (<a class="cita" href="#ref-ramirez2006">Ramírez y Téllez, 2006</a>).
-        </p>
-        <p>
-          Para las mujeres, el <strong>Decreto 227 del 2 de febrero de 1933</strong> extendió a la «enseñanza femenina» la
-          reforma de la secundaria de 1932 y permitió que los colegios de señoritas otorgaran el título de bachiller si
-          adoptaban el plan de estudios de los colegios de hombres <span class="nivel nivel-a">A</span>
-          (<a class="cita" href="#ref-d227">Decreto 227 de 1933</a>). Como la universidad exigía el bachillerato completo, esa
-          norma abrió el camino legal para que las mujeres ingresaran a ella. Varias fuentes secundarias atribuyen al Decreto
-          1972 de 1933 la apertura explícita de la universidad a las mujeres; no pude consultar su texto, así que no le atribuyo
-          un contenido preciso.
-        </p>
-        <p>
-          El reconocimiento legal no es lo mismo que el aprovechamiento real. Una ley puede permitir que una mujer estudie,
-          pero la decisión depende de los colegios disponibles, del costo, de lo que la familia espera del futuro de sus hijas
-          y de lo que el mercado laboral ofrecía a una mujer casada. Jaramillo-Echeverri y sus coautores encuentran que la brecha
-          entre hombres y mujeres matriculados en la educación superior solo empezó a cerrarse en los años ochenta
-          (<a class="cita" href="#ref-jmr2019">Jaramillo-Echeverri et al., 2019</a>).
-        </p>
-      </div>
-    </div>
+    <figure class="foto historica ancha revelar">
+      <button class="boton-ampliar" type="button" data-foto="plano"><img src="assets/lugares/plano-medellin-1932.jpg" alt="Plano a color de Medellín en 1932, con el centro en verde y amarillo y los barrios nuevos en rosado alrededor del río." loading="lazy" width="1280" height="921"></button>
+      <figcaption><span class="mono">Documento histórico · 1932</span>Plano de Medellín levantado por Guillermo Palacio &amp; Cía. Ingenieros. Los barrios en rosado muestran hacia dónde se estaba extendiendo la ciudad. Dominio público, Wikimedia Commons.</figcaption>
+    </figure>
 
-    <!-- I -->
-    <div class="subseccion">
-      <h3><span class="letra">I</span>Política monetaria y cambiaria</h3>
-      <div class="texto">
-        <p>
-          El control de cambios de 1931 inauguró casi cuatro décadas de intervención: tasas de cambio diferenciales desde 1932,
-          devaluaciones en 1948 y 1951 y crisis recurrentes de balanza de pagos. El <strong>Decreto-Ley 444 de 1967</strong>
-          estableció un régimen de minidevaluaciones (devaluación gradual) en lugar de la tasa fija ajustable, unificó los tipos
-          de cambio, impuso un control rígido sobre los flujos de capital y creó Proexpo y el certificado de abono tributario
-          para promover exportaciones nuevas (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023, pp. 19–20, 27–28</a>).
-          La protección cambiaria y arancelaria favoreció la industria urbana durante el periodo de mi historia. Sobre la
-          adaptación del banco central a estos cambios, el curso propone el capítulo publicado en el libro del centenario del
-          Banco de la República (<a class="cita" href="#ref-bdr2023">2023</a>). No tengo indicios de que estas políticas
-          beneficiaran o perjudicaran directamente a mi familia.
-        </p>
-      </div>
+    <h3 class="subtitulo revelar">Los censos: una ciudad que se multiplicó por seis</h3>
+    <div class="lectura revelar">
+      <p>Medellín pasó de 168.266 habitantes en 1938 a 1.071.252 en 1973: se multiplicó por <span data-clave="medellin_multiplo_1938_1973"></span>. Creció cerca de un 6 % al año hasta 1964, y entre 1951 y 1964 sumó <span data-clave="medellin_aumento_1951_1964"></span> personas. En 1951 vivía allí el 22,8 % de los antioqueños; en 1973, el 36,9 % <a class="ref" href="#ref-danedin">DANE</a>. Amagá y Titiribí, en cambio, casi no se movieron. La vista de índice pone a los tres municipios en la misma escala (1938 = 100) para comparar sus ritmos.</p>
     </div>
-
-    <div class="subseccion tesis" style="max-width:none">
-      <strong>¿Qué significa todo esto para mi familia?</strong>
-      <p>Cuatro procesos rodean la trayectoria de la rama antioqueña. La <strong>infraestructura</strong> unió el suroeste con
-        Medellín entre 1914 y 1929. La <strong>ciudad</strong> concentró, cada vez más, el empleo, los servicios y las
-        instituciones. El <strong>empleo estatal</strong>, aunque vulnerable a la crisis y a la política, ofrecía un ingreso
-        regular. Y las <strong>oportunidades educativas</strong> se abrieron legalmente para las mujeres en 1933 y se
-        expandieron sobre todo desde 1950. Estos procesos no demuestran por qué mi familia se trasladó ni por qué educó solo a
-        los hijos hombres, pero ayudan a entender por qué Medellín representaba nuevas posibilidades para una familia con
-        antecedentes rurales <span class="nivel nivel-c">C</span>.</p>
-      <p style="margin-bottom:0">La rama cucuteña ofrece otro camino: el comercio privado, conectado con el exterior por la
-        frontera, permitía acumular capital y transmitir un negocio, y en esa familia también se invirtió en educación
-        universitaria, incluida la de las mujeres <span class="nivel nivel-b">B</span>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 4. URBANIZACIÓN ============ -->
-<section id="poblacion" class="alterna">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">4 · Urbanización</span>
-    <h2>Medellín crece; el suroeste se queda atrás</h2>
-    <div class="texto">
-      <p>
-        Si la experiencia de mi familia fue parte de un movimiento más amplio, los censos deberían mostrar que Medellín creció
-        mucho más rápido que Amagá y Titiribí. Para comprobarlo reuní la población de los censos de 1938, 1951, 1964 y 1973.
-        Como Medellín es mucho más grande, la vista <strong>índice</strong> pone a los tres municipios en la misma escala
-        (1938 = 100) y compara ritmos de crecimiento; la vista <strong>habitantes</strong> muestra los tamaños reales.
-      </p>
-    </div>
-
-    <div class="grafica" id="caja-poblacion">
-      <h3>Población total de Medellín, Amagá y Titiribí, censos de 1938 a 1973</h3>
+    <div class="grafica revelar" id="caja-poblacion">
+      <span class="antetitulo">Gráfica 3 · Censos de 1938, 1951, 1964 y 1973</span>
+      <h3>Medellín crece; el suroeste se queda</h3>
       <div class="controles" role="group" aria-label="Unidad de la gráfica de población">
         <button type="button" data-modo="indice" aria-pressed="true">Índice (1938 = 100)</button>
         <button type="button" data-modo="absoluto" aria-pressed="false">Habitantes</button>
-        <label><input type="checkbox" id="verAjustada"> Mostrar Medellín con ajuste de cobertura</label>
+        <label><input type="checkbox" id="verAjustada"> Comparar con la serie ajustada de Medellín</label>
       </div>
-      <div class="lienzo"><canvas id="graficaPoblacion" role="img" aria-label="Gráfica de la población de Medellín, Amagá y Titiribí en los censos de 1938, 1951, 1964 y 1973"></canvas></div>
-      <div class="leyenda-puntos" aria-label="Tipo de cifra">
-        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="#5b4f46"/></svg>Población censada (DANE)</span>
-        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="#fff" stroke="#5b4f46" stroke-width="2"/></svg>Censada, tomada de fuente secundaria</span>
-        <span><svg width="14" height="14" aria-hidden="true"><polygon points="7,1 13,13 1,13" fill="#5b4f46"/></svg>Con ajuste de cobertura (Anuario de Antioquia)</span>
+      <div class="lienzo"><canvas id="graficaPoblacion" role="img" aria-label="Gráfica de la población de Medellín, Amagá y Titiribí en los censos de 1938 a 1973"></canvas></div>
+      <div class="leyenda-puntos">
+        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="#5f655c"/></svg>Población censada (DANE)</span>
+        <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="#fff" stroke="#5f655c" stroke-width="2"/></svg>Censada, tomada de fuente secundaria</span>
+        <span><svg width="14" height="14" aria-hidden="true"><polygon points="7,1 13,13 1,13" fill="#5f655c"/></svg>Ajustada por cobertura (Anuario de Antioquia)</span>
       </div>
-      <p class="nota">Fuentes: Medellín 1951–1973, <a class="cita" href="#ref-dane2006">DANE (2006)</a>, población censada. Amagá y Titiribí 1964 y 1973, <a class="cita" href="#ref-anuario2014">Anuario Estadístico de Antioquia (2014)</a>, cifras con ajuste por cobertura. Los tres municipios en 1938 y Amagá y Titiribí en 1951: fuente secundaria (<a class="cita" href="#ref-wiki">Wikipedia</a>), pendiente de cotejo con los tomos censales. Archivo: <a href="datos/censos_poblacion.csv">datos/censos_poblacion.csv</a>.</p>
-      <details class="datos-tabla"><summary>Ver los datos e indicadores en tabla</summary><div class="tabla-contenedor" id="tabla-poblacion"></div></details>
+      <p class="fuente">Fuentes: Medellín 1951–1973, población censada (<a href="#ref-dane2006">DANE, 2006</a>). Amagá y Titiribí 1964 y 1973, <a href="#ref-anuario2014">Anuario Estadístico de Antioquia</a>, con ajuste por cobertura. Los tres municipios en 1938, y Amagá y Titiribí en 1951: <a href="#ref-wiki">fuente secundaria</a>. Datos: <a href="datos/censos_poblacion.csv">censos_poblacion.csv</a>.</p>
+      <details class="tabla-datos"><summary>Ver la tabla con tasas e índices</summary><div class="tabla-contenedor" id="tabla-poblacion"></div></details>
+    </div>
+    <div class="interpretacion revelar">
+      <div><h4>Lo que muestra</h4><p>El crecimiento de Medellín no fue gradual: la ciudad se duplicó entre 1938 y 1951 y volvió a duplicarse entre 1951 y 1964. En el suroeste, Amagá creció poco y Titiribí se estancó y luego perdió población.</p></div>
+      <div><h4>Para mi familia</h4><p>Cuando Gloria nació, en 1947, la familia ya vivía en Medellín: llegó antes de los años de mayor crecimiento absoluto, no en su punto más alto.</p></div>
+      <div><h4>Sobre las cifras</h4><p>El DANE publica la población <em>censada</em> y otra <em>ajustada por cobertura</em>, que suma a quienes el censo no alcanzó a contar: un <span data-clave="ajuste_1964"></span> % más en 1964 y un <span data-clave="ajuste_1973"></span> % más en 1973 para Medellín. Uso la censada, que es consistente de 1951 a 1973. El control de la gráfica muestra la diferencia.</p></div>
     </div>
 
-    <div class="lectura">
-      <div><h4>Qué muestran los datos</h4>
-        <p>Medellín se multiplicó por <span data-clave="medellin_multiplo_1938_1973"></span> entre 1938 y 1973, con tasas cercanas al 6 % anual hasta 1964. Solo entre 1951 y 1964 sumó <span data-clave="medellin_aumento_1951_1964"></span> habitantes. Amagá creció un <span data-clave="amaga_crec_pct_1938_1973"></span> % en todo el periodo y Titiribí terminó con menos población que en 1938 (<span data-clave="titiribi_cambio_pct_1938_1973"></span> %), después de perder <span data-clave="titiribi_perdida_1964_1973"></span> personas entre 1964 y 1973.</p></div>
-      <div><h4>Relación con mi familia</h4>
-        <p>Mi abuela nació en Medellín en 1947, así que la familia ya vivía en la ciudad antes del periodo de mayor crecimiento absoluto (1951–1964). Su traslado formó parte de un flujo que se aceleraría después, no de su punto máximo <span class="nivel nivel-c">C</span>.</p></div>
-      <div><h4>Qué no permiten concluir</h4>
-        <p>Los censos no registran quién migró ni por qué. No prueban que mi familia saliera por las mismas razones que otros migrantes, ni que el estancamiento de Titiribí la afectara.</p></div>
-    </div>
-
-    <div class="texto" style="margin-top:1.5rem">
-      <h3>Una advertencia sobre las cifras: censada frente a ajustada</h3>
-      <p>
-        El DANE publica dos tipos de cifra. La <strong>población censada</strong> es la que efectivamente se contó. La
-        <strong>población ajustada por cobertura</strong> corrige el conteo por las personas que el censo no alcanzó a registrar.
-        En Medellín la diferencia es del <span data-clave="ajuste_1964"></span> % en 1964 (772.887 censados frente a 791.589
-        ajustados) y del <span data-clave="ajuste_1973"></span> % en 1973 (1.071.252 frente a 1.163.868). Por eso uso la serie
-        censada de Medellín, que es consistente de 1951 a 1973. Para Amagá y Titiribí en 1964 y 1973 solo conseguí cifras
-        ajustadas; las marco con triángulos. Si su ajuste fue de una magnitud parecida al de Medellín, el crecimiento de esos
-        municipios entre 1951 y 1964 estaría ligeramente sobreestimado, lo que refuerza la conclusión de que crecieron poco.
-      </p>
-    </div>
-
-    <div class="grafica" id="caja-urbano">
-      <h3>Porcentaje de la población en la cabecera municipal, 1964 y 1973</h3>
-      <p class="bajada-graf">% en cabecera = población en la cabecera / población total × 100 (ambas cifras ajustadas, de la misma fuente).</p>
+    <div class="grafica revelar" id="caja-urbano">
+      <span class="antetitulo">Gráfica 4 · Censos de 1964 y 1973</span>
+      <h3>Una ciudad urbana y dos municipios rurales</h3>
+      <p class="bajada-graf">% de la población en la cabecera = población en la cabecera ÷ población total × 100.</p>
       <div class="lienzo bajo"><canvas id="graficaUrbana" role="img" aria-label="Gráfica de barras del porcentaje de población en la cabecera de Medellín, Amagá y Titiribí en 1964 y 1973"></canvas></div>
-      <p class="nota">Fuente: elaboración propia con base en <a class="cita" href="#ref-anuario2014">Anuario Estadístico de Antioquia (2014)</a>, cuadro 3.1.5. No incluyo 1938 ni 1951 porque no conseguí los datos de cabecera de esos censos para los tres municipios, y no los interpolo.</p>
-      <details class="datos-tabla"><summary>Ver los datos en tabla</summary><div class="tabla-contenedor" id="tabla-urbano"></div></details>
+      <p class="fuente">Fuente: elaboración propia con datos del <a href="#ref-anuario2014">Anuario Estadístico de Antioquia (2014)</a>, cuadro 3.1.5. No incluyo 1938 ni 1951 porque no tengo los datos de cabecera de esos censos. La «cabecera» es una categoría censal (la localidad donde está la alcaldía), no una medida de la economía urbana.</p>
+      <details class="tabla-datos"><summary>Ver la tabla</summary><div class="tabla-contenedor" id="tabla-urbano"></div></details>
     </div>
 
-    <div class="cifras">
-      <div class="cifra"><div class="valor">22,8 %</div><div class="que">de la población de Antioquia vivía en Medellín en 1951</div></div>
-      <div class="cifra"><div class="valor">31,2 %</div><div class="que">en 1964</div></div>
-      <div class="cifra"><div class="valor">36,9 %</div><div class="que">en 1973 (<a class="cita" href="#ref-danedin">DANE</a>)</div></div>
-    </div>
-
-    <div class="lectura">
-      <div><h4>Qué muestran los datos</h4><p>En 1964 el 93 % de los habitantes de Medellín vivía en la cabecera, frente al 26 % en Amagá y en Titiribí. En 1973 los dos municipios del suroeste seguían siendo mayoritariamente rurales (alrededor del 28 % en cabecera). El tamaño y la proporción urbana son cosas distintas: Amagá creció, pero lo hizo sobre todo fuera de su cabecera, donde estaban las minas.</p></div>
-      <div><h4>Relación con mi familia</h4><p>Salir de Amagá o Titiribí hacia Medellín era pasar de un municipio donde tres de cada cuatro personas vivían en el campo a una ciudad casi totalmente urbana <span class="nivel nivel-c">C</span>.</p></div>
-      <div><h4>Qué no permiten concluir</h4><p>«Cabecera» es una categoría censal (la localidad donde está la alcaldía), no una medida económica de urbanización: una cabecera pequeña puede ser muy rural en su economía.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5. LÍNEA DE TIEMPO ============ -->
-<section id="tiempo">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">5 · Línea de tiempo</span>
-    <h2>Tres generaciones frente a la historia del país</h2>
-    <div class="texto">
-      <p>La línea distingue tres tipos de hitos: los de la <strong style="color:var(--verde)">historia nacional y regional</strong>
-        (documentados), los de la <strong style="color:var(--terracota)">historia familiar</strong> (transmitidos en entrevistas;
-        en morado, la rama de Cúcuta) y las <strong style="color:var(--oro)">hipótesis</strong>, cuyas fechas o causas están por confirmar.</p>
-    </div>
-    <div class="filtros-tiempo controles" role="group" aria-label="Filtrar la línea de tiempo">
-      <button type="button" data-filtro="todos" aria-pressed="true">Todo</button>
-      <button type="button" data-filtro="nacional" aria-pressed="false">Historia nacional y regional</button>
-      <button type="button" data-filtro="familia" aria-pressed="false">Historia familiar</button>
-      <button type="button" data-filtro="hipotesis-t" aria-pressed="false">Hipótesis</button>
-    </div>
-    <div class="linea-tiempo" id="lineaTiempo">
-      <div class="hito nacional"><div class="anio">1909</div><div class="caja"><span class="tipo">Nacional y regional</span><strong>Empiezan las obras del Ferrocarril de Amagá</strong>Llegará a Amagá en 1914. <span class="por-que">Por qué importa: conecta la cuenca carbonífera con Medellín (<a class="cita" href="#ref-banrepfc">Banrep Cultural</a>).</span></div></div>
-      <div class="hito familia cucuta"><div class="anio">c. 1910–1920</div><div class="caja"><span class="tipo">Familia · Cúcuta · fecha aproximada</span><strong>Un comerciante de telas en Cúcuta</strong>Un antepasado de la rama cucuteña prospera con el comercio de telas y otros negocios. <span class="por-que">Por qué importa: una forma de acumulación privada distinta de la tierra.</span></div></div>
-      <div class="hito nacional"><div class="anio">1914</div><div class="caja"><span class="tipo">Nacional y regional</span><strong>El tren llega al valle de Aburrá y a Amagá</strong>El 9 de marzo llega a Medellín el Ferrocarril de Antioquia; en diciembre, el de Amagá alcanza ese municipio. <span class="por-que">Por qué importa: el transporte por la ruta de Puerto Berrío era un 22 % más barato que el camino antiguo (<a class="cita" href="#ref-correa2012">Correa, 2012</a>).</span></div></div>
-      <div class="hito nacional"><div class="anio">1923–1928</div><div class="caja"><span class="tipo">Nacional</span><strong>La «danza de los millones»</strong>Auge exportador y crédito externo; las obras públicas se financian con deuda. <span class="por-que">Por qué importa: crecimiento rápido, pero vulnerable (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023</a>).</span></div></div>
-      <div class="hito nacional"><div class="anio">1927</div><div class="caja"><span class="tipo">Regional</span><strong>El Ferrocarril de Amagá se incorpora al de Antioquia</strong><span class="por-que">Por qué importa: el suroeste queda integrado en una sola red regional.</span></div></div>
-      <div class="hito nacional"><div class="anio">1929</div><div class="caja"><span class="tipo">Nacional e internacional</span><strong>Túnel de La Quiebra y crisis mundial</strong>El 7 de agosto se inaugura el túnel; en octubre colapsa Wall Street. <span class="por-que">Por qué importa: la línea continua a Puerto Berrío se completa justo cuando empieza la Gran Depresión.</span></div></div>
-      <div class="hito nacional"><div class="anio">1930</div><div class="caja"><span class="tipo">Nacional</span><strong>Comienza la República Liberal</strong>El PIB cae 7,6 %. <span class="por-que">Por qué importa: cambio de partido en el poder, del que dependían los nombramientos públicos.</span></div></div>
-      <div class="hito nacional"><div class="anio">1931–1932</div><div class="caja"><span class="tipo">Nacional</span><strong>Respuestas a la Gran Depresión</strong>Recorte de salarios públicos, arancel proteccionista (mayo de 1931) y control de cambios (24 de septiembre de 1931); en 1932 departamentos y municipios suspenden el pago de su deuda externa. <span class="por-que">Por qué importa: el Estado también sintió la crisis (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023</a>).</span></div></div>
-      <div class="hito nacional"><div class="anio">1933</div><div class="caja"><span class="tipo">Nacional</span><strong>Decreto 227: bachillerato para mujeres</strong>Los colegios de señoritas pueden otorgar el título de bachiller. <span class="por-que">Por qué importa: abre el camino legal hacia la universidad (<a class="cita" href="#ref-d227">Decreto 227</a>).</span></div></div>
-      <div class="hito hipotesis-t"><div class="anio">años 30–40</div><div class="caja"><span class="tipo">Hipótesis</span><strong>La familia se traslada a Medellín</strong>Sin fecha comprobada. Solo sabemos que ocurrió antes de 1947. <span class="por-que">Cómo verificarlo: registros civiles o de bautismo de los hermanos mayores de mi abuela.</span></div></div>
-      <div class="hito nacional"><div class="anio">1936</div><div class="caja"><span class="tipo">Nacional</span><strong>Ley 200 sobre régimen de tierras</strong><span class="por-que">Por qué importa: liga la propiedad rural a su explotación económica (<a class="cita" href="#ref-ley200">Ley 200</a>).</span></div></div>
-      <div class="hito nacional"><div class="anio">1942</div><div class="caja"><span class="tipo">Regional</span><strong>Empalme con el Ferrocarril del Pacífico</strong>Medellín queda conectada por tren con Cali y Buenaventura.</div></div>
-      <div class="hito familia cucuta"><div class="anio">1943</div><div class="caja"><span class="tipo">Familia · Cúcuta</span><strong>Nace mi abuelo en Cúcuta</strong>Dato transmitido por mi abuela.</div></div>
-      <div class="hito familia"><div class="anio">1947</div><div class="caja"><span class="tipo">Familia · Antioquia</span><strong>Nace mi abuela en Medellín</strong>«Yo nací en 1947 en Medellín». Vivió en el barrio Laureles. <span class="por-que">Por qué importa: es la única fecha firme del traslado: la familia ya estaba en la ciudad.</span></div></div>
-      <div class="hito nacional"><div class="anio">1948</div><div class="caja"><span class="tipo">Nacional</span><strong>Asesinato de Gaitán; se intensifica La Violencia</strong>La violencia política tenía antecedentes anteriores. <span class="por-que">Por qué importa: acelera la migración rural en muchas regiones; no hay indicios de que tocara a mi familia.</span></div></div>
-      <div class="hito nacional"><div class="anio">1951–1964</div><div class="caja"><span class="tipo">Regional</span><strong>Medellín suma 414.698 habitantes</strong>Pasa de 358.189 a 772.887 personas censadas (<a class="cita" href="#ref-dane2006">DANE</a>).</div></div>
-      <div class="hito hipotesis-t"><div class="anio">años 50–60</div><div class="caja"><span class="tipo">Hipótesis · fechas por confirmar</span><strong>Dos hijos hombres a la universidad</strong>Los dos hermanos de mi abuela estudian en la universidad; ella y su hermana se dedican al hogar. Las fechas se deducen del año de nacimiento de mi abuela y no están confirmadas.</div></div>
-      <div class="hito nacional"><div class="anio">1957</div><div class="caja"><span class="tipo">Nacional</span><strong>Primer voto femenino</strong>Plebiscito del 1 de diciembre. <span class="por-que">Por qué importa: ciudadanía política plena para las mujeres, una década después del nacimiento de mi abuela.</span></div></div>
-      <div class="hito nacional"><div class="anio">1958</div><div class="caja"><span class="tipo">Nacional</span><strong>Comienza el Frente Nacional</strong>Alternancia y paridad en los cargos públicos hasta 1974.</div></div>
-      <div class="hito nacional"><div class="anio">1967</div><div class="caja"><span class="tipo">Nacional</span><strong>Decreto-Ley 444</strong>Devaluación gradual, control de capitales y promoción de exportaciones (<a class="cita" href="#ref-ocampo2023">Ocampo, 2023</a>).</div></div>
-      <div class="hito nacional"><div class="anio">1970</div><div class="caja"><span class="tipo">Límite del estudio</span><strong>Fin del periodo principal</strong>Es el límite aproximado de esta investigación, no una fecha demostrada en la vida de ningún familiar.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6. CAPITAL HUMANO ============ -->
-<section id="capital" class="alterna">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">6 · Capital humano y género</span>
-    <h2>Ellos a la universidad, ellas al hogar… pero no en toda la familia</h2>
-    <div class="texto">
-      <p>
-        En la rama antioqueña, de cuatro hijos, los dos hombres llegaron a la universidad y las dos mujeres, entre ellas mi
-        abuela, se dedicaron principalmente al hogar. En la rama de Cúcuta, los siete hijos fueron universitarios, incluidas
-        mujeres. ¿Qué dicen los datos sobre la educación de hombres y mujeres en Colombia? ¿Y qué pueden y qué no pueden
-        explicar sobre mi familia?
-      </p>
-    </div>
-
-    <div class="grafica" id="caja-educacion">
-      <h3>Alfabetismo en Colombia por sexo, población de 15 años y más, censos de 1964 a 2005</h3>
-      <p class="bajada-graf">Total nacional. No son cifras de Antioquia ni de Medellín.</p>
-      <div class="controles" role="group" aria-label="Vista de la gráfica de alfabetismo">
-        <button type="button" data-modo="periodo" aria-pressed="true">Periodo del proyecto (1964–1973)</button>
-        <button type="button" data-modo="serie" aria-pressed="false">Serie completa (1964–2005)</button>
-        <button type="button" data-modo="brecha" aria-pressed="false">Brecha hombres − mujeres</button>
-      </div>
-      <div class="lienzo"><canvas id="graficaEducacion" role="img" aria-label="Gráfica del alfabetismo de hombres y mujeres de 15 años y más en Colombia, 1964 a 2005"></canvas></div>
-      <p class="nota">Fuente: <a class="cita" href="#ref-dane2005edu">DANE, Informe especial Censo General 2005 – Educación</a>, gráfica «Alfabetismo – población de 15 y más años» (censos de 1964, 1973, 1985, 1993 y 2005). Brecha calculada como hombres menos mujeres, en puntos porcentuales. Archivo: <a href="datos/alfabetismo_colombia_15mas.csv">datos/alfabetismo_colombia_15mas.csv</a>.</p>
-      <details class="datos-tabla"><summary>Ver los datos en tabla</summary><div class="tabla-contenedor" id="tabla-educacion"></div></details>
-    </div>
-    <div class="lectura">
-      <div><h4>Qué muestran los datos</h4><p>En 1964 sabía leer y escribir el 75,0 % de los hombres y el 71,1 % de las mujeres de 15 años y más: una brecha de <span data-clave="brecha_1964"></span> puntos. En 1973 la brecha bajó a <span data-clave="brecha_1973"></span> puntos; en 1993 desapareció y en 2005 las mujeres ya superaban a los hombres.</p></div>
-      <div><h4>Relación con mi familia</h4><p>La generación de mi abuela (nacida en 1947) tenía 17 años en 1964: la brecha básica entre hombres y mujeres ya era pequeña. La diferencia en mi familia no está en saber leer y escribir, sino en llegar a la universidad <span class="nivel nivel-c">C</span>.</p></div>
-      <div><h4>Qué no permiten concluir</h4><p>El alfabetismo no mide la matrícula universitaria; que la brecha básica se cerrara no implica igualdad en la educación superior, que tardó hasta los años ochenta (<a class="cita" href="#ref-jmr2019">Jaramillo-Echeverri et al., 2019</a>). Tampoco son datos regionales.</p></div>
-    </div>
-
-    <div class="grafica" id="caja-presupuesto">
-      <h3>Educación primaria en Antioquia: el presupuesto departamental favorecía a las zonas urbanas, 1932–1936</h3>
-      <p class="bajada-graf">Distribución del presupuesto departamental de educación primaria entre zona rural y urbana (%).</p>
-      <div class="lienzo bajo"><canvas id="graficaPresupuesto" role="img" aria-label="Gráfica de barras apiladas del presupuesto de educación primaria de Antioquia entre zona rural y urbana, 1932 a 1936"></canvas></div>
-      <p class="nota">Fuente: <a class="cita" href="#ref-ramirez2006">Ramírez y Téllez (2006)</a>, cuadro 3, con base en Memorias del Ministro de Instrucción Pública y Anuario General de Estadística. Archivo: <a href="datos/presupuesto_educacion_primaria_antioquia.csv">datos/presupuesto_educacion_primaria_antioquia.csv</a>.</p>
-      <details class="datos-tabla"><summary>Ver los datos en tabla</summary><div class="tabla-contenedor" id="tabla-presupuesto"></div></details>
-    </div>
-    <div class="lectura">
-      <div><h4>Qué muestran los datos</h4><p>Entre 1932 y 1936 Antioquia destinó en promedio solo el <span data-clave="presupuesto_rural"></span> % de su presupuesto de primaria a las zonas rurales, aunque la mayoría de la población era rural. Ramírez y Téllez concluyen que la calidad de la educación rural fue «bastante inferior».</p></div>
-      <div><h4>Relación con mi familia</h4><p>Vivir en Medellín y no en el campo daba acceso a mejores escuelas. Es una razón económica plausible para que una familia con recursos se instalara en la ciudad, aunque no sé si pesó en la decisión de la mía <span class="nivel nivel-c">C</span>.</p></div>
-      <div><h4>Qué no permiten concluir</h4><p>Son cifras de gasto público, no de matrícula ni de resultados, y se refieren a los años treinta, antes de que naciera mi abuela.</p></div>
-    </div>
-
-    <h3 class="subseccion">La educación dentro de las dos ramas familiares</h3>
-    <div class="grafica" id="caja-familia">
-      <h3>Hijos universitarios en las dos ramas de mi familia</h3>
-      <p class="bajada-graf">Recuentos basados exclusivamente en los testimonios. No son tasas representativas de Antioquia ni de Cúcuta.</p>
-      <div class="pictograma" id="pictograma"></div>
-      <p class="nota">Fuente: comunicaciones familiares, noviembre de 2026 <span class="nivel nivel-b">B</span>. Las dos generaciones pueden no ser estrictamente contemporáneas: mi abuela nació en 1947 y mi abuelo en 1943, pero no sé en qué años estudió cada uno de los hijos. Archivo: <a href="datos/familia_educacion.csv">datos/familia_educacion.csv</a>.</p>
-    </div>
-
-    <h3 class="subseccion">De la tierra a la universidad: tres generaciones</h3>
-    <div class="texto"><p>El diagrama resume la trayectoria recordada por cada rama. Los recuadros de borde discontinuo son conexiones hipotéticas.</p></div>
-    <div class="grafica" id="caja-flujo" style="background:var(--papel-2)">
-      <div class="flujo" role="list" aria-label="Diagrama de movilidad intergeneracional">
-        <div class="flujo-cab">Generaciones antiguas</div><div class="flujo-cab">Generación intermedia</div><div class="flujo-cab">Generación de mis abuelos</div>
-        <div class="fila-rama ant">Rama antioqueña</div>
-        <div class="paso-flujo ant" role="listitem"><strong>Tierra, ganado y carbón</strong>Fincas en Titiribí y Amagá, minería de carbón <span class="nivel nivel-b">B</span></div>
-        <div class="paso-flujo ant hip" role="listitem"><strong>Traslado a Medellín y empleo público</strong>Cargos de alcalde y tesorero; fecha y relación exacta por confirmar <span class="nivel nivel-c">C</span></div>
-        <div class="paso-flujo ultimo ant" role="listitem"><strong>Universidad para los hijos hombres</strong>2 de 4 hijos universitarios; las 2 hijas, al hogar <span class="nivel nivel-b">B</span></div>
-        <div class="fila-rama cuc">Rama cucuteña</div>
-        <div class="paso-flujo cuc hip" role="listitem"><strong>Inmigración y comercio</strong>Antepasados de España e Italia; ruta y fechas desconocidas <span class="nivel nivel-b">B</span></div>
-        <div class="paso-flujo cuc" role="listitem"><strong>Comercio de telas y negocios</strong>c. 1910–1920; negocios que heredan los descendientes <span class="nivel nivel-b">B</span></div>
-        <div class="paso-flujo ultimo cuc" role="listitem"><strong>Universidad para los siete hijos</strong>Incluidas mujeres: contadoras y tres abogadas <span class="nivel nivel-b">B</span></div>
-      </div>
-    </div>
-
-    <h3 class="subseccion">Cinco mecanismos que conectan los datos con mi familia</h3>
-    <div class="rejilla dos">
-      <div class="tarjeta"><h4>1 · Transporte y mercados</h4><p>Cuando bajan los costos de transporte, un productor puede vender más lejos y comprar insumos más baratos; cambia la rentabilidad de minas y fincas y sube el valor de la tierra cerca de la vía. Es lo que documenta Correa (2012) para el ferrocarril antioqueño. No prueba que la mina o la finca de mi familia ganaran o perdieran con el tren.</p></div>
-      <div class="tarjeta"><h4>2 · Urbanización y oportunidades</h4><p>Las ciudades concentran empleo, escuelas, universidades, servicios, información y redes sociales; por eso atraen población. Los censos muestran la asociación histórica (Medellín crece y el suroeste no), pero la causalidad individual (por qué se mudó mi familia) requiere documentos y testimonios más precisos.</p></div>
-      <div class="tarjeta"><h4>3 · Empleo público y estabilidad</h4><p>Un ingreso regular facilita planear a largo plazo y pagar la educación de los hijos. Es posible que el empleo público de un antepasado contribuyera a la movilidad educativa de sus hijos hombres <span class="nivel nivel-c">C</span>. No conozco su salario y sé que en 1931 el Estado recortó salarios: la estabilidad era relativa.</p></div>
-      <div class="tarjeta"><h4>4 · Capital humano y género</h4><p>La educación es una inversión que amplía las oportunidades laborales. Si las normas sociales y el mercado laboral de la época esperaban que una mujer casada dejara de trabajar, una familia podía percibir un menor retorno en la universidad de sus hijas. Es una explicación posible, no una prueba de que mi familia excluyera deliberadamente a sus hijas.</p></div>
-      <div class="tarjeta"><h4>5 · Comercio y continuidad empresarial</h4><p>Un negocio familiar transmite activos, clientes, proveedores y conocimiento entre generaciones; los títulos de contaduría o derecho son útiles para administrarlo y protegerlo. La rama de Cúcuta sugiere ese vínculo, pero la riqueza comercial no basta por sí sola para explicar que todos los hijos fueran a la universidad.</p></div>
-    </div>
-
-    <blockquote class="testimonio">
-      <p>En el caso de mi familia materna, de cuatro hijos, dos fueron universitarios y las dos mujeres, pues, fueron amas de casa.</p>
-      <cite>— Mi mamá, nota de voz, noviembre de 2026 <span class="nivel nivel-b">B</span></cite>
-    </blockquote>
-    <div class="texto">
-      <p>
-        «Ama de casa» describe la ocupación principal de una mujer adulta, no su escolaridad. El testimonio no acredita
-        estudios universitarios para mi abuela y su hermana, pero tampoco dice que no fueran a la escuela o al colegio.
-        Distingo así varios niveles que a menudo se confunden: alfabetización, primaria, bachillerato, universidad,
-        ejercicio profesional y trabajo doméstico no remunerado. La comparación entre las dos ramas debe leerse en ese sentido.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7. MEMORIA VS. DATOS ============ -->
-<section id="contraste">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">7 · Memoria, documento y dato</span>
-    <h2>¿Qué sabemos y qué podemos probar?</h2>
-    <div class="texto">
-      <p>
-        La matriz separa cada afirmación familiar de la evidencia disponible. No busca desmentir a mi familia, sino precisar
-        qué tipo de conocimiento tenemos y qué documento haría falta para avanzar.
-      </p>
-    </div>
-    <div class="tabla-contenedor">
-      <table>
-        <caption>Matriz de crítica de fuentes. Testimonios de noviembre de 2026.</caption>
-        <thead><tr><th scope="col">Afirmación familiar</th><th scope="col">Fuente del testimonio</th><th scope="col">Evidencia histórica o estadística</th><th scope="col">Qué podemos concluir</th><th scope="col">Qué falta verificar</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Origen en Amagá y Titiribí</strong></td><td>Mi mamá; mi abuela lo confirma en términos generales</td><td>En 1964, solo el 26 % de la población de ambos municipios vivía en la cabecera (Anuario).</td><td>La familia proviene de municipios mayoritariamente rurales <span class="nivel nivel-b">B</span>.</td><td>Partidas de bautismo o registros civiles de los antepasados.</td></tr>
-          <tr><td><strong>Agricultura, ganadería y carbón</strong></td><td>Mi mamá; mi abuela recuerda finca y mina</td><td>Amagá era la cuenca carbonífera unida a Medellín por ferrocarril desde 1914 (Banrep Cultural).</td><td>El recuerdo es coherente con la economía regional <span class="nivel nivel-c">C</span>.</td><td>Títulos mineros, escrituras, registros de producción.</td></tr>
-          <tr><td><strong>Traslado a Medellín</strong></td><td>Mi mamá y mi abuela</td><td>Medellín crecía cerca del 6 % anual entre 1938 y 1964 (censos).</td><td>Ocurrió antes de 1947 <span class="nivel nivel-c">C</span>.</td><td>Año y motivo; registros civiles de los hermanos mayores.</td></tr>
-          <tr><td><strong>Nacimiento de mi abuela en 1947</strong></td><td>Mi abuela, de forma directa</td><td>—</td><td>Dato transmitido directamente por la protagonista <span class="nivel nivel-b">B</span>.</td><td>Registro civil o cédula (no se publica por privacidad).</td></tr>
-          <tr><td><strong>Residencia en Laureles</strong></td><td>Mi mamá</td><td>—</td><td>La familia vivía en un barrio de clase media y alta de Medellín <span class="nivel nivel-b">B</span>. «Estrato seis» es una descripción retrospectiva: la estratificación socioeconómica actual no existía en 1947.</td><td>Dirección, escritura o arriendo; año de llegada al barrio.</td></tr>
-          <tr><td><strong>Empleo público (alcalde y tesorero)</strong></td><td>Mi mamá</td><td>Los alcaldes eran nombrados por el gobernador; el Estado recortó salarios en 1931 (Ocampo, 2023).</td><td>Un antepasado ocupó cargos públicos locales <span class="nivel nivel-b">B</span>.</td><td>Decretos de nombramiento en la Gaceta Departamental de Antioquia; nóminas municipales.</td></tr>
-          <tr><td><strong>Filiación liberal y conservadora</strong></td><td>Mi mamá</td><td>Competencia bipartidista y reparto de poder (Mazzuca y Robinson, 2009).</td><td>En la familia hubo miembros de ambos partidos <span class="nivel nivel-b">B</span>.</td><td>A quién corresponde cada filiación; si el capitán de policía era pariente directo.</td></tr>
-          <tr><td><strong>Destino de la finca</strong></td><td>Mi abuela y mi mamá, <strong>con dos versiones</strong></td><td>Ley 200 de 1936 y La Violencia como contexto, sin vínculo documentado.</td><td>La familia perdió el control de al menos una finca; no sabemos cómo ni cuándo.</td><td>Folio de matrícula inmobiliaria, escrituras de venta o sucesión en la notaría del municipio.</td></tr>
-          <tr><td><strong>Negocios de telas en Cúcuta</strong></td><td>Mi mamá</td><td>Cúcuta fue la puerta de entrada de importaciones, entre ellas textiles, vía Maracaibo (Arévalo Meneses).</td><td>El recuerdo es coherente con la economía comercial de la ciudad <span class="nivel nivel-c">C</span>.</td><td>Registro mercantil (Cámara de Comercio de Cúcuta), archivos notariales, prensa local.</td></tr>
-          <tr><td><strong>Inmigración desde España e Italia</strong></td><td>Mi mamá</td><td>Crónicas locales mencionan comerciantes de origen italiano en Cúcuta a comienzos del siglo XX (fuente divulgativa).</td><td>Origen familiar recordado <span class="nivel nivel-b">B</span>.</td><td>Registros de extranjería, cartas de naturalización, partidas eclesiásticas.</td></tr>
-          <tr><td><strong>Universidad de hombres y mujeres</strong></td><td>Mi mamá (dos notas de voz)</td><td>Brecha de alfabetismo pequeña en 1964; brecha universitaria hasta los años ochenta (JMR, 2019).</td><td>Las dos ramas recuerdan trayectorias educativas distintas para las mujeres <span class="nivel nivel-b">B</span>.</td><td>Diplomas, registros universitarios, años de grado.</td></tr>
-          <tr><td><strong>Continuidad empresarial en Cúcuta</strong></td><td>Mi mamá</td><td>—</td><td>Los descendientes continuaron negocios del comerciante <span class="nivel nivel-b">B</span>.</td><td>Registro mercantil y sucesiones.</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="subseccion">La finca: dos versiones, un ejercicio de crítica de fuentes</h3>
-    <div class="versiones">
-      <div class="version"><h4>Versión A · mi abuela</h4><p>«La mina la dejaron, se adueñaron de la finca». La finca habría quedado en manos de otras personas después de que la familia dejara las actividades rurales o mineras.</p></div>
-      <div class="version"><h4>Versión B · mi mamá</h4><p>Si se trata de la finca de su papá, esta fue vendida a un tercero.</p></div>
-    </div>
-    <div class="texto" style="margin-top:1rem">
-      <p>Las dos versiones no son necesariamente contradictorias: pueden referirse a fincas distintas o describir el mismo
-        hecho desde dos generaciones. No elijo una. Planteo cuatro escenarios contrastables:</p>
-    </div>
-    <div class="escenarios">
-      <div class="escenario"><strong>Venta</strong><p>Una venta voluntaria. Se verificaría con una escritura de compraventa.</p></div>
-      <div class="escenario"><strong>Sucesión</strong><p>Al morir un propietario, la finca pasó a otros herederos. Se verificaría con un juicio de sucesión.</p></div>
-      <div class="escenario"><strong>Abandono o administración</strong><p>Un dueño ausente pierde control frente a un administrador o un ocupante, como en los problemas que estudia Deas (1976). Se verificaría con cartas, contratos o pleitos.</p></div>
-      <div class="escenario"><strong>Disputa de propiedad</strong><p>Un conflicto por la posesión. Se verificaría con expedientes judiciales.</p></div>
-    </div>
-
-    <h3 class="subseccion">Hipótesis contrastables</h3>
-    <div class="rejilla dos">
-      <div class="hipotesis"><span class="marca">Hipótesis 1</span><h4>¿Una migración temprana?</h4>
-        <p>La familia se instaló en Medellín antes del periodo de mayor crecimiento absoluto de la ciudad (1951–1964).</p>
-        <dl><dt>Apoyo actual</dt><dd>Mi abuela nació en Medellín en 1947.</dd><dt>La confirmaría</dt><dd>El registro de nacimiento de un hermano mayor en Medellín antes de 1947.</dd><dt>La debilitaría</dt><dd>Documentos que ubiquen el hogar en el suroeste después de 1947.</dd><dt>Lo que no dice</dt><dd>Si la familia huyó de algo o buscó oportunidades: no hay evidencia sobre el motivo.</dd></dl></div>
-      <div class="hipotesis"><span class="marca">Hipótesis 2</span><h4>¿El empleo público como vía de movilidad?</h4>
-        <p>El ingreso estable de un cargo público ayudó a financiar la universidad de los hijos hombres.</p>
-        <dl><dt>Apoyo actual</dt><dd>El testimonio sobre los cargos y su buena remuneración.</dd><dt>La confirmaría</dt><dd>Decretos y nóminas que muestren cargos continuos en los años de estudio de los hijos.</dd><dt>La debilitaría</dt><dd>Interrupciones largas del empleo o que los estudios los financiaran otras fuentes (finca, herencia).</dd><dt>Lo que no dice</dt><dd>Que los nombramientos dependieran de su partido.</dd></dl></div>
-      <div class="hipotesis"><span class="marca">Hipótesis 3</span><h4>¿Qué pasó con la finca?</h4>
-        <p>Uno de los cuatro escenarios anteriores explica el cambio de propietario.</p>
-        <dl><dt>Apoyo actual</dt><dd>Dos versiones familiares que coinciden en que la finca dejó de pertenecer a la familia.</dd><dt>La confirmaría</dt><dd>El folio de matrícula inmobiliaria y las escrituras en la notaría del municipio.</dd><dt>La debilitaría</dt><dd>Que la finca siga registrada a nombre de familiares.</dd><dt>Lo que no dice</dt><dd>Que la Ley 200 o La Violencia hayan causado la pérdida.</dd></dl></div>
-      <div class="hipotesis"><span class="marca">Hipótesis 4</span><h4>¿Dos ramas, dos estrategias educativas?</h4>
-        <p>La diferencia en la educación de las mujeres responde a factores como el periodo en que nació cada generación, los recursos, el tipo de actividad económica y las normas sociales de cada hogar.</p>
-        <dl><dt>Apoyo actual</dt><dd>Los dos testimonios sobre la educación de los hijos.</dd><dt>La confirmaría</dt><dd>Años de nacimiento y de grado de cada hijo, para comparar cohortes iguales.</dd><dt>La debilitaría</dt><dd>Que las hijas de Cúcuta estudiaran una o dos décadas después que las de Antioquia: la diferencia sería sobre todo de época.</dd><dt>Lo que no dice</dt><dd>Que una ciudad fuera «más progresista», o que el origen inmigrante explique por sí solo la decisión.</dd></dl></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8. ARCHIVO FAMILIAR ============ -->
-<section id="archivo" class="alterna">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">8 · Archivo familiar</span>
-    <h2>El archivo familiar: recuerdos, testimonios y documentos por localizar</h2>
-    <div class="texto">
-      <p>
-        Esta historia se apoya sobre todo en fuentes orales. No publico los audios, las voces ni documentos privados de mi
-        familia, y no uso imágenes que puedan confundirse con fotografías familiares. Los testimonios pueden tener lagunas o
-        diferencias de recuerdo; por eso los contrasto entre sí y con otras fuentes.
-      </p>
-    </div>
-    <div class="rejilla dos">
-      <article class="fuente-oral">
-        <div class="cabecera"><span>Nota de voz · fuente oral</span><span>Noviembre de 2026</span></div>
-        <h3>Mi mamá</h3>
-        <blockquote>«Mis abuelos maternos venían de familias con tierras feudales, ganadería y, sobre todo, minería, carbón…»</blockquote>
-        <dl>
-          <dt>Temas</dt><dd>Origen en Amagá y Titiribí, empleo público, filiación política, educación de los hijos en las dos ramas, comercio en Cúcuta, la finca.</dd>
-          <dt>Interpretación histórica</dt><dd>Aporta la estructura de la historia y la comparación entre las dos ramas.</dd>
-          <dt>Limitaciones</dt><dd>Habla de hechos anteriores a su nacimiento, transmitidos por otros; hay ambigüedades de parentesco y fechas aproximadas.</dd>
-        </dl>
-      </article>
-      <article class="fuente-oral">
-        <div class="cabecera"><span>Nota de voz · fuente oral</span><span>Noviembre de 2026</span></div>
-        <h3>Mi abuela materna</h3>
-        <blockquote>«Yo nací en 1947 en Medellín.» · «La mina la dejaron, se adueñaron de la finca.»</blockquote>
-        <dl>
-          <dt>Temas</dt><dd>Nacimiento, llegada de la familia a Medellín, la finca y la mina, el origen de mi abuelo en Cúcuta.</dd>
-          <dt>Interpretación histórica</dt><dd>Es la testigo más cercana: fija la fecha que sitúa a la familia en Medellín y aporta una versión sobre la finca.</dd>
-          <dt>Limitaciones</dt><dd>Recuerdos de la infancia y de hechos contados por sus padres; algunos detalles no los recuerda con certeza.</dd>
-        </dl>
-      </article>
-    </div>
-
-    <h3 class="subseccion">Documentos por localizar</h3>
-    <div class="rejilla">
-      <div class="tarjeta"><h4>Para el origen y el traslado</h4><ul class="por-localizar"><li>Partidas de bautismo en las parroquias de Amagá y Titiribí.</li><li>Registros civiles de los hermanos de mi abuela.</li></ul></div>
-      <div class="tarjeta"><h4>Para la tierra y la mina</h4><ul class="por-localizar"><li>Escrituras y folios de matrícula inmobiliaria (notarías y oficina de registro).</li><li>Títulos o contratos mineros (Archivo Histórico de Antioquia).</li></ul></div>
-      <div class="tarjeta"><h4>Para el empleo público</h4><ul class="por-localizar"><li>Decretos de nombramiento en la Gaceta Departamental de Antioquia.</li><li>Nóminas y actas de los concejos municipales.</li></ul></div>
-      <div class="tarjeta"><h4>Para el comercio en Cúcuta</h4><ul class="por-localizar"><li>Registro mercantil de la Cámara de Comercio de Cúcuta.</li><li>Archivos notariales y prensa local de 1910–1930.</li></ul></div>
-      <div class="tarjeta"><h4>Para la educación</h4><ul class="por-localizar"><li>Diplomas y actas de grado familiares.</li><li>Registros de matrícula de las universidades.</li></ul></div>
-    </div>
-
-    <div class="recreacion">
-      <span class="nivel nivel-d">D · Recreación narrativa</span><br>
-      Una mañana de los años treinta, un tren de la Sección Amagá baja hacia Medellín cargado de carbón. En el mismo vagón de
-      pasajeros podría viajar un funcionario municipal, con papeles para la gobernación. Esta escena reconstruye condiciones
-      posibles de la época y no corresponde a un recuerdo documentado de mi familia.
-    </div>
-  </div>
-</section>
-
-<!-- ============ 9. SOBRE LOS DATOS ============ -->
-<section id="datos">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">9 · Sobre los datos</span>
-    <h2>De dónde salen los números</h2>
-    <div class="texto">
-      <p>
-        Los resultados cuantitativos son elaboración propia: localicé tablas oficiales y académicas, transcribí las cifras a
-        archivos CSV con la fuente de cada observación, comprobé su consistencia y calculé los indicadores con un script
-        reproducible. No digitalicé tomos censales completos; lo que no pude cotejar con la fuente original está marcado como tal.
-      </p>
-    </div>
-    <div class="ficha">
-      <dl>
-        <dt>Origen</dt>
-        <dd>DANE (población censada de Medellín, participación en Antioquia, alfabetismo); Anuario Estadístico de Antioquia 2014 (cabecera y resto, 1964 y 1973); Ocampo (2023, cuadro 1.1); Ramírez y Téllez (2006, cuadro 3); fuente secundaria para 1938 y 1951 en Amagá y Titiribí; testimonios familiares.</dd>
-        <dt>Cobertura</dt>
-        <dd>Municipios de Medellín, Amagá y Titiribí (censos de 1938, 1951, 1964 y 1973); departamento de Antioquia (participación de Medellín 1951–1973; presupuesto educativo 1932–1936); total nacional (alfabetismo 1964–2005; macroeconomía 1925–1945).</dd>
-        <dt>Variables</dt>
-        <dd>Población total; población en cabecera; participación de Medellín en el departamento; alfabetismo por sexo; PIB, inflación, exportaciones, importaciones y reservas; distribución rural/urbana del gasto en primaria; recuentos familiares de hijos universitarios.</dd>
-        <dt>Medición</dt>
-        <dd>Personas (población); % en cabecera = cabecera / total × 100; índice = población / población de 1938 × 100; tasa anual = (P<sub>1</sub>/P<sub>0</sub>)<sup>1/t</sup> − 1, con t medido en años exactos entre las fechas de los censos; alfabetismo como % de la población de 15 años y más; brecha = hombres − mujeres en puntos porcentuales; dólares corrientes.</dd>
-      </dl>
-      <dl>
-        <dt>Limitaciones</dt>
-        <dd>Mezcla de cifras censadas y ajustadas por cobertura (marcadas con símbolos distintos); cifras de 1938 y 1951 para Amagá y Titiribí tomadas de fuente secundaria; sin datos de cabecera para 1938 y 1951; «cabecera» es una categoría censal; el alfabetismo es nacional, no antioqueño; los censos de la época tienen problemas conocidos de omisión; no sé si los límites de Amagá o Titiribí cambiaron entre 1938 y 1973.</dd>
-        <dt>Datos faltantes</dt>
-        <dd>Alfabetismo de Antioquia por sexo y zona; población de Cúcuta; cifras de producción de carbón de Amagá; matrícula universitaria por sexo comparable para 1930–1970. Preferí no graficarlos antes que usar cifras no verificadas. Las cifras nacionales de alfabetismo por sexo y zona para 1951 y 1964 del documento Conpes 1016 del DNP no se pudieron consultar en la fuente original y no se usan.</dd>
-        <dt>Reproducibilidad</dt>
-        <dd>Datos crudos en <code>datos/*.csv</code>, fuentes en <code>datos/fuentes.csv</code>, diccionario en <code>datos/diccionario_variables.csv</code>. El script <code>scripts/procesar_datos.py</code> calcula los indicadores y genera <code>datos/datos.js</code>, que alimenta todas las gráficas y las cifras calculadas de esta página.</dd>
-      </dl>
-    </div>
-    <h3 class="subseccion">Procesamiento</h3>
-    <ol class="pasos">
-      <li>Búsqueda de las fuentes: publicaciones del DANE, anuario de la Gobernación de Antioquia, repositorio del Banco de la República. La Biblioteca Virtual del DANE no respondió durante la investigación, por lo que no se consultaron los tomos censales de 1938 y 1951.</li>
-      <li>Transcripción de cada cifra a CSV, con municipio, código DANE, censo, fecha del censo, variable, tipo de cifra y fuente.</li>
-      <li>Comprobaciones automáticas: cabecera menor que el total; el total de alfabetismo entre los valores de hombres y mujeres; porcentajes rural + urbano = 100.</li>
-      <li>Decisión de serie: población censada cuando existe; ajustada cuando no, señalada en la gráfica. Comparación explícita del efecto del ajuste en Medellín.</li>
-      <li>Cálculo de índices, cambios absolutos, tasas anuales con intervalos exactos entre censos, porcentajes en cabecera y brechas de género.</li>
-      <li>Los años sin dato quedan vacíos: no interpolo.</li>
+    <h3 class="subtitulo revelar">Medio siglo en una línea</h3>
+    <ol class="cronologia revelar" id="cronologia">
+      <li><span class="fecha">1909–1914</span><div><strong>El tren llega a Amagá y a Medellín</strong><p>Obras del Ferrocarril de Amagá desde 1909; el de Antioquia entra al valle de Aburrá en marzo de 1914.</p></div></li>
+      <li class="cucuta"><span class="fecha">c. 1910–1920</span><div><strong>Un comerciante de telas en Cúcuta</strong><p>Un antepasado de la rama cucuteña prospera con el comercio (fecha aproximada).</p></div></li>
+      <li><span class="fecha">1923–1928</span><div><strong>La danza de los millones</strong><p>Auge del café y del crédito externo; los ferrocarriles se endeudan.</p></div></li>
+      <li><span class="fecha">1929</span><div><strong>Túnel de La Quiebra y crisis mundial</strong><p>La línea a Puerto Berrío se completa justo antes de la Gran Depresión.</p></div></li>
+      <li><span class="fecha">1930–1931</span><div><strong>República Liberal y control de cambios</strong><p>Cambia el partido en el poder; recorte de salarios públicos; control de cambios el 24 de septiembre de 1931.</p></div></li>
+      <li><span class="fecha">1933</span><div><strong>Bachillerato para mujeres</strong><p>El Decreto 227 permite a los colegios de señoritas otorgar el título de bachiller.</p></div></li>
+      <li><span class="fecha">1936</span><div><strong>Ley 200 de tierras</strong><p>Liga la propiedad rural a su explotación económica.</p></div></li>
+      <li class="cucuta"><span class="fecha">1943</span><div><strong>Nace Miguel en Cúcuta</strong><p>Mi abuelo.</p></div></li>
+      <li><span class="fecha">1945</span><div><strong>Primer Censo Industrial</strong><p>Medellín concentra el 17,3 % del empleo industrial del país.</p></div></li>
+      <li class="familia"><span class="fecha">1947</span><div><strong>Nace Gloria en Medellín</strong><p>Mi abuela. La familia ya vive en la ciudad.</p></div></li>
+      <li><span class="fecha">1948</span><div><strong>Asesinato de Gaitán</strong><p>Se intensifica La Violencia, que tenía raíces anteriores.</p></div></li>
+      <li><span class="fecha">1957–1958</span><div><strong>Voto femenino y Frente Nacional</strong><p>Las mujeres votan por primera vez el 1 de diciembre de 1957; comienza el reparto de cargos entre los dos partidos.</p></div></li>
+      <li class="familia"><span class="fecha">años 50–60</span><div><strong>Los hermanos de Gloria van a la universidad</strong><p>Años aproximados, deducidos de la edad de Gloria.</p></div></li>
+      <li><span class="fecha">1967</span><div><strong>Decreto-Ley 444</strong><p>Devaluación gradual y promoción de exportaciones.</p></div></li>
+      <li><span class="fecha">1973</span><div><strong>Medellín supera el millón</strong><p>1.071.252 habitantes censados.</p></div></li>
     </ol>
-    <div class="tabla-contenedor">
-      <table>
-        <caption>Archivos de datos del proyecto</caption>
-        <thead><tr><th>Archivo</th><th>Contenido</th><th>Fuente</th></tr></thead>
+    <div class="leyenda-crono"><span>Colombia y Antioquia</span><span class="f">Rama antioqueña</span><span class="c">Rama cucuteña</span></div>
+  </div>
+</section>
+
+<!-- ================= CAPÍTULO 3 ================= -->
+<section class="capitulo" id="medellin">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">3</span>
+      <div><span class="rotulo">Capítulo 3 · Medellín, 1947</span><h2>La familia se establece en la ciudad</h2></div>
+    </header>
+
+    <div class="retrato-protagonista revelar">
+      <figure class="foto album inclinada">
+        <button class="boton-ampliar" type="button" data-foto="gloria"><img src="assets/archivo-familiar/03-gloria-retrato.jpeg" alt="Retrato a color de Gloria, una mujer de cabello castaño rizado con blusa de flores, recostada sobre un cojín al aire libre." width="590" height="477"></button>
+        <figcaption>Gloria, mi abuela, nacida en Medellín en 1947. Su historia familiar conecta Amagá y Titiribí con la transformación urbana de Medellín.<small>Archivo familiar · fecha de la fotografía por confirmar</small></figcaption>
+      </figure>
+      <div class="lectura">
+        <p class="cita-grande" style="margin-top:0">«Yo nací en 1947 en Medellín».<cite>Mi abuela Gloria, nota de voz, noviembre de 2026</cite></p>
+        <p>Es la frase más corta de las entrevistas y la más útil. Cuando Gloria nació, su familia ya estaba instalada en la ciudad; ella creció en el barrio Laureles. No sé en qué año exacto llegaron sus padres desde el suroeste ni qué los decidió, pero sí sé que lo hicieron antes de 1947: antes de que Medellín duplicara su población entre 1951 y 1964.</p>
+      </div>
+    </div>
+
+    <div class="dos-columnas subtitulo revelar">
+      <div class="lectura">
+        <h3>Un sueldo del Estado</h3>
+        <p>En la casa de Gloria el sustento no venía de una fábrica. Mi mamá recuerda que un antepasado se dedicó a la política y al empleo público: fue alcalde y tesorero en municipios de Antioquia, un trabajo que en esa época «era muy bien pagado». La familia recuerda también a un antepasado liberal y a otro conservador, que fue capitán de policía.</p>
+        <p>Para entender qué significaba ese empleo hay que recordar cómo funcionaba el Estado. Los alcaldes no se elegían: los nombraba el gobernador, que a su vez dependía del Gobierno nacional; la elección popular de alcaldes solo llegó con la reforma de 1986. Un cargo municipal era a la vez sueldo, prestigio y pertenencia a una red política. Correa encuentra lo mismo en el ferrocarril: sus directivos pasaban por cargos públicos, y la empresa llevaba gratis a los empleados públicos que viajaban por asuntos oficiales <a class="ref" href="#ref-correa2012">Correa, 2012, pp. 161 y 164</a>.</p>
+      </div>
+      <div class="lectura">
+        <p>En 1930 terminó la Hegemonía Conservadora y comenzó la República Liberal, que duró hasta 1946. La competencia entre liberales y conservadores venía del siglo XIX: Safford y Palacios describen un país fragmentado en regiones y dividido por los partidos <a class="ref" href="#ref-safford2002">Safford y Palacios, 2002</a>, y Mazzuca y Robinson muestran que, entre 1850 y 1950, los dos partidos buscaron reglas para repartirse el poder y evitar la guerra: primero el «voto incompleto» de 1905 y luego la representación proporcional <a class="ref" href="#ref-mazzuca2009">Mazzuca y Robinson, 2009</a>. Después de La Violencia, el Frente Nacional (1958–1974) llevó esa lógica a la burocracia y repartió por mitades los cargos públicos.</p>
+        <p>En una ciudad que se diversificaba, con más oficinas, bancos, colegios y comercio, el Estado era otra puerta al trabajo urbano. La rama antioqueña de mi familia entró por esa puerta.</p>
+      </div>
+    </div>
+
+    <div class="mosaico revelar">
+      <figure class="foto historica">
+        <button class="boton-ampliar" type="button" data-foto="junin"><img src="assets/lugares/carrera-junin-1923.jpg" alt="Calle del centro de Medellín en 1923 con edificios de varios pisos y una iglesia al fondo." loading="lazy" width="1280" height="808"></button>
+        <figcaption><span class="mono">Fotografía histórica · 1923</span>Carrera Junín, en el centro de Medellín. Foto: Gonzalo Escovar Gaviria, dominio público (Biblioteca Pública Piloto).</figcaption>
+      </figure>
+      <figure class="foto historica">
+        <button class="boton-ampliar" type="button" data-foto="feria"><img src="assets/lugares/feria-ganado-medellin-1920.jpg" alt="Feria de ganado en Medellín hacia 1920, con reses y compradores en un corral amplio." loading="lazy" width="1280" height="817"></button>
+        <figcaption><span class="mono">Fotografía histórica · c. 1920</span>Feria de ganado en Medellín: el campo y la ciudad seguían conectados. Foto: Gonzalo Escovar Gaviria, dominio público.</figcaption>
+      </figure>
+    </div>
+
+    <div class="lectura revelar">
+      <h3>La finca que quedó atrás</h3>
+      <p>Mientras la familia se instalaba en Medellín, la finca del suroeste dejó de ser suya. Gloria recuerda que «se adueñaron de la finca»; mi mamá cree que, si era la de su abuelo, se vendió a un tercero. Pueden ser dos fincas distintas o el mismo hecho contado desde dos generaciones. La Ley 200 de 1936 y La Violencia cambiaron la propiedad rural en muchas regiones, pero nada en la memoria de la familia las relaciona con esta finca, y la Ley 200 ni siquiera regulaba las minas: su artículo 5 la limita a la propiedad «superficiaria» <a class="ref" href="#ref-ley200">Ley 200 de 1936</a>. Lo que la historia sí deja claro es el cambio de fondo: el patrimonio de la familia dejó de estar en la tierra y pasó a estar en la ciudad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPÍTULO 4 ================= -->
+<section class="capitulo bosque" id="cucuta">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">4</span>
+      <div><span class="rotulo">Capítulo 4 · Cúcuta</span><h2>La otra rama: comercio en la frontera</h2></div>
+    </header>
+
+    <div class="pareja-retratos revelar">
+      <figure class="foto album inclinada-d">
+        <button class="boton-ampliar" type="button" data-foto="padremiguel"><img src="assets/archivo-familiar/01-padre-de-miguel-nino.jpeg" alt="Fotografía antigua en sepia de un niño de traje oscuro y corbatín, con un lazo blanco en el brazo, de pie en un estudio." loading="lazy" width="577" height="914"></button>
+        <figcaption>El padre de mi abuelo Miguel, retratado durante su infancia.<small>Archivo familiar · fecha y lugar por confirmar</small></figcaption>
+      </figure>
+      <figure class="foto album">
+        <button class="boton-ampliar" type="button" data-foto="miguel"><img src="assets/archivo-familiar/02-miguel-retrato.jpeg" alt="Retrato formal en blanco y negro de Miguel, un hombre de traje oscuro y corbata estampada, en un marco plateado." loading="lazy" width="738" height="1118"></button>
+        <figcaption>Miguel, mi abuelo, nacido en Cúcuta en 1943.<small>Archivo familiar · fecha de la fotografía por confirmar</small></figcaption>
+      </figure>
+    </div>
+
+    <div class="dos-columnas revelar">
+      <div class="lectura">
+        <p class="entradilla">Mi abuelo Miguel nació en Cúcuta en 1943. Su familia no recuerda fincas ni minas, sino tiendas, telas y negocios propios.</p>
+        <p>Según mi mamá, un antepasado de esta rama fue un comerciante de telas próspero en las primeras décadas del siglo XX, hacia 1910–1920. Tuvo varios negocios, y algunos los siguieron sus descendientes. La familia recuerda además antepasados que llegaron de España y de Italia. No sé con exactitud qué parentesco tenía el comerciante con el niño de la fotografía, así que no los presento como la misma persona.</p>
+      </div>
+      <div class="lectura">
+        <p>El comercio de telas en Cúcuta tenía sentido económico. La ciudad estaba aislada del interior por la cordillera, pero conectada con el mar por el río Zulia y el puerto venezolano de Maracaibo. En el siglo XIX, «dos tercios de la mercancía extranjera que entró a Santander llegó por Cúcuta», y los textiles estaban entre las importaciones principales <a class="ref" href="#ref-arevalo">Arévalo Meneses</a>. Un comerciante de telas estaba en el centro de esa economía de frontera.</p>
+        <p>En 1945 Norte de Santander tenía 250 empresas industriales frente a las 1.287 de Antioquia <a class="ref" href="#ref-jmr2016">Jaramillo-Echeverri et al., 2016</a>. Cúcuta no era una ciudad de fábricas: era una ciudad de comercio.</p>
+      </div>
+    </div>
+
+    <figure class="foto historica ancha revelar" style="max-width:640px">
+      <button class="boton-ampliar" type="button" data-foto="bus"><img src="assets/lugares/bus-cucuta-1920.jpg" alt="Bus de pasajeros abierto, construido sobre un camión Ford, con mujeres y hombres a bordo en una calle arbolada de Cúcuta hacia 1920." loading="lazy" width="450" height="279"></button>
+      <figcaption><span class="mono">Fotografía histórica · c. 1920</span>Bus de pasajeros en Cúcuta, sobre un chasís Ford TT. Dominio público según Wikimedia Commons (procedencia: CúcutaNuestra.com). Fotografía regional, no del archivo familiar.</figcaption>
+    </figure>
+
+    <div class="lectura revelar">
+      <h3>Un negocio que se hereda</h3>
+      <p>La diferencia con la rama antioqueña es de fondo. Un cargo público no se hereda; un negocio sí. El comercio permite pasar a la siguiente generación capital, clientes, proveedores y conocimiento del oficio. En esa familia, además, la educación pesó mucho: siete hijos fueron a la universidad, y entre ellos había mujeres que estudiaron contaduría y derecho. Para una familia de comerciantes, una contadora o una abogada eran saberes útiles para administrar y proteger lo que se había construido.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPÍTULO 5 ================= -->
+<section class="capitulo papel" id="universidad">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">5</span>
+      <div><span class="rotulo">Capítulo 5 · Educación, género y movilidad</span><h2>¿Quién podía ir a la universidad?</h2></div>
+    </header>
+
+    <div class="texto-y-foto revelar">
+      <div class="lectura">
+        <p class="entradilla">«En el caso de mi familia materna, de cuatro hijos, dos fueron universitarios y las dos mujeres, pues, fueron amas de casa».</p>
+        <p class="fuente-de-relato">Mi mamá, nota de voz, noviembre de 2026</p>
+        <p>En la casa de Gloria, los dos hombres fueron a la universidad; ella y su hermana se dedicaron al hogar. En la familia de Miguel, los siete hijos estudiaron una carrera, también las mujeres. Las dos ramas vivieron en el mismo país y en décadas cercanas, y aun así tomaron decisiones opuestas sobre la educación de sus hijas.</p>
+        <p>Que Gloria fuera ama de casa no significa que no estudiara. El testimonio no menciona universidad para ella, pero tampoco dice nada sobre la primaria o el bachillerato. Saber leer, terminar el colegio y tener un título universitario son escalones distintos, y conviene no mezclarlos.</p>
+      </div>
+      <figure class="foto historica">
+        <button class="boton-ampliar" type="button" data-foto="udea"><img src="assets/lugares/universidad-antioquia-1928.jpg" alt="Fachada del Edificio San Ignacio de la Universidad de Antioquia en 1928, con torre de reloj y árboles al frente." loading="lazy" width="494" height="357"></button>
+        <figcaption><span class="mono">Fotografía histórica · 1928</span>Edificio San Ignacio de la Universidad de Antioquia, en Medellín. Foto: Melitón Rodríguez, dominio público (Archivo Fotográfico Biblioteca Pública Piloto).</figcaption>
+      </figure>
+    </div>
+
+    <div class="dos-columnas subtitulo revelar">
+      <div class="lectura">
+        <h3>Lo que permitía la ley</h3>
+        <p>Desde el 2 de febrero de 1933, el Decreto 227 extendió a «la enseñanza femenina» la reforma de la secundaria y permitió que los colegios de señoritas dieran el título de bachiller si seguían el plan de estudios de los colegios de hombres <a class="ref" href="#ref-d227">Decreto 227 de 1933</a>. Como la universidad exigía el bachillerato completo, ese decreto abrió el camino legal. En 1957 las mujeres votaron por primera vez.</p>
+        <p>Gloria tenía 17 años en 1964. Para entonces ninguna ley le impedía estudiar una carrera. La diferencia estuvo en otra parte.</p>
+      </div>
+      <div class="lectura">
+        <h3>Lo que pasaba en el país</h3>
+        <p>Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo muestran que el nivel de vida de los colombianos mejoró mucho en el siglo XX, «especialmente en las mujeres»: primero por el ingreso y, desde los años cincuenta, por la inversión pública en educación y salud <a class="ref" href="#ref-jmr2019">Jaramillo-Echeverri et al., 2019</a>. Pero la brecha entre hombres y mujeres en la universidad solo empezó a cerrarse en los años ochenta. Ramírez y Téllez documentan que la escuela se expandió muy despacio hasta 1950: el analfabetismo bajó del 66 % en 1900 al 38 % en 1950, y después los indicadores crecieron «a un ritmo nunca antes visto» <a class="ref" href="#ref-ramirez2006">Ramírez y Téllez, 2006</a>.</p>
+      </div>
+    </div>
+
+    <div class="grafica revelar" id="caja-alfabetismo">
+      <span class="antetitulo">Gráfica 5 · Colombia, censos de 1951 y 1964</span>
+      <h3>Aprender a leer no significaba llegar a la universidad</h3>
+      <p class="bajada-graf">Alfabetización por sexo en Colombia, 1951–1964, población mayor de siete años. Son datos nacionales, no de Antioquia.</p>
+      <div class="controles" role="group" aria-label="Zona">
+        <button type="button" data-zona="Total nacional" aria-pressed="true">Total nacional</button>
+        <button type="button" data-zona="Urbano" aria-pressed="false">Urbano</button>
+        <button type="button" data-zona="Rural" aria-pressed="false">Rural</button>
+      </div>
+      <div class="lienzo"><canvas id="graficaAlfabetismo" role="img" aria-label="Gráfica de barras de la alfabetización de hombres y mujeres en Colombia en 1951 y 1964"></canvas></div>
+      <p class="fuente">Fuente: <a href="#ref-dnp1016">Departamento Nacional de Planeación, documento 1016</a>, cuadros B.6 (1 y 2), con base en los censos de 1951 y 1964. Brecha = hombres − mujeres, en puntos porcentuales. Datos: <a href="datos/alfabetismo_colombia_7mas_dnp.csv">alfabetismo_colombia_7mas_dnp.csv</a>. Como contraste, el DANE reporta para la población de 15 años y más un 75,0 % de hombres y un 71,1 % de mujeres alfabetos en 1964, y un 83,1 % y un 81,1 % en 1973 (<a href="#ref-dane2005edu">DANE</a>; <a href="datos/alfabetismo_colombia_15mas.csv">datos</a>).</p>
+      <details class="tabla-datos"><summary>Ver la tabla</summary><div class="tabla-contenedor" id="tabla-alfabetismo"></div></details>
+    </div>
+    <div class="interpretacion revelar">
+      <div><h4>Lo que muestra</h4><p>La brecha nacional entre hombres y mujeres pasó de <span data-clave="brecha_dnp_1951"></span> puntos en 1951 a <span data-clave="brecha_dnp_1964"></span> en 1964. La distancia grande no era de género sino de lugar: en 1964, en el campo, solo la mitad sabía leer; en las ciudades, más de tres de cada cuatro.</p></div>
+      <div><h4>Para mi familia</h4><p>Gloria creció en una ciudad donde hombres y mujeres aprendían a leer casi por igual. La diferencia en su casa no estuvo en la alfabetización sino en la universidad.</p></div>
+      <div><h4>Lo que no muestra</h4><p>La alfabetización no mide quién entraba a la universidad. Que la brecha básica casi desapareciera no significa que las mujeres tuvieran el mismo acceso a la educación superior.</p></div>
+    </div>
+
+    <div class="grafica revelar" id="caja-presupuesto">
+      <span class="antetitulo">Gráfica 6 · Antioquia, 1932–1936</span>
+      <h3>La escuela estaba en la ciudad</h3>
+      <p class="bajada-graf">Reparto del presupuesto departamental de educación primaria entre zona rural y zona urbana.</p>
+      <div class="lienzo bajo"><canvas id="graficaPresupuesto" role="img" aria-label="Gráfica de barras apiladas del presupuesto de primaria de Antioquia entre zona rural y urbana, 1932 a 1936"></canvas></div>
+      <p class="fuente">Fuente: <a href="#ref-ramirez2006">Ramírez y Téllez (2006)</a>, cuadro 3, con base en las Memorias del Ministro de Instrucción Pública y el Anuario General de Estadística. Datos: <a href="datos/presupuesto_educacion_primaria_antioquia.csv">presupuesto_educacion_primaria_antioquia.csv</a>.</p>
+      <details class="tabla-datos"><summary>Ver la tabla</summary><div class="tabla-contenedor" id="tabla-presupuesto"></div></details>
+    </div>
+    <div class="lectura revelar" style="margin-top:-1rem">
+      <p>Aunque la mayoría de los antioqueños vivía en el campo, el departamento destinaba en promedio solo el <span data-clave="presupuesto_rural"></span> % del dinero de la primaria a las zonas rurales, y Ramírez y Téllez concluyen que la calidad de la educación rural era «bastante inferior». Vivir en Medellín y no en Amagá o Titiribí significaba tener mejores escuelas cerca: la ciudad también era una inversión en la educación de los hijos.</p>
+    </div>
+
+    <h3 class="subtitulo revelar">Dos familias, dos decisiones</h3>
+    <div class="ramas revelar" id="ramas"></div>
+
+    <div class="dos-columnas revelar">
+      <div class="lectura">
+        <h3>La educación como inversión</h3>
+        <p>Pagar una carrera es invertir en capital humano: se gasta hoy esperando ingresos y oportunidades mañana. Una familia decide cuánto invertir según lo que espera de ese título. En la Colombia de los años cincuenta, el mercado laboral y las normas sociales esperaban que una mujer casada dejara de trabajar fuera de la casa. Para muchas familias, un título universitario para una hija parecía rendir menos que para un hijo. No sé si mi familia lo pensó en esos términos, pero el resultado se parece mucho a esa lógica.</p>
+      </div>
+      <div class="lectura">
+        <h3>Por qué la otra rama fue distinta</h3>
+        <p>En la familia de Miguel la cuenta salió diferente, y hay varias razones que se suman. Un negocio familiar necesitaba gente formada en contaduría y derecho, y podía dar trabajo a las hijas. Los hijos de esa rama pudieron estudiar en años distintos a los de la casa de Gloria, cuando estudiar ya era más común para las mujeres. Y cada familia tenía sus propias ideas sobre lo que una mujer debía hacer. No fue que una ciudad fuera «más moderna» que la otra: fueron decisiones de hogares concretos, en contextos económicos distintos.</p>
+      </div>
+    </div>
+
+    <h3 class="subtitulo revelar">Dos trayectorias recordadas</h3>
+    <p class="fuente-de-relato revelar">Rama antioqueña</p>
+    <div class="trayectoria revelar">
+      <div><strong>Tierra y carbón</strong><span>Fincas, ganado y minas en Amagá y Titiribí</span></div>
+      <div><strong>Medellín</strong><span>La familia ya vive en la ciudad en 1947</span></div>
+      <div><strong>Empleo público</strong><span>Un antepasado alcalde y tesorero</span></div>
+      <div><strong>Universidad</strong><span>Los dos hijos hombres</span></div>
+    </div>
+    <p class="fuente-de-relato revelar">Rama cucuteña</p>
+    <div class="trayectoria cuc revelar">
+      <div><strong>Inmigración</strong><span>Antepasados de España e Italia</span></div>
+      <div><strong>Comercio de telas</strong><span>Cúcuta, c. 1910–1920</span></div>
+      <div><strong>Negocios familiares</strong><span>Continuados por los descendientes</span></div>
+      <div><strong>Universidad</strong><span>Siete hijos, incluidas las mujeres</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPÍTULO 6 ================= -->
+<section class="capitulo" id="documentos">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">6</span>
+      <div><span class="rotulo">Capítulo 6 · Memoria, fotografías y datos</span><h2>Lo que muestran los documentos</h2></div>
+    </header>
+    <div class="dos-columnas revelar">
+      <div class="lectura">
+        <p class="entradilla">Esta historia está hecha con tres tipos de fuentes, y cada una ve cosas que las otras no ven.</p>
+        <p><strong>Las entrevistas.</strong> En noviembre de 2026 les pedí a mi mamá y a mi abuela Gloria que me contaran de dónde venía la familia, de qué vivía y quiénes estudiaron. Sus respuestas, en notas de voz, son la columna de esta historia. Mi mamá cuenta hechos anteriores a su nacimiento, así que algunas fechas son aproximadas y algunos parentescos no están claros; Gloria recuerda sobre todo su propia vida y lo que le contaron sus padres.</p>
+        <p><strong>Las fotografías.</strong> Las cuatro fotos del archivo familiar ponen cara a la historia. No traen fechas ni lugares escritos, así que las presento con lo que sabemos de cada persona.</p>
+      </div>
+      <div class="lectura">
+        <p><strong>Los datos.</strong> Los censos, los cuadros industriales y las cifras educativas muestran lo que ningún recuerdo puede ver: el tamaño de los cambios. Pero no dicen nada de una familia en particular.</p>
+        <p>La tabla resume qué parte de la historia viene de cada fuente. Lo que todavía no está documentado (el año del traslado, los cargos exactos, el destino de la finca) lo reúno en la nota de metodología, con los archivos que habría que consultar.</p>
+      </div>
+    </div>
+    <div class="tabla-contenedor revelar">
+      <table class="matriz">
+        <caption class="solo-lectores">Contraste entre memoria familiar y fuentes documentales</caption>
+        <thead><tr><th scope="col">Lo que recuerda la familia</th><th scope="col">Quién lo cuenta</th><th scope="col">Lo que dicen las otras fuentes</th><th scope="col">Tipo</th></tr></thead>
         <tbody>
-          <tr><td><a href="datos/censos_poblacion.csv">censos_poblacion.csv</a></td><td>Población total y en cabecera, censada y ajustada</td><td>DANE; Anuario de Antioquia; fuente secundaria</td></tr>
-          <tr><td><a href="datos/indicadores_poblacion.csv">indicadores_poblacion.csv</a></td><td>Índices, tasas anuales y % en cabecera (calculados)</td><td>Elaboración propia</td></tr>
-          <tr><td><a href="datos/participacion_medellin_antioquia.csv">participacion_medellin_antioquia.csv</a></td><td>Peso de Medellín en Antioquia, 1951–1973</td><td>DANE</td></tr>
-          <tr><td><a href="datos/alfabetismo_colombia_15mas.csv">alfabetismo_colombia_15mas.csv</a></td><td>Alfabetismo por sexo, 15 años y más</td><td>DANE</td></tr>
-          <tr><td><a href="datos/indicadores_alfabetismo.csv">indicadores_alfabetismo.csv</a></td><td>Brecha de género (calculada)</td><td>Elaboración propia</td></tr>
-          <tr><td><a href="datos/macro_colombia_1925_1945.csv">macro_colombia_1925_1945.csv</a></td><td>PIB, inflación, comercio y reservas</td><td>Ocampo (2023)</td></tr>
-          <tr><td><a href="datos/presupuesto_educacion_primaria_antioquia.csv">presupuesto_educacion_primaria_antioquia.csv</a></td><td>Gasto en primaria rural/urbano, Antioquia</td><td>Ramírez y Téllez (2006)</td></tr>
-          <tr><td><a href="datos/familia_educacion.csv">familia_educacion.csv</a></td><td>Recuentos familiares de hijos universitarios</td><td>Testimonios</td></tr>
+          <tr><td>Origen en Amagá y Titiribí, con fincas, ganado y carbón</td><td>Mi mamá y Gloria</td><td>Amagá era la cuenca carbonífera unida a Medellín por tren desde 1914; en 1964 tres de cada cuatro habitantes de ambos municipios vivían fuera de la cabecera.</td><td><span class="estado mem">Memoria</span> <span class="estado ctx">Contexto</span></td></tr>
+          <tr><td>Gloria nació en Medellín en 1947 y creció en Laureles</td><td>Gloria y mi mamá</td><td>Medellín tenía 168.266 habitantes en 1938 y 358.189 en 1951.</td><td><span class="estado mem">Memoria</span></td></tr>
+          <tr><td>Un antepasado fue alcalde y tesorero</td><td>Mi mamá</td><td>Los alcaldes eran nombrados por el gobernador; el Estado recortó salarios en 1931.</td><td><span class="estado mem">Memoria</span> <span class="estado ctx">Contexto</span></td></tr>
+          <tr><td>La finca pasó a otras manos (dos versiones)</td><td>Gloria y mi mamá</td><td>No hay documento; la Ley 200 de 1936 no regulaba el subsuelo.</td><td><span class="estado mem">Memoria</span></td></tr>
+          <tr><td>Comercio de telas en Cúcuta, c. 1910–1920</td><td>Mi mamá</td><td>Cúcuta importaba textiles vía Maracaibo; en 1945 tenía poca industria.</td><td><span class="estado mem">Memoria</span> <span class="estado ctx">Contexto</span></td></tr>
+          <tr><td>Antioquia: 2 de 4 hijos universitarios, los hombres</td><td>Mi mamá</td><td>La brecha de género en la universidad duró hasta los años ochenta.</td><td><span class="estado mem">Memoria</span> <span class="estado ctx">Contexto</span></td></tr>
+          <tr><td>Cúcuta: 7 de 7 hijos universitarios, incluidas mujeres</td><td>Mi mamá</td><td>Sin documento familiar.</td><td><span class="estado mem">Memoria</span></td></tr>
+          <tr><td>Medellín se multiplicó por seis entre 1938 y 1973</td><td>—</td><td>Censos del DANE.</td><td><span class="estado doc">Documento</span></td></tr>
         </tbody>
       </table>
     </div>
+    <div class="lectura revelar" style="font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.45;border-left:3px solid var(--ocre);padding-left:1.2rem;margin-top:2.5rem">
+      <span class="mono" style="font-style:normal;display:block;color:var(--terracota);margin-bottom:.4rem">Recreación narrativa, no un recuerdo familiar</span>
+      Una mañana de los años treinta, un tren de la Sección Amagá baja hacia Medellín cargado de carbón. En el vagón de pasajeros viaja gratis un funcionario municipal con papeles para la gobernación. Así se movían, en esos años, el carbón y el Estado por la misma vía.
+    </div>
   </div>
 </section>
 
-<!-- ============ 10. CONCLUSIONES ============ -->
-<section id="conclusiones" class="alterna">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">10 · Conclusiones</span>
-    <h2>Lo que la familia y los datos cuentan juntos</h2>
-    <p class="conclusion-grande">La rama antioqueña de mi familia dejó la tierra y el carbón por la ciudad antes de la gran ola migratoria, y su ascenso educativo fue real pero desigual: llegó a los hijos, no a las hijas.</p>
-    <div class="rejilla dos">
-      <div class="hallazgo"><div class="n">1</div><h3>La economía regional se transformó</h3>
-        <p>El ferrocarril unió el suroeste con Medellín entre 1914 y 1929, bajó los costos de transporte y valorizó la tierra cerca de la vía (Correa, 2012). Tras la Gran Depresión, la industria protegida impulsó a la ciudad: Medellín se multiplicó por más de seis entre 1938 y 1973, mientras Titiribí terminó con menos población. La familia recuerda justamente ese paso de lo rural a lo urbano. No conocemos la causa exacta de su traslado, pero ocurrió dentro de este proceso y antes de su punto máximo.</p></div>
-      <div class="hallazgo"><div class="n">2</div><h3>La movilidad social tomó caminos diferentes</h3>
-        <p>La rama antioqueña recuerda el empleo público, una fuente de ingreso y prestigio ligada a las redes políticas y vulnerable a la crisis (Ocampo, 2023). La rama cucuteña recuerda el comercio privado y la continuidad de los negocios. Son dos formas distintas de acumular y transmitir oportunidades: un cargo no se hereda, un negocio sí.</p></div>
-      <div class="hallazgo"><div class="n">3</div><h3>El progreso educativo fue desigual</h3>
-        <p>Los datos nacionales muestran que la brecha de alfabetismo entre hombres y mujeres ya era pequeña en 1964 y desapareció hacia 1993, pero la brecha universitaria duró hasta los años ochenta (Jaramillo-Echeverri et al., 2019). En mi familia, la diferencia aparece en la universidad: en una rama solo estudiaron los hombres y en la otra también las mujeres. Once personas de dos ramas no permiten generalizar a Colombia.</p></div>
-      <div class="hallazgo"><div class="n">4</div><h3>La memoria necesita contrastarse</h3>
-        <p>Los testimonios revelan lo que los censos no registran: la importancia de una finca, de un empleo o de una decisión sobre qué hijos educar. Los datos agregados muestran tendencias que los recuerdos no pueden ver. La finca tiene dos versiones, las fechas son aproximadas y los cargos públicos no están documentados: la investigación debe distinguir lo que puede explicar de lo que sigue abierto.</p></div>
+<!-- ================= CAPÍTULO 7 ================= -->
+<section class="capitulo bosque" id="cierre">
+  <div class="envoltura">
+    <header class="encabezado-cap revelar">
+      <span class="numero" aria-hidden="true">7</span>
+      <div><span class="rotulo">Capítulo 7 · Conclusiones</span><h2>Lo que queda de esta historia</h2></div>
+    </header>
+    <div class="hallazgos">
+      <div class="hallazgo revelar"><div class="n">I</div><h3>Los mercados y la ciudad cambiaron las oportunidades</h3>
+        <p>El ferrocarril unió el suroeste con Medellín entre 1914 y 1929, abarató el transporte y valorizó la tierra cerca de la vía. Después de la crisis de 1929, la industria protegida hizo de Medellín la ciudad con más empleo industrial del país: el 72 % de las empresas antioqueñas de 1945 había nacido después de 1930. La ciudad se multiplicó por seis entre 1938 y 1973, mientras Titiribí perdía población. Las oportunidades se mudaron a la ciudad.</p></div>
+      <div class="hallazgo revelar"><div class="n">II</div><h3>La familia pasó de la tierra al trabajo urbano</h3>
+        <p>La rama antioqueña recuerda fincas, ganado y carbón; luego Medellín y un sueldo público. Cuando Gloria nació en 1947, ese paso ya estaba dado. El empleo en el Estado daba un ingreso regular y una red política, aunque la crisis de 1931 demostró que no era inmune. La finca que quedó atrás marca el cambio: el patrimonio familiar dejó la tierra.</p></div>
+      <div class="hallazgo revelar"><div class="n">III</div><h3>La universidad llegó distinto a hombres y mujeres</h3>
+        <p>En Colombia, la brecha de alfabetización entre hombres y mujeres era de 2,9 puntos en 1951 y de 1,1 en 1964; la de la universidad duró hasta los años ochenta. En la casa de Gloria estudiaron los hombres; en la de Miguel, también las mujeres. El negocio familiar, la época y las expectativas de cada hogar pesaron más que la ley, que desde 1933 permitía a las mujeres llegar al bachillerato.</p></div>
+      <div class="hallazgo revelar"><div class="n">IV</div><h3>Memoria, fotografías y censos se necesitan</h3>
+        <p>Las entrevistas cuentan lo que ningún censo registra: una finca, un cargo, una decisión sobre qué hijos educar. Las fotografías les ponen rostro. Los censos y los cuadros industriales muestran el tamaño del cambio. Juntas reconstruyen una historia que ninguna podría contar sola.</p></div>
     </div>
-    <div class="texto" style="margin-top:2rem">
-      <h3>Respuesta a la pregunta de investigación</h3>
-      <p>
-        La transición de la rama antioqueña desde las actividades rurales y mineras de Amagá y Titiribí hacia Medellín coincide
-        con la integración ferroviaria del suroeste y con el crecimiento urbano e industrial de Medellín, y su acceso a la
-        universidad coincide con la expansión educativa posterior a 1950. Esa coincidencia está bien documentada; la relación
-        causal en el caso de mi familia es plausible pero no demostrada. El acceso desigual entre hombres y mujeres no se
-        explica por la ley, que desde 1933 permitía el bachillerato femenino, sino por decisiones y expectativas dentro de los
-        hogares que los datos agregados solo pueden enmarcar, como muestra el contraste con la rama de Cúcuta.
-      </p>
-      <h3>Preguntas abiertas</h3>
-      <ul>
-        <li>¿En qué año exacto llegó la familia a Medellín y por qué?</li>
-        <li>¿Qué cargos tuvo el antepasado funcionario y en qué periodos?</li>
-        <li>¿Cuál de las versiones sobre la finca corresponde a qué propiedad?</li>
-        <li>¿Estudiaron las hijas de Cúcuta en los mismos años que los hijos de la rama antioqueña?</li>
-      </ul>
+    <div class="cierre">
+      <figure class="foto album revelar" style="color:var(--tinta)">
+        <button class="boton-ampliar" type="button" data-foto="nieta"><img src="assets/archivo-familiar/04-miguel-gloria-nieta.jpeg" alt="Fotografía a color de Miguel, con gafas y camisa a cuadros, y Gloria, con blusa estampada, junto a una bebé vestida de blanco." loading="lazy" width="586" height="833"></button>
+        <figcaption>Miguel y Gloria con una de sus nietas.<small>Archivo familiar · fecha y lugar por confirmar</small></figcaption>
+      </figure>
+      <div class="revelar">
+        <p class="reflexion">Empecé pensando que la historia económica de Colombia era una sola: el país se industrializó, se urbanizó y se educó. Escuchando a mi mamá y a mi abuela entendí que esos cambios llegaron distinto a cada casa, y a veces distinto a cada hijo dentro de la misma casa.</p>
+        <p class="reflexion">Gloria nació en una ciudad que crecía, en una época en que la ley ya le permitía estudiar, y su camino fue otro que el de sus hermanos. Miguel venía de una familia de comerciantes donde estudiaron todos. En esta foto están juntos con una de sus nietas, que creció en un país donde ir a la universidad ya era normal para una mujer. Los cambios que estudiamos con censos y lecturas también son, al final, la historia de nuestras propias familias.</p>
+      </div>
     </div>
-    <p class="reflexion">
-      Al empezar, pensaba que la historia económica de Colombia era una sola: el país se industrializó, se urbanizó y se educó.
-      Al escuchar a mi mamá y a mi abuela entendí que esas transformaciones llegaron de manera distinta a cada hogar, e incluso
-      a cada hijo dentro del mismo hogar. Mi abuela nació en una ciudad que crecía y en una época en que la ley ya le permitía
-      estudiar, y aun así su camino fue otro que el de sus hermanos. Esa diferencia, que ningún censo registra, es para mí el
-      hallazgo más importante de este trabajo.
-    </p>
   </div>
 </section>
 
-<!-- ============ 11. FUENTES ============ -->
-<section id="fuentes">
-  <div class="envoltura aparecer">
-    <span class="etiqueta">11 · Fuentes</span>
-    <h2>Bibliografía y fuentes</h2>
-    <div class="texto"><p>Cada referencia indica cómo la consulté: <span class="acceso completo">texto completo</span> <span class="acceso parcial">resumen o ficha</span> <span class="acceso no">no consultada directamente</span>. Solo atribuyo a cada autor afirmaciones que pude verificar.</p></div>
+<!-- ================= FUENTES Y METODOLOGÍA ================= -->
+<section class="capitulo papel" id="fuentes">
+  <div class="envoltura">
+    <header class="encabezado-cap">
+      <span class="numero" aria-hidden="true">§</span>
+      <div><span class="rotulo">Para revisar el trabajo</span><h2>Fuentes y metodología</h2></div>
+    </header>
 
-    <h3 class="subseccion">Fuentes familiares</h3>
-    <ul class="bibliografia">
-      <li id="ref-testimonios">Mi mamá. Notas de voz sobre origen, ocupaciones, migración, política, la finca y educación en las ramas antioqueña y cucuteña. Comunicaciones familiares, noviembre de 2026. Archivo privado.</li>
-      <li>Mi abuela materna. Nota de voz sobre su nacimiento, la llegada de la familia a Medellín, la finca y la mina, y el origen de mi abuelo. Comunicación familiar, noviembre de 2026. Archivo privado.</li>
+    <div class="metodo-grid">
+      <div>
+        <h4>Entrevistas y fotografías</h4>
+        <p>Notas de voz de mi mamá y de mi abuela Gloria, noviembre de 2026. Cuatro fotografías del archivo familiar: el padre de Miguel en su infancia, Miguel, Gloria, y Miguel y Gloria con una nieta. Se publican recortadas solo para quitar los bordes y las marcas del celular, sin alterar a las personas; los archivos originales se conservan en <code>assets/archivo-familiar/originales/</code>. No se publican audios ni otros datos personales.</p>
+        <h4>Datos</h4>
+        <ul>
+          <li>Población censada de Medellín, 1951–1973 (DANE, 2006).</li>
+          <li>Población total y en cabecera de Amagá, Titiribí y Medellín, 1964 y 1973 (Anuario Estadístico de Antioquia, cifras con ajuste por cobertura).</li>
+          <li>Población de 1938, y de 1951 en Amagá y Titiribí: fuente secundaria (Wikipedia), porque la Biblioteca Virtual del DANE no respondió durante la investigación.</li>
+          <li>Empresas industriales en 1945 por periodo de fundación y participación de las ciudades (Primer Censo Industrial, vía Jaramillo-Echeverri et al., 2016); empleo textil de Antioquia en 1945 y 1970 (España y Sánchez).</li>
+          <li>Alfabetización por sexo y zona, 1951 y 1964 (DNP, documento 1016); alfabetismo de 15 años y más, 1964–2005 (DANE).</li>
+          <li>Variables macroeconómicas 1925–1945 (Ocampo, 2023) y presupuesto educativo de Antioquia 1932–1936 (Ramírez y Téllez, 2006).</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Cálculos</h4>
+        <p class="formula">Índice<sub>t</sub> = P<sub>t</sub> ÷ P<sub>1938</sub> × 100</p>
+        <p class="formula">Tasa anual = (P<sub>1</sub> ÷ P<sub>0</sub>)<sup>1/t</sup> − 1, con t en años exactos entre las fechas de los censos (5/7/1938, 9/5/1951, 15/7/1964 y 24/10/1973)</p>
+        <p class="formula">% en cabecera = cabecera ÷ total × 100 (misma fuente en numerador y denominador)</p>
+        <p class="formula">Brecha de género = % hombres − % mujeres (puntos porcentuales)</p>
+        <p class="formula">Efecto del ajuste = población ajustada ÷ población censada − 1</p>
+        <p class="formula">% de empresas por periodo = empresas fundadas en el periodo ÷ empresas del departamento en 1945 × 100</p>
+        <h4>Decisiones</h4>
+        <ul>
+          <li>Uso la población <em>censada</em> de Medellín, no la ajustada, para tener una serie consistente; las cifras ajustadas o de fuente secundaria se marcan con símbolos distintos.</li>
+          <li>No interpolo años sin dato.</li>
+          <li>Los datos de alfabetización son nacionales y así se rotulan.</li>
+          <li>El script <code>scripts/procesar_datos.py</code> calcula todos los indicadores y genera <code>datos/datos.js</code>, del que leen las gráficas y las cifras del texto.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Lo que falta documentar</h4>
+        <ul>
+          <li>El año y el motivo del traslado a Medellín. Fuente posible: registros civiles o de bautismo de los hermanos mayores de Gloria.</li>
+          <li>Los cargos exactos del antepasado funcionario y su parentesco preciso. Fuente: decretos en la Gaceta Departamental de Antioquia.</li>
+          <li>El destino de la finca. Fuente: escrituras y folios de matrícula inmobiliaria en la notaría del municipio.</li>
+          <li>El negocio de telas en Cúcuta y el parentesco del comerciante. Fuente: registro mercantil y archivos notariales.</li>
+          <li>Los años de estudio de los hijos de cada rama, para comparar generaciones equivalentes.</li>
+          <li>Las fechas y los lugares de las cuatro fotografías.</li>
+        </ul>
+        <h4>Limitaciones de los datos</h4>
+        <ul>
+          <li>Las cifras de alfabetización del DNP fueron transcritas del documento original; durante la preparación de esta versión su servidor no respondió y no pude hacer un segundo cotejo.</li>
+          <li>Las cifras de 1938 y 1951 de Amagá y Titiribí, y la de Medellín en 1938, vienen de una fuente secundaria.</li>
+          <li>No encontré cifras comparables de la industria de Medellín para 1970, ni fotografías con licencia libre de las minas de carbón de Amagá; preferí no reemplazarlas por imágenes de otros lugares.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Archivos</h4>
+        <ul>
+          <li><a href="datos/censos_poblacion.csv">censos_poblacion.csv</a> · <a href="datos/indicadores_poblacion.csv">indicadores_poblacion.csv</a></li>
+          <li><a href="datos/empresas_industriales_1945.csv">empresas_industriales_1945.csv</a> · <a href="datos/industria_ciudades_1945.csv">industria_ciudades_1945.csv</a> · <a href="datos/empleo_textil_antioquia.csv">empleo_textil_antioquia.csv</a></li>
+          <li><a href="datos/alfabetismo_colombia_7mas_dnp.csv">alfabetismo_colombia_7mas_dnp.csv</a> · <a href="datos/alfabetismo_colombia_15mas.csv">alfabetismo_colombia_15mas.csv</a></li>
+          <li><a href="datos/macro_colombia_1925_1945.csv">macro_colombia_1925_1945.csv</a> · <a href="datos/presupuesto_educacion_primaria_antioquia.csv">presupuesto_educacion_primaria_antioquia.csv</a></li>
+          <li><a href="datos/participacion_medellin_antioquia.csv">participacion_medellin_antioquia.csv</a> · <a href="datos/familia_educacion.csv">familia_educacion.csv</a></li>
+          <li><a href="datos/fuentes.csv">fuentes.csv</a> · <a href="datos/diccionario_variables.csv">diccionario_variables.csv</a> · <a href="assets/lugares/creditos.csv">créditos de las fotografías</a></li>
+          <li><a href="https://github.com/mariananaderg-collab/proyecto-HEC/blob/main/METODOLOGIA_Y_FUENTES.md">Documento de metodología completo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subtitulo">Lecturas del curso</h3>
+    <ul class="biblio">
+      <li id="ref-jmr2019"><div>Jaramillo-Echeverri, J., Meisel-Roca, A. y Ramírez-Giraldo, M. T. (2019). More than 100 years of improvements in living standards: The case of Colombia. <em>Cliometrica</em>, 13(3), 323–366. <a href="https://investiga.banrep.gov.co/es/content/more-100-years-improvements-living-standards-case-colombia">Ficha</a>.<span class="uso">Niveles de vida, educación y diferencias entre hombres y mujeres (cap. 5). Consultada en su versión en español: Cuadernos de Historia Económica n.º 46, 2018.</span></div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-safford2002"><div>Safford, F. y Palacios, M. (2002). <em>Colombia: país fragmentado, sociedad dividida</em>. Norma. Caps. 4, 5 y 8.<span class="uso">Antecedente de la fragmentación regional y la división partidista (cap. 3).</span></div><span class="acceso">Lectura del curso</span></li>
+      <li id="ref-correa2012"><div>Correa Restrepo, J. S. (2012). El ferrocarril de Antioquia: empresarios extranjeros y participación local. <em>Estudios Gerenciales</em>, 28(123), 149–166. <a href="https://www.icesi.edu.co/revistas/index.php/estudios_gerenciales/article/view/1213">Artículo</a>.<span class="uso">Costos de transporte, valorización de tierras, deuda, élites y cargos públicos (caps. 2 y 3).</span></div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-deas1976"><div>Deas, M. (1976). Una hacienda cafetera de Cundinamarca: Santa Bárbara (1870–1912). <em>Anuario Colombiano de Historia Social y de la Cultura</em>, 8, 74–100. <a href="https://revistas.unal.edu.co/index.php/achsc/article/view/36325">Artículo</a>.<span class="uso">La propiedad rural vista desde sus documentos; dueño y administrador (cap. 1).</span></div><span class="acceso">Resumen</span></li>
+      <li id="ref-mazzuca2009"><div>Mazzuca, S. L. y Robinson, J. A. (2009). Political conflict and power sharing in the origins of modern Colombia. <em>Hispanic American Historical Review</em>, 89(2), 285–321. <a href="https://www.nber.org/papers/w12099">Versión de trabajo</a>.<span class="uso">Reparto del poder entre partidos, 1850–1950 (cap. 3).</span></div><span class="acceso">Resumen</span></li>
+      <li id="ref-junguito2016a"><div>Junguito, R. (2016). El auge económico de los años veinte y la prosperidad al debe. En <em>Historia económica de Colombia en el siglo XX</em>. Universidad Sergio Arboleda. <a href="https://www.usergioarboleda.edu.co/fondo/historia-economica-colombia-en-siglo-xx/">Ficha</a>.<span class="uso">El auge de los veinte financiado con deuda (cap. 2).</span></div><span class="acceso">Lectura del curso</span></li>
+      <li id="ref-caballero2006"><div>Caballero, C. y Urrutia, M. (2006). Las crisis financieras del siglo XX. En <em>Historia del sector financiero colombiano en el siglo XX</em>, pp. 65–92. <a href="https://www.fedesarrollo.org.co/publicaciones/las-crisis-financieras-del-siglo-xx">Ficha</a>.<span class="uso">Crisis financieras del siglo XX; complementa a Ocampo (cap. 2).</span></div><span class="acceso">Lectura del curso</span></li>
+      <li id="ref-ocampo2023"><div>Ocampo, J. A. (2023). Una historia de las crisis económicas de Colombia. En <em>Ensayos de historia económica: cien años del Banco de la República</em>, cap. 1, pp. 15–28. <a href="https://repositorio.banrep.gov.co/items/e0831695-ff88-48cf-97eb-5718c3275ed7">Repositorio</a>.<span class="uso">Gran Depresión, control de cambios, recorte de salarios públicos, Decreto-Ley 444; datos de la gráfica 1 (cap. 2).</span></div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-bdr2023"><div>Adaptación del Banco de la República a los cambios en la política monetaria, cambiaria y de crédito: 1923–2023 (2023). Villar-Gómez, L. y Esguerra-Umaña, M. P. (eds.). Banco de la República. <a href="https://repositorio.banrep.gov.co/items/b13abf02-299f-4524-9727-5a2ec4cfca46">Repositorio</a>.<span class="uso">Contexto de la política monetaria y cambiaria. El programa del curso cita a Caballero y Esguerra; el repositorio registra a Villar-Gómez y Esguerra-Umaña como editores.</span></div><span class="acceso">Ficha</span></li>
+      <li id="ref-caballero1987"><div>Caballero, C. (1987). <em>50 años de economía: de la crisis del treinta a la del ochenta</em>. Asobancaria. <a href="https://publicaciones.asobancaria.com/libro/cincuenta-anos-de-economia-de-la-crisis-del-treinta-a-la-del-ochenta/">Ficha</a>.<span class="uso">Marco de largo plazo, 1930–1980.</span></div><span class="acceso">Lectura del curso</span></li>
+      <li id="ref-alvarez2011"><div>Álvarez, A. y Timoté, J. (2011). La experiencia de la banca libre en Bogotá (1871–1880). Documento CEDE 2011-32.<span class="uso">Antecedente institucional del sistema monetario, anterior al periodo estudiado.</span></div><span class="acceso">Lectura del curso</span></li>
+      <li><div>Junguito, R. (2016). La economía colombiana en los años noventa; Urrutia, M. y Llano, J. (2012). <em>Los actores en la crisis económica de fin de siglo</em>.<span class="uso">Posteriores al periodo de este trabajo; no se usan en el análisis.</span></div><span class="acceso">Lectura del curso</span></li>
     </ul>
 
-    <h3 class="subseccion">Lecturas del curso</h3>
-    <ul class="bibliografia">
-      <li id="ref-jmr2019">Jaramillo-Echeverri, J., Meisel-Roca, A. y Ramírez-Giraldo, M. T. (2019). More than 100 years of improvements in living standards: The case of Colombia. <em>Cliometrica</em>, 13(3), 323–366. <a href="https://investiga.banrep.gov.co/es/content/more-100-years-improvements-living-standards-case-colombia">Ficha en Banco de la República</a>. <span class="acceso completo">Texto completo (versión en español: Cuadernos de Historia Económica n.º 46, 2018)</span><span class="uso">Uso: mejora de los niveles de vida en el siglo XX, especialmente de las mujeres; papel de la educación desde 1950; brecha en la educación superior (secciones 3 y 6).</span></li>
-      <li id="ref-safford2002">Safford, F. y Palacios, M. (2002). <em>Colombia: país fragmentado, sociedad dividida</em>. Norma. Caps. 4, 5 y 8. <span class="acceso no">No consultada directamente</span><span class="uso">Uso: antecedente general sobre la fragmentación regional y la inestabilidad política del siglo XIX. No la uso como evidencia sobre mi familia en el siglo XX.</span></li>
-      <li id="ref-correa2012">Correa Restrepo, J. S. (2012). El ferrocarril de Antioquia: empresarios extranjeros y participación local. <em>Estudios Gerenciales</em>, 28(123), 149–166. <a href="https://www.icesi.edu.co/revistas/index.php/estudios_gerenciales/article/view/1213">Artículo</a>. <span class="acceso completo">Texto completo</span><span class="uso">Uso: costos de transporte, valorización de tierras, fletes, endeudamiento y relación entre élite, cargos públicos y ferrocarril (secciones 3 y 6). Es una de las lecturas principales del proyecto.</span></li>
-      <li id="ref-alvarez2011">Álvarez, A. y Timoté, J. (2011). La experiencia de la banca libre en Bogotá (1871–1880). Documento CEDE 2011-32, Universidad de los Andes. <span class="acceso no">No consultada directamente</span><span class="uso">Uso: antecedente de las instituciones monetarias y bancarias, anterior al periodo estudiado; no se usa como evidencia.</span></li>
-      <li id="ref-deas1976">Deas, M. (1976). Una hacienda cafetera de Cundinamarca: Santa Bárbara (1870–1912). <em>Anuario Colombiano de Historia Social y de la Cultura</em>, (8), 74–100. <a href="https://revistas.unal.edu.co/index.php/achsc/article/view/36325">Artículo</a>. <span class="acceso parcial">Resumen y ficha</span><span class="uso">Uso metodológico: estudiar una propiedad rural con documentos y atender la relación entre propietario, administrador y trabajadores (secciones 3 y 7). No es una hacienda antioqueña ni de mi familia.</span></li>
-      <li id="ref-mazzuca2009">Mazzuca, S. L. y Robinson, J. A. (2009). Political conflict and power sharing in the origins of modern Colombia. <em>Hispanic American Historical Review</em>, 89(2), 285–321. <a href="https://www.nber.org/papers/w12099">Versión de trabajo (NBER w12099)</a>. <span class="acceso parcial">Resumen de la versión de trabajo</span><span class="uso">Uso: competencia bipartidista y reglas de reparto del poder, 1850–1950 (sección 3E). No se usa para el Frente Nacional ni para nombramientos locales.</span></li>
-      <li id="ref-junguito2016a">Junguito, R. (2016). El auge económico de los años veinte y la prosperidad al debe. En <em>Historia económica de Colombia en el siglo XX</em>. Universidad Sergio Arboleda. <a href="https://www.usergioarboleda.edu.co/fondo/historia-economica-colombia-en-siglo-xx/">Ficha editorial</a>. <span class="acceso no">No consultada directamente</span><span class="uso">Uso: marco del auge financiado con deuda de los años veinte; los datos específicos de esa década provienen de Ocampo (2023) y Correa (2012).</span></li>
-      <li id="ref-caballero2006">Caballero, C. y Urrutia, M. (2006). Las crisis financieras del siglo XX. En <em>Historia del sector financiero colombiano en el siglo XX</em> (pp. 65–92). <a href="https://www.fedesarrollo.org.co/publicaciones/las-crisis-financieras-del-siglo-xx">Ficha</a>. <span class="acceso no">No consultada directamente</span><span class="uso">Uso: lectura complementaria sobre crisis financieras; no le atribuyo cifras.</span></li>
-      <li id="ref-ocampo2023">Ocampo, J. A. (2023). Una historia de las crisis económicas de Colombia. En <em>Ensayos de historia económica: cien años del Banco de la República</em> (cap. 1, pp. 15–28). Banco de la República. <a href="https://repositorio.banrep.gov.co/items/e0831695-ff88-48cf-97eb-5718c3275ed7">Repositorio</a>. <span class="acceso completo">Texto completo</span><span class="uso">Uso: Gran Depresión, recorte de salarios públicos, control de cambios, Segunda Guerra Mundial, Decreto-Ley 444; datos de la gráfica macroeconómica (secciones 3 y 5).</span></li>
-      <li id="ref-bdr2023">Banco de la República (2023). Adaptación del Banco de la República a los cambios en la política monetaria, cambiaria y de crédito: 1923–2023. Villar-Gómez, L. y Esguerra-Umaña, M. P. (eds.). <a href="https://repositorio.banrep.gov.co/items/b13abf02-299f-4524-9727-5a2ec4cfca46">Repositorio</a>. <span class="acceso no">No consultada directamente</span><span class="uso">El programa del curso lo atribuye a Caballero y Esguerra; la ficha del repositorio registra a Villar-Gómez y Esguerra-Umaña como editores y no pude verificar la autoría del capítulo. Uso: lectura de contexto sobre política monetaria y cambiaria.</span></li>
-      <li id="ref-caballero1987">Caballero, C. (1987). <em>50 años de economía: de la crisis del treinta a la del ochenta</em>. Asobancaria. <a href="https://publicaciones.asobancaria.com/libro/cincuenta-anos-de-economia-de-la-crisis-del-treinta-a-la-del-ochenta/">Ficha</a>. <span class="acceso no">No consultada directamente</span><span class="uso">Uso: marco de largo plazo de 1930 a 1980; no le atribuyo afirmaciones específicas.</span></li>
-      <li>Junguito, R. (2016). La economía colombiana en los años noventa. <span class="acceso no">No consultada directamente</span><span class="uso">Relación indirecta: posterior al periodo estudiado; no se usa en el análisis.</span></li>
-      <li>Urrutia, M. y Llano, J. (2012). <em>Los actores en la crisis económica de fin de siglo</em>. Universidad de los Andes. <span class="acceso no">No consultada directamente</span><span class="uso">Relación indirecta: posterior al periodo estudiado; no se usa en el análisis.</span></li>
+    <h3 class="subtitulo">Datos y documentos</h3>
+    <ul class="biblio">
+      <li id="ref-jmr2016"><div>Jaramillo-Echeverri, J., Meisel-Roca, A. y Ramírez-Giraldo, M. T. (2016). La Gran Depresión en Colombia: un estímulo a la industrialización, 1930–1953. <em>Cuadernos de Historia Económica y Empresarial</em>, 39. Banco de la República. <a href="https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/chee_39.pdf">PDF</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-espana"><div>España Eljaiek, I. R. y Sánchez Torres, F. Industrialización regional, café y capital humano en Colombia en la primera mitad del siglo XX. Universidad de los Andes. <a href="https://economia.uniandes.edu.co/sites/default/files/imagenes/eventos/Industrializacionregional-IrinaEspana-FSanchez.pdf">PDF</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-dane2006"><div>DANE (2006). <em>Censo General 2005. Medellín y Área Metropolitana: población censada, censos 1951–2005</em>. <a href="https://www.dane.gov.co/files/censo2005/medellin_1206-06.pdf">PDF</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-danedin"><div>DANE. <em>Censo General 2005. Medellín: dinámica poblacional</em>. <a href="https://www.dane.gov.co/files/censos/analisis/medellin/medellin_dinami.pdf">PDF</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-dnp1016"><div>Departamento Nacional de Planeación. Documento 1016, cuadros B.6 (1 y 2): población alfabeta mayor de siete años por sexo y zona, 1951 y 1964. <a href="https://colaboracion.dnp.gov.co/CDT/Conpes/Econ%C3%B3micos/1016.pdf">PDF</a>.</div><span class="acceso">Transcripción</span></li>
+      <li id="ref-dane2005edu"><div>DANE. <em>Informe especial Censo General 2005: Colombia – Educación</em>. <a href="https://www.dane.gov.co/files/censos/boletines/bol_educacion.pdf">PDF</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-anuario2014"><div>Gobernación de Antioquia (2014). <em>Anuario Estadístico de Antioquia 2014</em>, cuadro 3.1.5. <a href="https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/poblacion/censos/cp-3-1-5.html">Tabla</a>.</div><span class="acceso completo">Tabla completa</span></li>
+      <li id="ref-wiki"><div>Wikipedia en español: tablas de población histórica de <a href="https://es.wikipedia.org/wiki/Amag%C3%A1">Amagá</a>, <a href="https://es.wikipedia.org/wiki/Titirib%C3%AD">Titiribí</a> y <a href="https://es.wikipedia.org/wiki/Medell%C3%ADn">Medellín</a>.<span class="uso">Solo para las cifras de 1938 y 1951 que no pude consultar en los tomos censales.</span></div><span class="acceso">Fuente secundaria</span></li>
+      <li id="ref-ramirez2006"><div>Ramírez, M. T. y Téllez, J. P. (2006). La educación primaria y secundaria en Colombia en el siglo XX. <em>Borradores de Economía</em>, Banco de la República. <a href="https://repositorio.banrep.gov.co/handle/20.500.12134/5397">Repositorio</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-banrepfc"><div>Banco de la República, Biblioteca Virtual. «Ferrocarril de Amagá (1909–1933)» y «Ferrocarril de Antioquia (1874–1914)». <a href="https://www.banrepcultural.org/ferrocarriles/secciones/ferrocarril_amaga.htm">Amagá</a> · <a href="https://www.banrepcultural.org/ferrocarriles/secciones/ferrocarril_antioquia.htm">Antioquia</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-arevalo"><div>Arévalo Meneses, B. Libertades republicanas populares en el circuito comercial de Cúcuta, 1860–1900. Informe final, Estímulos ICANH. <a href="https://estimulos.icanh.gov.co/wp-content/uploads/2026/01/INFORME-FINAL.pdf">PDF</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-ley200"><div>Ley 200 de 1936 (30 de diciembre), sobre régimen de tierras. <a href="https://gestornormativo.creg.gov.co/gestor/entorno/docs/ley_0200_1936.htm">Texto</a>.</div><span class="acceso completo">Texto completo</span></li>
+      <li id="ref-d227"><div>Decreto 227 de 1933 (2 de febrero), sobre enseñanza secundaria para señoritas. <a href="https://www.cortesuprema.gov.co/corte/wp-content/uploads/subpage/mujer/mujer/Leyes%20Mujer%20PDF/Decreto%20227%20de%201933.pdf">Texto</a>.</div><span class="acceso completo">Texto completo</span></li>
     </ul>
 
-    <h3 class="subseccion">Datos y documentos</h3>
-    <ul class="bibliografia">
-      <li id="ref-dane2006">DANE (2006). <em>Censo General 2005. Medellín y Área Metropolitana: población censada, censos 1951–2005</em>. <a href="https://www.dane.gov.co/files/censo2005/medellin_1206-06.pdf">PDF</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-danedin">DANE. <em>Censo General 2005. Medellín: dinámica poblacional</em>. <a href="https://www.dane.gov.co/files/censos/analisis/medellin/medellin_dinami.pdf">PDF</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-dane2005edu">DANE. <em>Informe especial Censo General 2005: Colombia – Educación</em>. <a href="https://www.dane.gov.co/files/censos/boletines/bol_educacion.pdf">PDF</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-anuario2014">Gobernación de Antioquia, Departamento Administrativo de Planeación (2014). <em>Anuario Estadístico de Antioquia 2014</em>, cuadro 3.1.5. <a href="https://www.antioquia.gov.co/images/pdf/anuario2014/es-CO/capitulos/poblacion/censos/cp-3-1-5.html">Tabla</a>. <span class="acceso completo">Tabla completa</span></li>
-      <li id="ref-wiki">Wikipedia en español: «Amagá», «Titiribí» y «Medellín», tablas de población histórica. <a href="https://es.wikipedia.org/wiki/Amag%C3%A1">Amagá</a>, <a href="https://es.wikipedia.org/wiki/Titirib%C3%AD">Titiribí</a>, <a href="https://es.wikipedia.org/wiki/Medell%C3%ADn">Medellín</a>. <span class="acceso parcial">Fuente secundaria, pendiente de cotejo</span><span class="uso">Uso: solo para las cifras de 1938 y 1951 que no pude consultar en los tomos censales.</span></li>
-      <li id="ref-ramirez2006">Ramírez, M. T. y Téllez, J. P. (2006). La educación primaria y secundaria en Colombia en el siglo XX. <em>Borradores de Economía</em>, Banco de la República. <a href="https://repositorio.banrep.gov.co/handle/20.500.12134/5397">Repositorio</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-ley200">Ley 200 de 1936 (30 de diciembre), sobre régimen de tierras. <em>Diario Oficial</em> 23.388. <a href="https://gestornormativo.creg.gov.co/gestor/entorno/docs/ley_0200_1936.htm">Texto compilado (CREG)</a>; también en <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=16049">Función Pública</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-d227">Decreto 227 de 1933 (2 de febrero), por el cual se dictan disposiciones sobre enseñanza secundaria para señoritas. <em>Diario Oficial</em> 22.215. <a href="https://www.cortesuprema.gov.co/corte/wp-content/uploads/subpage/mujer/mujer/Leyes%20Mujer%20PDF/Decreto%20227%20de%201933.pdf">Texto</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-banrepfc">Banco de la República, Biblioteca Virtual. «Ferrocarril de Amagá (1909–1933)» y «Ferrocarril de Antioquia (1874–1914)». <a href="https://www.banrepcultural.org/ferrocarriles/secciones/ferrocarril_amaga.htm">Amagá</a>, <a href="https://www.banrepcultural.org/ferrocarriles/secciones/ferrocarril_antioquia.htm">Antioquia</a>. <span class="acceso completo">Texto completo</span></li>
-      <li id="ref-wikifc">Wikipedia en español. «Ferrocarril de Amagá». <a href="https://es.wikipedia.org/wiki/Ferrocarril_de_Amag%C3%A1">Artículo</a>. <span class="acceso parcial">Fuente secundaria</span><span class="uso">Cita, entre otras, a <em>Credencial Historia</em> n.º 102; la uso para la función del carbón en la línea y para fechas ya confirmadas por Banrep Cultural.</span></li>
-      <li id="ref-arevalo">Arévalo Meneses, B. Libertades republicanas populares en el circuito comercial de Cúcuta, 1860–1900. Informe final, Estímulos ICANH. <a href="https://estimulos.icanh.gov.co/wp-content/uploads/2026/01/INFORME-FINAL.pdf">PDF</a>. <span class="acceso completo">Texto completo</span><span class="uso">Uso: antecedente del siglo XIX sobre el comercio de importación, incluidos textiles, en Cúcuta.</span></li>
-      <li id="ref-cronicas">Crónicas de Cúcuta (blog). «Los primeros extranjeros de Cúcuta». <a href="http://cronicasdecucuta.blogspot.com/2015/05/762-los-primeros-extranjeros-de-cucuta.html">Entrada</a>. <span class="acceso parcial">Fuente divulgativa, consultada mediante resumen</span><span class="uso">Uso: solo como indicio de la presencia de comerciantes italianos; no es evidencia académica.</span></li>
-    </ul>
-
-    <h3 class="subseccion">Mapa y herramientas</h3>
-    <ul class="bibliografia">
-      <li>Mapas base: Esri (World Light Gray Canvas, World Topographic Map, World Imagery). Librerías: Leaflet 1.9.4 y Chart.js 4.4.1.</li>
-      <li>Referentes de diseño: Baics, G. et al. (2021). <em>Mapping Historical New York: A digital atlas</em>. Columbia University; Historical Society of Pennsylvania (s. f.). <em>PhilaPlace</em>.</li>
-    </ul>
+    <h3 class="subtitulo">Fotografías</h3>
+    <div class="tabla-contenedor">
+      <table id="tabla-creditos">
+        <thead><tr><th scope="col">Imagen</th><th scope="col">Tipo</th><th scope="col">Autor y fecha</th><th scope="col">Licencia</th><th scope="col">Procedencia</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p style="font-size:.86rem;color:var(--oliva)">Las cuatro fotografías del archivo familiar pertenecen a la familia y se publican con su autorización. Las fotografías regionales e históricas no muestran a mis familiares. Mapas base: Esri. Librerías: Leaflet 1.9.4 y Chart.js 4.4.1.</p>
   </div>
 </section>
 </main>
 
-<footer>
-  Mariana Nader · Historia Económica de Colombia · 2026 · Datos y código en <a href="https://github.com/mariananaderg-collab/proyecto-HEC">GitHub</a>
-</footer>
+<footer>Mariana Nader · Historia Económica de Colombia · 2026 · <a href="https://github.com/mariananaderg-collab/proyecto-HEC">Datos y código</a></footer>
+
+<dialog class="visor" id="visor" aria-label="Fotografía ampliada">
+  <div class="marco">
+    <img id="visor-img" src="data:," alt="">
+    <div class="info" id="visor-info"></div>
+  </div>
+  <button class="cerrar" type="button" id="visor-cerrar">Cerrar ✕</button>
+</dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
