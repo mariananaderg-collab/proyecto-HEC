@@ -116,6 +116,23 @@
   blockquote.testimonio p{font-family:"Fraunces",serif;font-size:1.15rem}
   blockquote.testimonio cite{font-style:normal;font-size:.9rem;color:var(--tinta-suave)}
 
+  /* Árbol de generaciones */
+  .generaciones{display:grid;gap:.8rem;margin-top:2rem}
+  .gen{display:grid;grid-template-columns:150px 1fr;gap:1rem;align-items:start;background:var(--blanco);border:1px solid var(--linea);border-radius:10px;padding:1rem 1.2rem}
+  .gen .quien{font-family:"Fraunces",serif;font-weight:600;line-height:1.25}
+  .gen .quien small{display:block;font-family:"Source Sans 3",sans-serif;font-weight:400;font-size:.82rem;color:var(--tinta-suave);margin-top:.2rem}
+  .gen p{margin-bottom:.4rem;font-size:.97rem}
+  .gen p:last-child{margin-bottom:0}
+  .rama-cucuta{border-left:4px solid var(--oro)}
+  .rama-antioquia{border-left:4px solid var(--terracota)}
+  @media (max-width:720px){.gen{grid-template-columns:1fr;gap:.3rem}}
+
+  /* Hipótesis (deducciones no confirmadas) */
+  .hipotesis{background:var(--blanco);border:1px dashed var(--terracota);border-radius:10px;padding:1.2rem 1.4rem}
+  .hipotesis .marca{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#f3d9d2;color:#8a2f1a;border-radius:4px;padding:.1rem .5rem;margin-bottom:.5rem}
+  .hipotesis p:last-child{margin-bottom:0}
+  .hipotesis .como{font-size:.9rem;color:var(--tinta-suave)}
+
   /* Espacios por completar */
   .completar{
     background:#fff3c4;border:1px dashed var(--oro);border-radius:4px;padding:0 .25em;
@@ -293,10 +310,11 @@
     <h2>Una familia, tres lugares, cuatro décadas</h2>
     <div class="texto">
       <p class="entrada">
-        Según la historia oral de mi familia, las generaciones anteriores vivieron de la propiedad y
-        administración de tierras, la agricultura, la ganadería y, en Amagá, de actividades ligadas a la
-        minería de carbón. Después, algunos se trasladaron a Medellín, y las generaciones siguientes
-        llegaron a ocupaciones urbanas, al empleo público y a la universidad.
+        Según la historia oral de mi familia, los padres de mi abuela venían de familias de Titiribí y Amagá que vivían
+        de la tierra, la ganadería y, sobre todo, de la minería de carbón. Antes de que naciera mi abuela ya se habían
+        instalado en Medellín. Allí mi bisabuelo hizo carrera en el gobierno, como alcalde y tesorero de varios pueblos,
+        y con ese salario estable sus dos hijos hombres fueron a la universidad. Sus dos hijas, entre ellas mi abuela,
+        se dedicaron a la casa.
       </p>
       <p>
         Quiero entender cómo esa trayectoria particular se conecta con las transformaciones más amplias de
@@ -330,10 +348,52 @@
     </div>
 
     <blockquote class="testimonio">
-      <!-- EDITAR: ponga aquí una frase textual de la entrevista a su mamá -->
-      <p><span class="completar">[Cita textual de la entrevista que resuma el origen de la familia. Ej.: lo que su mamá recuerda de cómo vivían en Amagá o Titiribí.]</span></p>
-      <cite>— <span class="completar">[Nombre o parentesco]</span>, entrevista, septiembre de 2026</cite>
+      <p>Mis abuelos maternos venían de familias con tierras feudales, ganadería y, sobre todo, minería, carbón, sobre todo en el municipio de Amagá.</p>
+      <cite>— Mi mamá, nota de voz, noviembre de 2026</cite>
     </blockquote>
+
+    <h3 style="margin-top:3rem">¿Quién es quién?</h3>
+    <div class="texto">
+      <p>
+        Los parentescos se cuentan desde mí. La historia central es la de la familia de mi abuela materna, en Antioquia.
+        La familia de mi abuelo materno, en Cúcuta, aparece como contraste. Los años marcados con «c.» son aproximados
+        y salen de la memoria familiar; algunos son deducciones que explico en la sección 7.
+      </p>
+    </div>
+    <div class="generaciones">
+      <div class="gen rama-antioquia">
+        <div class="quien">Tatarabuelos<small>Titiribí y Amagá · antes de c. 1930</small></div>
+        <div>
+          <p>Familias con tierras, ganado y minas de carbón en Amagá. Mi abuela cree que vivieron en finca, pero no lo recuerda con certeza.</p>
+        </div>
+      </div>
+      <div class="gen rama-antioquia">
+        <div class="quien">Bisabuelos maternos<small>De Titiribí y Amagá a Medellín · c. 1930–1970</small></div>
+        <div>
+          <p>Él dedicó su vida a la política y fue empleado del gobierno: alcalde y tesorero de varios pueblos. Ella fue ama de casa.</p>
+          <p>Se instalaron en Medellín antes de que naciera mi abuela. Tuvieron cuatro hijos: los dos hombres fueron a la universidad y las dos mujeres fueron amas de casa.</p>
+        </div>
+      </div>
+      <div class="gen rama-antioquia">
+        <div class="quien">Mi abuela materna<small>Nace en Medellín · antes de 1946</small></div>
+        <div>
+          <p>Nació en Medellín, donde sus padres vivían con su abuela. Fue ama de casa. Recuerda que la familia dejó la mina y que otros «se adueñaron» de la finca.</p>
+        </div>
+      </div>
+      <div class="gen rama-cucuta">
+        <div class="quien">Rama de Cúcuta<small>Familia de mi abuelo materno · c. 1910–1960</small></div>
+        <div>
+          <p>Mi bisabuelo, hijo de inmigrantes de España e Italia, fue un comerciante de telas próspero en Cúcuta hacia 1910–1920. Sus hijos heredaron los negocios.</p>
+          <p>Tuvo siete hijos y los siete fueron a la universidad. Mi abuelo fue el primero.</p>
+        </div>
+      </div>
+      <div class="gen">
+        <div class="quien">Mi mamá y yo<small>Hoy</small></div>
+        <div>
+          <p>Mi mamá une las dos ramas. Yo reconstruyo esta historia a partir de lo que ella y mi abuela recuerdan.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -434,7 +494,14 @@
         solo el 26 % en Amagá y en Titiribí; en 1973 los dos municipios del suroeste seguían siendo mayoritariamente rurales
         (28–29 %). El crecimiento de Amagá se dio sobre todo en la zona rural, donde estaban las minas de carbón.
       </p>
-      <p><span class="completar">[Conecte con su familia: ¿en qué periodo se movieron? ¿Hicieron parte de la ola de 1951–1964?]</span></p>
+      <p>
+        Mi familia no hizo parte de la gran ola. Mi abuela nació en Medellín antes de 1946, y para entonces sus padres
+        ya vivían allí con su abuela. El traslado desde Titiribí y Amagá ocurrió entonces, a más tardar, a comienzos de
+        los años cuarenta, cuando Medellín tenía unos 170.000 habitantes y no el millón que alcanzaría en 1973. Llegaron
+        antes de la explosión urbana de 1951–1964 y antes de La Violencia, que empujó a muchas familias rurales a la
+        ciudad. Por eso su migración parece menos una huida que una apuesta temprana por la ciudad, sostenida por un
+        empleo público y no por una fábrica.
+      </p>
     </div>
 
     <div class="grafica" id="caja-poblacion">
@@ -444,7 +511,7 @@
         <button data-modo="absoluto">Habitantes</button>
       </div>
       <div class="lienzo"><canvas id="graficaPoblacion"></canvas></div>
-      <p class="nota">Fuente: elaboración propia con base en los censos de población. 1938 y 1951: cifras censales (DANE). 1964 y 1973: DANE, reportadas en el Anuario Estadístico de Antioquia (con ajuste por cobertura). La franja sombreada marca el periodo de traslado de la familia.</p>
+      <p class="nota">Fuente: elaboración propia con base en los censos de población. 1938 y 1951: cifras censales (DANE). 1964 y 1973: DANE, reportadas en el Anuario Estadístico de Antioquia (con ajuste por cobertura). La franja sombreada marca el periodo en que mi abuela ya vivía en Medellín con sus padres, antes de la ola migratoria de 1951–1964.</p>
     </div>
 
     <div class="grafica" id="caja-urbano">
@@ -473,7 +540,13 @@
     <div class="linea-tiempo" id="lineaTiempo">
 
       <div class="hito">
-        <div class="familia"><div class="caja"><strong><span class="completar">[Generación 1]</span></strong><span class="completar">[Ej.: bisabuelo con tierras/ganado en Titiribí]</span></div></div>
+        <div class="familia"><div class="caja"><strong>Cúcuta: las telas</strong>Mi bisabuelo de la rama de Cúcuta, hijo de inmigrantes españoles e italianos, prospera como comerciante de telas.</div></div>
+        <div class="anio">c. 1910–1920</div>
+        <div class="colombia"><div class="caja vacio"></div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong>Tierra, ganado y carbón</strong>Las familias de mis bisabuelos maternos tienen tierras, ganado y minas de carbón en Titiribí y Amagá.</div></div>
         <div class="anio">1929</div>
         <div class="colombia"><div class="caja"><strong>Túnel de La Quiebra</strong>Se completa la conexión ferroviaria de Medellín con el Magdalena. Crisis mundial.</div></div>
       </div>
@@ -485,33 +558,57 @@
       </div>
 
       <div class="hito">
-        <div class="familia"><div class="caja"><strong><span class="completar">[Hito]</span></strong><span class="completar">[Ej.: trabajo en la mina de carbón de Amagá]</span></div></div>
-        <div class="anio"><span class="completar">19__</span></div>
-        <div class="colombia"><div class="caja"><strong>Ley 200 de 1936</strong>Reforma sobre tierras durante la "Revolución en Marcha".</div></div>
+        <div class="familia"><div class="caja"><strong>Mi bisabuelo en el gobierno</strong>Empieza una carrera de cuatro décadas como alcalde y tesorero en distintos pueblos de Antioquia.</div></div>
+        <div class="anio">c. 1930</div>
+        <div class="colombia"><div class="caja"><strong>1930 · República Liberal</strong>Fin de la Hegemonía Conservadora. Los alcaldes los nombra el gobernador, así que el cargo depende del partido en el poder.</div></div>
       </div>
 
       <div class="hito">
-        <div class="familia"><div class="caja"><strong><span class="completar">[Traslado]</span></strong><span class="completar">[¿Quién se mudó a Medellín y por qué?]</span></div></div>
-        <div class="anio"><span class="completar">19__</span></div>
-        <div class="colombia"><div class="caja"><strong>1948 · La Violencia</strong>Migración rural hacia las ciudades.</div></div>
+        <div class="familia"><div class="caja"><strong>Mujeres y universidad</strong>Una norma abre la puerta a las mujeres. En mi familia, la puerta seguirá cerrada para mi abuela y su hermana.</div></div>
+        <div class="anio">1933</div>
+        <div class="colombia"><div class="caja"><strong>Decreto 1972 de 1933</strong>Las mujeres pueden cursar bachillerato completo e ingresar a la universidad. <span class="completar">[verificar y citar]</span></div></div>
       </div>
 
       <div class="hito">
-        <div class="familia"><div class="caja"><strong><span class="completar">[Generación 2]</span></strong><span class="completar">[Ej.: empleo público en Medellín]</span></div></div>
-        <div class="anio"><span class="completar">19__</span></div>
-        <div class="colombia"><div class="caja"><strong>1957–1958 · Frente Nacional</strong>Primer voto de las mujeres (1957) y pacto bipartidista.</div></div>
+        <div class="familia"><div class="caja vacio"></div></div>
+        <div class="anio">1936</div>
+        <div class="colombia"><div class="caja"><strong>Ley 200 de 1936</strong>Reforma de tierras de la «Revolución en Marcha»: protege a quien trabaja la tierra y amenaza con extinguir el dominio de la tierra sin explotar.</div></div>
       </div>
 
       <div class="hito">
-        <div class="familia"><div class="caja"><strong><span class="completar">[Universidad]</span></strong><span class="completar">[¿Quién entró, a qué universidad, a qué carrera?]</span></div></div>
-        <div class="anio"><span class="completar">19__</span></div>
+        <div class="familia"><div class="caja"><strong>Ya en Medellín</strong>Mi abuela nace en Medellín. Sus padres viven allí con su abuela: la familia ya dejó el suroeste.</div></div>
+        <div class="anio">antes de 1946</div>
+        <div class="colombia"><div class="caja"><strong>1938 · Censo</strong>Medellín tiene 168.266 habitantes.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong>La finca y la mina se pierden</strong>«La mina la dejaron, se adueñaron de la finca». Fecha y forma desconocidas. <span class="completar">[preguntar cuándo]</span></div></div>
+        <div class="anio">¿?</div>
+        <div class="colombia"><div class="caja"><strong>1948 · La Violencia</strong>Despojo de tierras y migración rural masiva hacia las ciudades.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong>Dos hijos a la universidad</strong>Los dos hijos hombres de mi bisabuelo estudian en la universidad. Mi abuela y su hermana se quedan en casa. En Cúcuta, mi abuelo es el primero de siete hermanos universitarios.</div></div>
+        <div class="anio">c. 1955–1965</div>
         <div class="colombia"><div class="caja"><strong>Expansión educativa</strong>Crece la matrícula universitaria en Medellín. <span class="completar">[dato]</span></div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja vacio"></div></div>
+        <div class="anio">1957–1958</div>
+        <div class="colombia"><div class="caja"><strong>Frente Nacional</strong>Primer voto de las mujeres (1957). El pacto reparte por mitades los cargos públicos entre liberales y conservadores (paridad burocrática).</div></div>
       </div>
 
       <div class="hito">
         <div class="familia"><div class="caja vacio"></div></div>
         <div class="anio">1967</div>
         <div class="colombia"><div class="caja"><strong>Decreto-Ley 444</strong>Nuevo régimen cambiario con devaluación gradual.</div></div>
+      </div>
+
+      <div class="hito">
+        <div class="familia"><div class="caja"><strong>Fin de una carrera</strong>Según mi mamá, mi bisabuelo cierra cerca de cuatro décadas en el sector público.</div></div>
+        <div class="anio">c. 1970</div>
+        <div class="colombia"><div class="caja vacio"></div></div>
       </div>
 
     </div>
@@ -530,7 +627,20 @@
         Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo (2019) documentan que la inversión en educación se aceleró
         después de mediados de siglo; los censos permiten ver si esa expansión llegó por igual a hombres y mujeres.
       </p>
-      <p><span class="completar">[Interprete: ¿se cerró la brecha de género? ¿Cuándo? ¿Cómo se compara con su familia?]</span></p>
+      <p>
+        En mi familia la respuesta es clara. De los cuatro hijos de mi bisabuelo, los dos hombres fueron a la universidad
+        y las dos mujeres, entre ellas mi abuela, fueron amas de casa. No parece que faltaran recursos: el salario público
+        de mi bisabuelo era estable y, según mi mamá, «en esa época era muy bien pagado». Tampoco lo impedía la ley, porque
+        desde 1933 las mujeres podían entrar a la universidad. Todo indica que la familia invirtió en la educación de los
+        hijos hombres y no en la de las hijas.
+      </p>
+      <p>
+        Leído en clave económica, es una decisión de inversión en capital humano: si el mercado laboral y las normas
+        sociales de la época esperaban que la mujer dejara de trabajar al casarse, el retorno esperado de su título era
+        bajo para el hogar. La rama de Cúcuta ofrece un contraste: allí los siete hijos de un comerciante, descendiente
+        de inmigrantes, fueron a la universidad. <span class="completar">[Confirmar con mi mamá si entre esos siete había mujeres. Si las había, el contraste entre las dos ramas es uno de los hallazgos más fuertes del trabajo.]</span>
+      </p>
+      <p><span class="completar">[Cuando estén los datos de alfabetismo por sexo: ¿la brecha de Antioquia se cierra en 1964–1973, justo cuando mi abuela ya estaba fuera del sistema educativo?]</span></p>
     </div>
 
     <div class="grafica" id="caja-educacion">
@@ -547,8 +657,8 @@
     </div>
 
     <blockquote class="testimonio">
-      <p><span class="completar">[Cita de la entrevista sobre por qué los hombres estudiaron y las mujeres no, o sobre la primera persona que fue a la universidad.]</span></p>
-      <cite>— <span class="completar">[Nombre o parentesco]</span>, entrevista</cite>
+      <p>En el caso de mi familia materna, de cuatro hijos, dos fueron universitarios y las dos mujeres, pues, fueron amas de casa.</p>
+      <cite>— Mi mamá, nota de voz, noviembre de 2026</cite>
     </blockquote>
   </div>
 </section>
@@ -572,43 +682,92 @@
         <tbody>
           <tr>
             <td><strong>Origen</strong></td>
-            <td>La familia viene de Amagá y Titiribí.</td>
-            <td><span class="completar">[partida de bautismo, escritura…]</span></td>
-            <td>Población de ambos municipios en los censos.</td>
+            <td>Los padres de mi abuela vienen de familias de Titiribí y Amagá. Mi mamá y mi abuela coinciden.</td>
+            <td><span class="completar">[partida de bautismo o registro civil de mis bisabuelos]</span></td>
+            <td>Titiribí y Amagá eran municipios rurales: solo el 26 % de su población vivía en la cabecera en 1964.</td>
             <td><span class="estado parcial">Parcial</span></td>
           </tr>
           <tr>
-            <td><strong>Minería de carbón</strong></td>
-            <td>Vínculo con minas en Amagá.</td>
-            <td><span class="completar">[registro laboral, foto…]</span></td>
-            <td><span class="completar">[producción de carbón / empleo minero]</span></td>
-            <td><span class="estado verificar">Por verificar</span></td>
+            <td><strong>Tierras y minería de carbón</strong></td>
+            <td>Tierras, ganado y, sobre todo, minas de carbón en Amagá. Mi abuela: «la mina la dejaron, se adueñaron de la finca».</td>
+            <td><span class="completar">[escritura de la finca o título minero; Notaría o Archivo Histórico de Antioquia]</span></td>
+            <td><span class="completar">[producción de carbón o empleo minero en Amagá]</span></td>
+            <td><span class="estado parcial">Parcial</span></td>
           </tr>
           <tr>
             <td><strong>Traslado a Medellín</strong></td>
-            <td><span class="completar">[año aproximado y motivo]</span></td>
-            <td><span class="completar">[dirección, escritura de casa…]</span></td>
-            <td>Crecimiento de Medellín entre censos.</td>
+            <td>Mi abuela nació en Medellín antes de 1946 y sus padres ya vivían allí. El traslado fue anterior a la ola de 1951–1964.</td>
+            <td><span class="completar">[registro civil o cédula de mi abuela: año y lugar de nacimiento]</span></td>
+            <td>Medellín: 168.266 habitantes en 1938 y 358.189 en 1951.</td>
+            <td><span class="estado parcial">Parcial</span></td>
+          </tr>
+          <tr>
+            <td><strong>Empleo público</strong></td>
+            <td>Mi bisabuelo fue alcalde y tesorero de varios pueblos, con un trabajo estable «muy bien pagado».</td>
+            <td><span class="completar">[decretos de nombramiento en la Gaceta Departamental de Antioquia]</span></td>
+            <td>Hasta 1986 los alcaldes los nombraba el gobernador.</td>
             <td><span class="estado verificar">Por verificar</span></td>
           </tr>
           <tr>
-            <td><strong>Universidad</strong></td>
-            <td>La siguiente generación entra a la universidad.</td>
-            <td><span class="completar">[diploma, carné…]</span></td>
-            <td>Alfabetismo y escolaridad por sexo.</td>
-            <td><span class="estado verificar">Por verificar</span></td>
-          </tr>
-          <tr>
-            <td><strong>Brecha de género</strong></td>
-            <td>Hombres estudian; mujeres en el hogar.</td>
-            <td>—</td>
-            <td>Alfabetismo por sexo y zona.</td>
-            <td><span class="estado verificar">Por verificar</span></td>
+            <td><strong>Universidad y género</strong></td>
+            <td>Antioquia: de 4 hijos, los 2 hombres fueron a la universidad y las 2 mujeres no. Cúcuta: 7 de 7 hijos universitarios.</td>
+            <td><span class="completar">[diplomas de mis tíos abuelos y de mi abuelo]</span></td>
+            <td>Alfabetismo por sexo y zona <span class="completar">[pendiente]</span>.</td>
+            <td><span class="estado parcial">Parcial</span></td>
           </tr>
         </tbody>
       </table>
     </div>
     <!-- EDITAR: cambie la clase de cada estado a "confirmado", "parcial" o "verificar" según avance -->
+
+    <h3 style="margin-top:3rem">Lo que deduzco, pero aún no puedo probar</h3>
+    <div class="texto">
+      <p>
+        La memoria familiar tiene vacíos. Mi abuela tuvo un derrame cerebral y perdió parte de sus recuerdos, y mi mamá
+        habla de hechos que ocurrieron antes de que ella naciera. Para no presentar suposiciones como hechos, separo aquí
+        lo que deduzco cruzando sus relatos con el contexto histórico. Cada hipótesis dice qué fuente podría confirmarla
+        o descartarla.
+      </p>
+    </div>
+    <div class="rejilla">
+      <div class="hipotesis">
+        <span class="marca">Hipótesis 1</span>
+        <h3>Migrantes tempranos, no desplazados</h3>
+        <p>Si mi abuela nació en Medellín antes de 1946 y sus padres ya vivían allí, la familia salió del suroeste en los
+          años treinta o comienzos de los cuarenta. Llegó antes de La Violencia y antes de que Medellín se duplicara.</p>
+        <p class="como">Se prueba con: el registro civil de mi abuela y, si existe, el de nacimiento de sus hermanos mayores.</p>
+      </div>
+      <div class="hipotesis">
+        <span class="marca">Hipótesis 2</span>
+        <h3>La política como escalera</h3>
+        <p>El ascenso de esta rama no vino de la industria sino del Estado. Como el gobernador nombraba a los alcaldes, una
+          carrera de cuatro décadas sugiere que mi bisabuelo estaba bien conectado con su partido. Tal vez sobrevivió a los
+          cambios de gobierno gracias a cargos técnicos como la tesorería. Mazzuca y Robinson (2009) muestran que en Colombia
+          los partidos se repartieron el poder para evitar la guerra; el Frente Nacional llevó esa lógica a la burocracia con
+          la paridad de cargos.</p>
+        <p class="como">Se prueba con: su partido (liberal o conservador), los pueblos y años de cada cargo, y los decretos de
+          nombramiento en la Gaceta Departamental de Antioquia.</p>
+      </div>
+      <div class="hipotesis">
+        <span class="marca">Hipótesis 3</span>
+        <h3>La tierra se pierde cuando el dueño se va</h3>
+        <p>«Se adueñaron de la finca» sugiere que, al irse a Medellín, la familia dejó la finca en manos de administradores,
+          arrendatarios o parientes. La Ley 200 de 1936 favorecía a quien explotaba la tierra y amenazaba con quitar el dominio
+          de la tierra sin explotar. Después de 1948, La Violencia facilitó el despojo en muchas zonas rurales. Cualquiera de
+          los dos procesos pudo hacer más difícil que un propietario ausente conservara su finca.</p>
+        <p class="como">Se prueba con: cuándo y cómo se perdió la finca, quién se quedó con ella, y la escritura o el folio
+          de matrícula en la Notaría o la Oficina de Registro del municipio.</p>
+      </div>
+      <div class="hipotesis">
+        <span class="marca">Hipótesis 4</span>
+        <h3>Dos ramas, dos estrategias educativas</h3>
+        <p>La familia antioqueña, con un ingreso público estable, educó solo a los hijos hombres. La familia de Cúcuta,
+          comerciantes descendientes de inmigrantes, educó a sus siete hijos. Las familias de inmigrantes y comerciantes
+          suelen valorar el título como una forma de afianzar su lugar en la sociedad, y la diferencia también puede deberse
+          a que las dos generaciones no estudiaron en los mismos años.</p>
+        <p class="como">Se prueba con: si había mujeres entre los siete hijos de Cúcuta y en qué años estudió cada uno.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -681,11 +840,27 @@
   <div class="envoltura aparecer">
     <span class="etiqueta">10 · Conclusiones</span>
     <h2>Lo que la familia y los datos cuentan juntos</h2>
-    <p class="conclusion-grande"><span class="completar">[Una frase que resuma su hallazgo principal]</span></p>
+    <p class="conclusion-grande">Mi familia no siguió a la ola hacia Medellín: la precedió, de la mano del Estado y no de la fábrica, y la universidad llegó solo para los hijos hombres.</p>
     <div class="texto">
-      <p><span class="completar">[¿En qué coincide la trayectoria familiar con los procesos de integración regional, urbanización y acumulación de capital humano?]</span></p>
-      <p><span class="completar">[¿En qué se aparta? ¿Qué tan común o excepcional fue la experiencia de su familia?]</span></p>
-      <p><span class="completar">[¿Qué preguntas quedan abiertas?]</span></p>
+      <p class="bloque-completar" style="margin-bottom:1.5rem">Borrador. Ajústelo cuando confirme las hipótesis de la sección 7 y tenga los datos de alfabetismo.</p>
+      <p>
+        <strong>En qué coincide.</strong> La trayectoria de la familia sigue las grandes tendencias de Antioquia entre 1930
+        y 1970. Salió de un suroeste rural, que según los censos casi no creció, hacia una Medellín que se multiplicó casi por
+        siete. Dejó atrás la tierra y el carbón por un ingreso urbano. Y convirtió ese ingreso en educación universitaria,
+        la acumulación de capital humano que Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo (2019) asocian con la mejora
+        del nivel de vida en el siglo XX.
+      </p>
+      <p>
+        <strong>En qué se aparta.</strong> La familia llegó antes de la migración masiva y no huyendo de La Violencia. Su
+        sustento en la ciudad fue el empleo público, ligado a la política partidista, y no la industria textil que suele
+        asociarse con Medellín. Y el salto educativo fue desigual: la ley ya permitía que las mujeres fueran a la universidad,
+        pero en la familia antioqueña solo estudiaron los hombres. La rama de Cúcuta, en cambio, educó a todos sus hijos.
+      </p>
+      <p>
+        <strong>Qué queda abierto.</strong> ¿Cuándo y cómo se perdieron la finca y la mina? ¿A qué partido pertenecía mi
+        bisabuelo y cómo se sostuvo cuatro décadas en cargos que dependían del gobernador? ¿Fue la brecha de género de mi
+        familia típica de la clase media antioqueña de su época, o los datos muestran que otras familias ya educaban a sus hijas?
+      </p>
     </div>
   </div>
 </section>
@@ -698,7 +873,9 @@
     <h3 style="margin-top:1.5rem">Fuentes familiares</h3>
     <ul class="bibliografia">
       <li>Entrevista semiestructurada a mi madre, septiembre de 2026.</li>
-      <li><span class="completar">[Otras entrevistas, fotos, documentos]</span></li>
+      <li>Mi madre. Nota de voz con respuestas sobre origen, ocupaciones, migración y educación de la familia, 17 de noviembre de 2026.</li>
+      <li>Mi abuela materna. Nota de voz sobre la llegada de la familia a Medellín y la pérdida de la finca y la mina, noviembre de 2026. Mi abuela tuvo un derrame cerebral que afectó su memoria; su testimonio se usa para lo que recuerda con claridad y se contrasta con el de mi madre.</li>
+      <li><span class="completar">[Fotos y documentos familiares]</span></li>
     </ul>
     <h3 style="margin-top:1.5rem">Datos</h3>
     <ul class="bibliografia">
@@ -714,6 +891,7 @@
       <li>Correa Restrepo, J. S. (2012). El ferrocarril de Antioquia: empresarios extranjeros y participación local. <em>Estudios Gerenciales</em>, 28(123), 149–166.</li>
       <li>Deas, M. (1976). Una hacienda cafetera de Cundinamarca: Santa Bárbara (1870–1912). <em>Anuario Colombiano de Historia Social y de la Cultura</em>, (8), 74–100.</li>
       <li>Jaramillo-Echeverri, J., Meisel-Roca, A., &amp; Ramírez-Giraldo, M. T. (2019). More than 100 years of improvements in living standards: The case of Colombia. <em>Cliometrica</em>, 13(3), 323–366.</li>
+      <li>Mazzuca, S. L., &amp; Robinson, J. A. (2009). Political conflict and power sharing in the origins of modern Colombia. <em>Hispanic American Historical Review</em>, 89(2), 285–321.</li>
     </ul>
     <h3 style="margin-top:1.5rem">Referentes de diseño</h3>
     <ul class="bibliografia">
@@ -763,20 +941,21 @@ const DATOS = {
     resto:    { hombres: [45, 55, 62, 68], mujeres: [40, 50, 60, 67] }
   },
 
-  // Periodo aproximado de traslado de la familia a Medellín (franja sombreada)
-  periodoTraslado: [1951, 1964],
+  // Periodo en que la familia ya vive en Medellín, antes de la gran ola migratoria (franja sombreada)
+  periodoTraslado: [1938, 1951],
+  etiquetaTraslado: "Mi familia ya vive en Medellín",
 
   // Lugares del mapa
   lugares: [
     { nombre: "Titiribí", coords: [6.0636, -75.7928], color: "#4f6b47",
       texto: "Municipio de tierras, café y ganado, con tradición minera: la mina de oro El Zancudo fue una de las mayores de Antioquia en el siglo XIX. Su población se estancó entre 1938 y 1973.",
-      familia: "[COMPLETAR: qué hacía aquí la familia]" },
+      familia: "Uno de los dos pueblos de origen de mis bisabuelos maternos, de familias con tierras y ganado." },
     { nombre: "Amagá", coords: [6.0397, -75.7031], color: "#33302d",
       texto: "Centro de la cuenca carbonífera del suroeste, conectada con Medellín por el Ferrocarril de Amagá. Creció más que Titiribí, sobre todo en la zona rural donde estaban las minas.",
-      familia: "[COMPLETAR: vínculo de la familia con el carbón]" },
+      familia: "La familia tenía minas de carbón aquí. Según mi abuela, «la mina la dejaron» al irse a Medellín." },
     { nombre: "Medellín", coords: [6.2442, -75.5812], color: "#a4512b",
       texto: "Centro industrial y textil del país. Pasó de 168.266 habitantes en 1938 a más de un millón en 1973, en buena parte por la migración desde los pueblos de Antioquia.",
-      familia: "[COMPLETAR: llegada, barrio, empleo, universidad]" }
+      familia: "Mis bisabuelos llegan antes de c. 1945. Mi abuela nace aquí. Mi bisabuelo trabaja en el gobierno y sus dos hijos hombres van a la universidad. [COMPLETAR: barrio]" }
   ],
 
   // Relato guiado del mapa (edite los textos; "lugar" debe coincidir con un nombre de arriba o ser null)
@@ -784,13 +963,13 @@ const DATOS = {
     { titulo: "El punto de partida", lugar: null, zoom: 10,
       texto: "Tres municipios a menos de 40 km en línea recta, separados por montañas. A comienzos del siglo XX representaban economías distintas: la finca, la mina y la ciudad." },
     { titulo: "Titiribí: la tierra", lugar: "Titiribí", zoom: 12,
-      texto: "Las primeras generaciones vivieron de la propiedad y administración de tierras, la agricultura y la ganadería. [COMPLETAR con detalles de la entrevista]" },
+      texto: "Mis tatarabuelos vivían de la tierra y el ganado. Mi mamá habla de «familias con tierras feudales». Más tarde, según mi abuela, otros «se adueñaron de la finca»." },
     { titulo: "Amagá: el carbón", lugar: "Amagá", zoom: 12,
-      texto: "En Amagá la familia se vinculó a la minería de carbón, que abastecía al ferrocarril y a las fábricas de Medellín. [COMPLETAR]" },
+      texto: "En Amagá la familia tuvo minas de carbón, el combustible del ferrocarril y de las fábricas de Medellín. Al trasladarse a la ciudad, «la mina la dejaron»." },
     { titulo: "El ferrocarril", lugar: null, zoom: 11, centro: [6.13, -75.64],
       texto: "El Ferrocarril de Amagá unía la cuenca carbonífera con Medellín pasando por Caldas, La Estrella e Itagüí. Al bajar el costo de transporte, integró el suroeste con la ciudad." },
     { titulo: "Medellín: la ciudad", lugar: "Medellín", zoom: 12,
-      texto: "Entre 1951 y 1964 Medellín sumó más de 430.000 habitantes. La familia llegó a ocupaciones urbanas, al empleo público y a la universidad. [COMPLETAR: año, barrio, motivo]" }
+      texto: "Mi familia llegó temprano, antes de c. 1945, cuando Medellín tenía unos 170.000 habitantes. Mi bisabuelo vivió del empleo público y sus hijos hombres fueron a la universidad. Después, entre 1951 y 1964, la ciudad sumaría más de 430.000 habitantes. [COMPLETAR: barrio]" }
   ]
 };
 /* =================== FIN DE LA PARTE EDITABLE ======================= */
@@ -932,7 +1111,7 @@ if (typeof Chart !== "undefined") {
       c.fillRect(x0, a.top, x1 - x0, a.bottom - a.top);
       c.fillStyle = "#8a6620";
       c.font = "600 12px 'Source Sans 3'";
-      c.fillText("Traslado de la familia", x0 + 6, a.top + 16);
+      c.fillText(DATOS.etiquetaTraslado || "Traslado de la familia", x0 + 6, a.top + 16);
       c.restore();
     }
   };
