@@ -27,3 +27,10 @@ presupuesto_educacion_primaria_antioquia.csv,rural_pct,Porcentaje del presupuest
 presupuesto_educacion_primaria_antioquia.csv,urbano_pct,Porcentaje asignado a la zona urbana,%
 familia_educacion.csv,hijos,Número de hijos recordado en el testimonio,personas
 familia_educacion.csv,universitarios,Hijos con estudios universitarios según el testimonio,personas
+alfabetismo_colombia_7mas_dnp.csv,hombres_pct,Hombres mayores de siete años que saben leer y escribir / hombres mayores de siete años × 100,%
+alfabetismo_colombia_7mas_dnp.csv,mujeres_pct,Igual para mujeres,%
+empresas_industriales_1945.csv,empresas,Empresas industriales existentes en 1945 según su período de fundación (sobrevivientes al censo),establecimientos
+industria_ciudades_1945.csv,pct_empleo_industrial_nacional,Empleo industrial de la ciudad / empleo industrial nacional × 100,%
+industria_ciudades_1945.csv,pct_establecimientos_nacional,Establecimientos industriales de la ciudad / total nacional × 100,%
+industria_ciudades_1945.csv,pct_capital_nacional,Capital industrial de la ciudad / total nacional × 100,%
+empleo_textil_antioquia.csv,pct_empleo_textil_nacional_en_antioquia,Empleo textil de Antioquia / empleo textil nacional × 100,%

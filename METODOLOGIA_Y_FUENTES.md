@@ -174,3 +174,68 @@ Detalle completo en la sección 11 de la página. Estado de consulta de las lect
 **Una oración.** Reconstruyo cómo una rama de mi familia pasó de la tierra y el carbón del suroeste antioqueño a la vida urbana de Medellín y a la universidad, y la comparo con otra rama comerciante de Cúcuta, para entender cómo la industrialización, la urbanización y la expansión educativa de Colombia entre 1930 y 1970 se vivieron de forma desigual dentro de una misma familia.
 
 **Un párrafo.** A partir de notas de voz de mi mamá y de mi abuela, reconstruyo dos trayectorias. En Antioquia, los antepasados de mi abuela vivieron de fincas, ganado y minería de carbón en Amagá y Titiribí; la familia se estableció en Medellín antes de 1947, un antepasado trabajó en cargos públicos y, de cuatro hijos, solo los dos hombres llegaron a la universidad. En Cúcuta, un antepasado comerciante de telas dejó negocios a sus descendientes y los siete hijos de esa rama, incluidas mujeres, fueron universitarios. Contrasto estos recuerdos con los censos de población, con las cifras macroeconómicas de la Gran Depresión y con las lecturas del curso sobre ferrocarriles, crisis, instituciones y capital humano. El resultado muestra una transformación intergeneracional real, pero también que las oportunidades no se repartieron igual entre regiones, generaciones y géneros, y que la memoria familiar necesita contrastarse con documentos.
+
+---
+
+## 14. Rediseño final (versión 3)
+
+### Cambios principales
+- Nueva estructura en siete capítulos narrativos: Antes de Medellín; Una ciudad que crecía; La familia se establece en la ciudad; La otra rama: Cúcuta; ¿Quién podía ir a la universidad?; Lo que muestran los documentos; Lo que queda de esta historia.
+- Nueva identidad visual: paleta marfil, tinta carbón, verde bosque, terracota y ocre; tipografías Cormorant Garamond, Source Sans 3 e IBM Plex Mono.
+- Redacción en primera persona. Las advertencias de incertidumbre se agrupan en la nota de metodología de la página y en este documento.
+- Se usan los nombres de pila de los abuelos (Gloria y Miguel), por decisión de la autora.
+
+### Inventario de fotografías familiares
+| Archivo | Persona | Uso en la página |
+|---|---|---|
+| `01-padre-de-miguel-nino.jpeg` | Padre de Miguel (bisabuelo, rama de Cúcuta), en su infancia | Capítulo 4 |
+| `02-miguel-retrato.jpeg` | Miguel, abuelo, nacido en Cúcuta en 1943 | Capítulo 4 |
+| `03-gloria-retrato.jpeg` | Gloria, abuela, nacida en Medellín en 1947 | Capítulo 3, retrato protagonista |
+| `04-miguel-gloria-nieta.jpeg` | Miguel y Gloria con una nieta | Capítulo 7, cierre |
+
+Las versiones web solo se recortaron para eliminar las franjas negras de la captura de pantalla, el fondo de la mesa y la marca de agua del celular. No se alteraron los rostros. Los originales están en `assets/archivo-familiar/originales/`. Las fechas y los lugares de las fotografías están por confirmar. La fotografía del padre de Miguel no se presenta como prueba de que él fuera el comerciante de telas.
+
+### Fotografías externas
+Todas proceden de Wikimedia Commons; la licencia de cada una se comprobó en su página. Registro completo en `assets/lugares/creditos.csv`.
+
+| Imagen | Tipo | Autor | Licencia |
+|---|---|---|---|
+| Estación Medellín, Ferrocarril de Antioquia, c. 1920 | Histórica | Gonzalo Escovar Gaviria | Dominio público |
+| Fabricato de Bello, c. 1920 | Histórica | Gonzalo Escovar Gaviria | Dominio público |
+| Feria de ganado, Medellín, c. 1920 | Histórica | Gonzalo Escovar Gaviria | Dominio público |
+| Carrera Junín, Medellín, 1923 | Histórica | Gonzalo Escovar Gaviria | Dominio público |
+| Plano de Medellín, 1932 | Documento histórico | Guillermo Palacio & Cía. | Dominio público |
+| Edificio San Ignacio, Universidad de Antioquia, 1928 | Histórica | Melitón Rodríguez | Dominio público |
+| Locomotora Henschel del Ferrocarril de Antioquia, c. 1936 | Histórica | Foto de fábrica Henschel | Dominio público |
+| Bus de pasajeros en Cúcuta, c. 1920 | Histórica | CúcutaNuestra.com (según Commons) | Dominio público según Commons |
+| Amagá desde Angelópolis, 2020 | Actual | XalD | CC BY-SA 4.0 |
+| Titiribí, panorámica, 2010 | Actual | I.D. R.J. | CC BY-SA 2.0 |
+
+No se encontraron fotografías con licencia libre de las minas de carbón de Amagá; no se usaron imágenes de minas de otros municipios. Las fotografías actuales se rotulan como actuales y no se modificaron de color.
+
+### Nuevos datos
+- **Industria, 1945** (`empresas_industriales_1945.csv`, `industria_ciudades_1945.csv`). Fuente: Jaramillo-Echeverri, Meisel-Roca y Ramírez-Giraldo (2016), cuadros A1 y A2, con base en el Primer Censo Industrial de Colombia, 1945.
+  - El 72,3 % de las empresas antioqueñas existentes en 1945 se fundó entre 1931 y 1945; en Norte de Santander, el 73,6 %.
+  - Medellín concentraba el 17,3 % del empleo industrial nacional; Bogotá, el 15,7 %.
+  - El cuadro solo incluye las empresas que sobrevivían en 1945.
+- **Empleo textil** (`empleo_textil_antioquia.csv`): Antioquia tenía el 54,3 % del empleo textil nacional en 1945 y el 56,8 % en 1970 (España y Sánchez).
+- **Alfabetización 1951 y 1964** (`alfabetismo_colombia_7mas_dnp.csv`): DNP, documento 1016, cuadros B.6 (1 y 2), población mayor de siete años, por sexo y zona. Brecha nacional: 2,9 puntos en 1951 y 1,1 en 1964.
+  - **Limitación:** las cifras se transcribieron del documento original. Durante la preparación de esta versión, el servidor del DNP no respondió desde el entorno de trabajo y no fue posible un segundo cotejo automático. Se recomienda revisarlas contra el PDF antes de la entrega.
+  - Son coherentes con la serie del DANE para la población de 15 años y más (75,0 % de hombres y 71,1 % de mujeres alfabetos en 1964).
+- **Medellín en cifras (DANE, 1975):** no se pudo consultar porque la Biblioteca Virtual del DANE no respondió. Por eso no hay serie industrial 1945–1970 por ciudad. La comparación industrial se hizo con el Primer Censo Industrial publicado por Jaramillo-Echeverri et al. (2016).
+
+### Correcciones adicionales
+- El niño de la fotografía antigua es el padre de Miguel (bisabuelo), no Miguel.
+- Se eliminó la referencia a «estrato seis»; solo se menciona que Gloria creció en Laureles.
+- Las lecturas no consultadas en texto completo se citan solo para ideas generales que su título o su programa respaldan. Las cifras se atribuyen únicamente a fuentes consultadas.
+
+### Matriz de cumplimiento actualizada
+| Criterio | Evidencia | Valoración |
+|---|---|---|
+| Motivación | Introducción personal, pregunta, tesis, periodo y lugares | Cumplido |
+| Profundidad | Comparaciones temporales (1925–1973), regionales (Medellín, suroeste, Cúcuta / Antioquia y Norte de Santander), sectoriales (minería, industria, Estado, comercio) y de género (alfabetización, universidad en las dos ramas) | Cumplido |
+| Historia económica | Correa, Ocampo, Jaramillo-Echeverri et al. (2016, 2019), Deas, Mazzuca y Robinson, Junguito, Safford y Palacios, Ramírez y Téllez, citados donde sostienen una idea | Cumplido; algunas lecturas se citan por su argumento general |
+| Fuentes | Entrevistas, cuatro fotografías familiares, fotografías de archivo con licencia, censos, leyes y decretos; tabla de contraste memoria-documento | Cumplido |
+| Análisis empírico | Seis gráficas con datos reales, tablas accesibles, indicadores calculados con un script reproducible | Cumplido, con las limitaciones de las cifras de 1938–1951 y del cotejo del DNP |
+| Narrativa | Siete capítulos con principio, desarrollo y cierre; cuatro conclusiones y reflexión final | Cumplido |
+| Forma | Portada editorial, mapa interactivo, visor de fotografías, gráficas con controles, diseño adaptable a móvil | Cumplido |
