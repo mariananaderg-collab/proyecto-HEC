@@ -1,0 +1,29 @@
+archivo,variable,descripcion,unidad
+censos_poblacion.csv,municipio,Municipio o departamento,texto
+censos_poblacion.csv,codigo_dane,Código DIVIPOLA del DANE,texto
+censos_poblacion.csv,censo,Año del censo,año
+censos_poblacion.csv,fecha_censo,Fecha oficial del censo (para calcular intervalos exactos),AAAA-MM-DD
+censos_poblacion.csv,variable,"poblacion_total (censada), poblacion_total_ajustada, poblacion_cabecera_ajustada",texto
+censos_poblacion.csv,valor,Número de personas,personas
+censos_poblacion.csv,tipo_cifra,"censada (conteo DANE), censada_secundaria (conteo tomado de fuente secundaria), ajustada (con ajuste por cobertura)",texto
+censos_poblacion.csv,fuente_id,Identificador de la fuente en fuentes.csv,texto
+indicadores_poblacion.csv,indice_1938_100,Población / población de 1938 × 100,índice
+indicadores_poblacion.csv,cambio_absoluto,Población menos población del censo anterior,personas
+indicadores_poblacion.csv,tasa_anual_pct,"((P1/P0)^(1/t) − 1) × 100, con t en años exactos entre fechas de censo",% anual
+indicadores_poblacion.csv,anios_intervalo,Años transcurridos entre los dos censos,años
+indicadores_poblacion.csv,pct_cabecera,Población en cabecera / población total × 100 (ambas ajustadas),%
+participacion_medellin_antioquia.csv,medellin_sobre_total_dpto_pct,Población de Medellín / población de Antioquia × 100,%
+participacion_medellin_antioquia.csv,cabecera_medellin_sobre_cabeceras_dpto_pct,Población de la cabecera de Medellín / población de todas las cabeceras de Antioquia × 100,%
+alfabetismo_colombia_15mas.csv,hombres_pct,Hombres de 15 años y más que saben leer y escribir / total de hombres de 15 años y más × 100,%
+alfabetismo_colombia_15mas.csv,mujeres_pct,Igual para mujeres,%
+alfabetismo_colombia_15mas.csv,total_pct,Igual para ambos sexos,%
+indicadores_alfabetismo.csv,brecha_h_menos_m_pp,hombres_pct − mujeres_pct,puntos porcentuales
+macro_colombia_1925_1945.csv,pib_crecimiento_pct,Crecimiento anual del PIB real,%
+macro_colombia_1925_1945.csv,inflacion_pct,Inflación anual,%
+macro_colombia_1925_1945.csv,exportaciones_musd,Exportaciones,millones de dólares corrientes
+macro_colombia_1925_1945.csv,importaciones_musd,Importaciones,millones de dólares corrientes
+macro_colombia_1925_1945.csv,reservas_musd,Reservas internacionales brutas,millones de dólares
+presupuesto_educacion_primaria_antioquia.csv,rural_pct,Porcentaje del presupuesto departamental de educación primaria asignado a la zona rural,%
+presupuesto_educacion_primaria_antioquia.csv,urbano_pct,Porcentaje asignado a la zona urbana,%
+familia_educacion.csv,hijos,Número de hijos recordado en el testimonio,personas
+familia_educacion.csv,universitarios,Hijos con estudios universitarios según el testimonio,personas
