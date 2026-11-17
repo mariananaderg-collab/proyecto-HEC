@@ -126,7 +126,21 @@
   }
 
   /* Mapa */
-  #mapa{height:480px;border-radius:12px;border:1px solid var(--linea);margin-top:1.5rem;z-index:1}
+  #mapa{height:520px;border-radius:12px;border:1px solid var(--linea);z-index:1}
+  .mapa-panel{display:grid;grid-template-columns:1fr 300px;gap:1rem;margin-top:1.5rem;align-items:start}
+  .mapa-lateral{background:var(--blanco,#fffdf9);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.1rem;font-size:.95rem}
+  .mapa-lateral h4{font-family:"Fraunces",serif;font-size:1.15rem;margin:.2rem 0 .4rem}
+  .mapa-lateral .paso-n{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--terracota);font-weight:700}
+  .mapa-lateral .botones{display:flex;gap:.4rem;margin-top:.8rem}
+  .mapa-lateral button,.anio-censo button{font:inherit;font-size:.85rem;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--linea);background:transparent;cursor:pointer;color:var(--tinta)}
+  .mapa-lateral button:hover,.anio-censo button:hover{border-color:var(--carbon)}
+  .anio-censo{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin-top:1rem;font-size:.9rem}
+  .anio-censo button.activo{background:var(--carbon);border-color:var(--carbon);color:#fffdf9}
+  .tabla-mini{font-size:.85rem;margin-top:.5rem}
+  .fila-mini{display:flex;justify-content:space-between;gap:1rem;padding:.15rem 0;border-bottom:1px dotted var(--linea);font-variant-numeric:tabular-nums}
+  .leyenda-mapa{background:rgba(255,253,249,.95);padding:.5rem .7rem;border-radius:8px;font-size:12px;line-height:1.6;border:1px solid var(--linea)}
+  .leyenda-mapa i{display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+  @media (max-width:820px){.mapa-panel{grid-template-columns:1fr}#mapa{height:420px}}
   .leaflet-popup-content{font-family:"Source Sans 3",sans-serif;font-size:15px;line-height:1.45}
   .leaflet-popup-content h4{font-family:"Fraunces",serif;font-size:1.1rem;margin-bottom:.3rem}
 
@@ -335,10 +349,19 @@
         Haga clic en cada punto para ver qué pasaba en cada lugar y qué hizo allí la familia.
       </p>
     </div>
-    <div id="mapa" role="img" aria-label="Mapa de la trayectoria familiar entre Titiribí, Amagá y Medellín"></div>
+    <div class="anio-censo" id="anioCenso">
+      <span>Tamaño de los círculos según el censo de:</span>
+      <button data-i="0">1938</button><button data-i="1">1951</button><button data-i="2" class="activo">1964</button><button data-i="3">1973</button>
+    </div>
+    <div class="mapa-panel">
+      <div id="mapa" role="application" aria-label="Mapa interactivo de la trayectoria familiar entre Titiribí, Amagá y Medellín"></div>
+      <aside class="mapa-lateral" id="relato" aria-live="polite"></aside>
+    </div>
     <p class="nota" style="font-size:.85rem;color:var(--tinta-suave);margin-top:.6rem">
-      La línea punteada representa la trayectoria familiar, no una ruta geográfica exacta.
-      <!-- EDITAR: si consigue un mapa histórico del Ferrocarril de Antioquia / ramal de Amagá, súmelo como imagen aquí. -->
+      Recorra la historia con los botones del panel o haga clic en cada punto. El área de cada círculo es proporcional a la
+      población del municipio en el censo elegido. La flecha punteada representa la trayectoria familiar, no una ruta exacta;
+      el trazado del ferrocarril y la ubicación de las minas son aproximados. Use el control de capas (arriba a la derecha) para
+      cambiar a un mapa de relieve o satelital y para mostrar u ocultar el ferrocarril y las minas.
     </p>
   </div>
 </section>
@@ -399,25 +422,35 @@
         <strong>índice</strong> pone a los tres municipios en la misma escala (año base = 100) y permite comparar
         sus ritmos de crecimiento.
       </p>
-      <p><span class="completar">[Interprete aquí lo que muestran sus datos: ¿cuánto creció cada municipio? ¿En qué periodo se movió la familia?]</span></p>
+      <p>
+        Los censos muestran dos ritmos muy distintos. Entre 1938 y 1973 Medellín multiplicó su población casi por siete
+        (de 168.266 a 1.163.868 habitantes), con tasas cercanas al 6 % anual entre 1938 y 1964. En el mismo periodo
+        Amagá creció apenas un 73 % (de 11.033 a 19.068) y Titiribí prácticamente no creció: tenía 14.433 habitantes en 1938
+        y 13.752 en 1973, después de perder casi 2.700 personas entre 1964 y 1973. En 1964 Medellín ya concentraba el 31 % de
+        la población de Antioquia, y en 1973 el 37 %.
+      </p>
+      <p>
+        La urbanización también fue desigual. En 1964 el 93 % de los habitantes de Medellín vivía en la cabecera, frente a
+        solo el 26 % en Amagá y en Titiribí; en 1973 los dos municipios del suroeste seguían siendo mayoritariamente rurales
+        (28–29 %). El crecimiento de Amagá se dio sobre todo en la zona rural, donde estaban las minas de carbón.
+      </p>
+      <p><span class="completar">[Conecte con su familia: ¿en qué periodo se movieron? ¿Hicieron parte de la ola de 1951–1964?]</span></p>
     </div>
 
     <div class="grafica" id="caja-poblacion">
-      <span class="sello">Datos ilustrativos — reemplazar</span>
-      <h3>Población total por municipio, censos</h3>
+      <h3>Población total por municipio, censos de 1938 a 1973</h3>
       <div class="controles" id="controles-poblacion">
         <button class="activo" data-modo="indice">Índice (primer censo = 100)</button>
         <button data-modo="absoluto">Habitantes</button>
       </div>
       <div class="lienzo"><canvas id="graficaPoblacion"></canvas></div>
-      <p class="nota">Fuente: elaboración propia con base en censos nacionales de población (DANE). La franja sombreada marca el periodo de traslado de la familia.</p>
+      <p class="nota">Fuente: elaboración propia con base en los censos de población. 1938 y 1951: cifras censales (DANE). 1964 y 1973: DANE, reportadas en el Anuario Estadístico de Antioquia (con ajuste por cobertura). La franja sombreada marca el periodo de traslado de la familia.</p>
     </div>
 
     <div class="grafica" id="caja-urbano">
-      <span class="sello">Datos ilustrativos — reemplazar</span>
-      <h3>Porcentaje de la población que vive en la cabecera municipal</h3>
+      <h3>Porcentaje de la población que vive en la cabecera municipal, 1964 y 1973</h3>
       <div class="lienzo"><canvas id="graficaUrbana"></canvas></div>
-      <p class="nota">Fuente: elaboración propia con base en censos (DANE), población de cabecera / población total.</p>
+      <p class="nota">Fuente: elaboración propia con base en los censos de 1964 y 1973 (DANE, Anuario Estadístico de Antioquia). Población de cabecera / población total. Los datos de cabecera de 1938 y 1951 para Amagá y Titiribí están en los tomos del DANE y aún no se han digitalizado <span class="completar">[agregar 1938 y 1951]</span>.</p>
     </div>
   </div>
 </section>
@@ -503,6 +536,7 @@
     <div class="grafica" id="caja-educacion">
       <span class="sello">Datos ilustrativos — reemplazar</span>
       <h3>Tasa de alfabetismo en Antioquia por sexo</h3>
+      <p class="nota" style="margin-top:.3rem"><span class="completar">[Pendiente: estas cifras aún son de ejemplo. Digitalícelas de los cuadros de alfabetismo de los censos de 1938, 1951, 1964 y 1973 (DANE, tomos de Antioquia).]</span></p>
       <div class="controles" id="controles-educacion">
         <button class="activo" data-zona="total">Total</button>
         <button data-zona="cabecera">Cabecera</button>
@@ -615,19 +649,19 @@
     <div class="ficha">
       <dl>
         <dt>Origen</dt>
-        <dd>Censos nacionales de población, Biblioteca Virtual del DANE: <span class="completar">[1938,]</span> 1951, 1964 y 1973. Publicaciones estadísticas de Antioquia <span class="completar">[cuáles]</span>.</dd>
+        <dd>Censos nacionales de población de 1938, 1951, 1964 y 1973 (Biblioteca Virtual del DANE). Para 1964 y 1973, el cuadro 3.1.5 del <em>Anuario Estadístico de Antioquia</em> (Gobernación de Antioquia), que reproduce los datos históricos del DANE por municipio y zona.</dd>
         <dt>Cobertura</dt>
         <dd>Municipios de Medellín, Amagá y Titiribí; departamento de Antioquia para las variables educativas.</dd>
         <dt>Variables</dt>
-        <dd>Población total, población de cabecera y resto, alfabetismo por sexo y zona <span class="completar">[agregar otras]</span>.</dd>
+        <dd>Población total; población de cabecera y resto (1964, 1973); participación de Medellín en el total departamental; alfabetismo por sexo y zona (pendiente).</dd>
       </dl>
       <dl>
         <dt>Medición</dt>
         <dd>Los censos cambian definiciones entre años (por ejemplo, rangos de edad para alfabetismo o la definición de cabecera). <span class="completar">[Describa las diferencias encontradas]</span></dd>
         <dt>Limitaciones</dt>
-        <dd>Los censos colombianos de este periodo tienen problemas conocidos de cobertura; los límites municipales pueden haber cambiado. <span class="completar">[detallar]</span></dd>
+        <dd>Las cifras de 1964 y 1973 del Anuario incluyen un ajuste por cobertura del DANE; las de 1938 y 1951 son los conteos publicados. Por eso Medellín aparece con 791.589 habitantes en 1964 (ajustado), mientras el conteo sin ajuste es de 772.887. <span class="completar">[Verificar si Amagá o Titiribí cambiaron de límites entre 1938 y 1973]</span> El censo de 1951 se hizo en plena Violencia, con omisiones estimadas por el propio DANE.</dd>
         <dt>Archivos</dt>
-        <dd><span class="completar">[Enlace a su base limpia, p. ej. un Google Sheets o CSV descargable]</span></dd>
+        <dd><a href="datos/censos.csv" download>datos/censos.csv</a>: base limpia con cada cifra, su año, municipio, variable y fuente.</dd>
       </dl>
     </div>
     <h3 style="margin-top:2.5rem">Proceso</h3>
@@ -636,6 +670,7 @@
       <li>Digitalización manual de las cifras de interés para cada municipio.</li>
       <li>Revisión de consistencia (que cabecera + resto = total; comparación con fuentes secundarias).</li>
       <li>Construcción de indicadores: índices de crecimiento, porcentaje urbano, tasas de alfabetismo por sexo.</li>
+      <li>Los años sin dato se dejan vacíos en las gráficas en lugar de interpolar.</li>
       <li><span class="completar">[Otros pasos: correcciones, decisiones sobre datos faltantes…]</span></li>
     </ol>
   </div>
@@ -667,7 +702,12 @@
     </ul>
     <h3 style="margin-top:1.5rem">Datos</h3>
     <ul class="bibliografia">
-      <li>Departamento Administrativo Nacional de Estadística (DANE). Censos nacionales de población de 1951, 1964 y 1973. Biblioteca Virtual del DANE.</li>
+      <li>Contraloría General de la República. (1940). <em>Censo general de población, 5 de julio de 1938. Tomo de Antioquia</em>. Bogotá. Disponible en la Biblioteca Virtual del DANE.</li>
+      <li>Departamento Administrativo Nacional de Estadística (DANE). (1954). <em>Censo de población de 1951: Antioquia</em>. Bogotá: DANE.</li>
+      <li>DANE. (1967). <em>XIII Censo Nacional de Población (julio 15 de 1964): Resumen de Antioquia</em>. Bogotá: DANE.</li>
+      <li>DANE. (1975). <em>Medellín en cifras: ciudad tricentenaria, 1675–1975</em>. Bogotá: DANE.</li>
+      <li>DANE. <em>XIV Censo Nacional de Población y III de Vivienda, 24 de octubre de 1973</em>. Bogotá: DANE.</li>
+      <li>Gobernación de Antioquia, Departamento Administrativo de Planeación. (2014). <em>Anuario Estadístico de Antioquia 2014</em>, cuadro 3.1.5: Población de Antioquia por área geográfica y municipios, según censos entre 1964 y 2005.</li>
     </ul>
     <h3 style="margin-top:1.5rem">Literatura</h3>
     <ul class="bibliografia">
@@ -690,31 +730,33 @@
 <script>
 /* =====================================================================
    DATOS — EDITE SOLO ESTA PARTE
-   Reemplace los números por los que digitalice de los censos del DANE.
-   Cuando todos sean reales, cambie  ejemplo: true  por  ejemplo: false
-   y desaparecerán los sellos rojos de "Datos ilustrativos".
+   Población y cabecera ya tienen cifras de los censos (ver datos/censos.csv).
+   Falta el alfabetismo: cuando lo digitalice, cambie
+   alfabetismoEjemplo: true  por  false  y desaparecerá el sello rojo.
    ===================================================================== */
 const DATOS = {
-  ejemplo: true,
+  // Población y urbanización: CIFRAS REALES (ver datos/censos.csv)
+  // Alfabetismo: TODAVÍA DE EJEMPLO -> cambie alfabetismoEjemplo a false cuando ponga las cifras reales
+  alfabetismoEjemplo: true,
 
-  // Años de los censos que va a usar (puede agregar 1938)
   censos: [1938, 1951, 1964, 1973],
 
-  // Población total por municipio (mismo orden que "censos")
+  // Población total por municipio.
+  // 1938 y 1951: censos DANE. 1964 y 1973: DANE vía Anuario Estadístico de Antioquia (ajuste por cobertura)
   poblacion: {
-    "Medellín": [150000, 350000, 750000, 1050000],
-    "Amagá":    [ 15000,  18000,  20000,   22000],
-    "Titiribí": [ 15000,  14000,  13000,   12000]
+    "Medellín": [168266, 358189, 791589, 1163868],
+    "Amagá":    [ 11033,  12436,  17455,   19068],
+    "Titiribí": [ 14433,  14450,  16439,   13752]
   },
 
-  // % de población en la cabecera municipal
-  porcentajeCabecera: {
-    "Medellín": [80, 90, 95, 97],
-    "Amagá":    [25, 30, 35, 40],
-    "Titiribí": [20, 22, 25, 28]
+  // Población en la cabecera municipal (null = aún sin digitalizar)
+  cabecera: {
+    "Medellín": [143952, null, 735236, 1122099],
+    "Amagá":    [  null, null,   4487,    5436],
+    "Titiribí": [  null, null,   4317,    3798]
   },
 
-  // Tasa de alfabetismo (%) en Antioquia por sexo y zona
+  // Tasa de alfabetismo (%) en Antioquia por sexo y zona  ***EJEMPLO, REEMPLAZAR***
   alfabetismo: {
     total:    { hombres: [55, 65, 75, 82], mujeres: [50, 62, 74, 83] },
     cabecera: { hombres: [70, 80, 87, 91], mujeres: [65, 78, 86, 91] },
@@ -727,45 +769,145 @@ const DATOS = {
   // Lugares del mapa
   lugares: [
     { nombre: "Titiribí", coords: [6.0636, -75.7928], color: "#4f6b47",
-      texto: "Tierras, agricultura y ganadería. Municipio con tradición minera (mina El Zancudo, siglo XIX).",
+      texto: "Municipio de tierras, café y ganado, con tradición minera: la mina de oro El Zancudo fue una de las mayores de Antioquia en el siglo XIX. Su población se estancó entre 1938 y 1973.",
       familia: "[COMPLETAR: qué hacía aquí la familia]" },
     { nombre: "Amagá", coords: [6.0397, -75.7031], color: "#33302d",
-      texto: "Cuenca carbonífera del suroeste, conectada con Medellín por ferrocarril.",
+      texto: "Centro de la cuenca carbonífera del suroeste, conectada con Medellín por el Ferrocarril de Amagá. Creció más que Titiribí, sobre todo en la zona rural donde estaban las minas.",
       familia: "[COMPLETAR: vínculo de la familia con el carbón]" },
-    { nombre: "Medellín", coords: [6.2518, -75.5636], color: "#a4512b",
-      texto: "Centro industrial y textil; destino de migración desde el campo antioqueño.",
+    { nombre: "Medellín", coords: [6.2442, -75.5812], color: "#a4512b",
+      texto: "Centro industrial y textil del país. Pasó de 168.266 habitantes en 1938 a más de un millón en 1973, en buena parte por la migración desde los pueblos de Antioquia.",
       familia: "[COMPLETAR: llegada, barrio, empleo, universidad]" }
+  ],
+
+  // Relato guiado del mapa (edite los textos; "lugar" debe coincidir con un nombre de arriba o ser null)
+  relato: [
+    { titulo: "El punto de partida", lugar: null, zoom: 10,
+      texto: "Tres municipios a menos de 40 km en línea recta, separados por montañas. A comienzos del siglo XX representaban economías distintas: la finca, la mina y la ciudad." },
+    { titulo: "Titiribí: la tierra", lugar: "Titiribí", zoom: 12,
+      texto: "Las primeras generaciones vivieron de la propiedad y administración de tierras, la agricultura y la ganadería. [COMPLETAR con detalles de la entrevista]" },
+    { titulo: "Amagá: el carbón", lugar: "Amagá", zoom: 12,
+      texto: "En Amagá la familia se vinculó a la minería de carbón, que abastecía al ferrocarril y a las fábricas de Medellín. [COMPLETAR]" },
+    { titulo: "El ferrocarril", lugar: null, zoom: 11, centro: [6.13, -75.64],
+      texto: "El Ferrocarril de Amagá unía la cuenca carbonífera con Medellín pasando por Caldas, La Estrella e Itagüí. Al bajar el costo de transporte, integró el suroeste con la ciudad." },
+    { titulo: "Medellín: la ciudad", lugar: "Medellín", zoom: 12,
+      texto: "Entre 1951 y 1964 Medellín sumó más de 430.000 habitantes. La familia llegó a ocupaciones urbanas, al empleo público y a la universidad. [COMPLETAR: año, barrio, motivo]" }
   ]
 };
 /* =================== FIN DE LA PARTE EDITABLE ======================= */
 
 const COLORES = { "Medellín": "#a4512b", "Amagá": "#33302d", "Titiribí": "#4f6b47" };
+const fmt = n => n == null ? "s. d." : n.toLocaleString("es-CO");
 
-// Sellos de datos ilustrativos
-if (DATOS.ejemplo) {
-  document.querySelectorAll(".grafica").forEach(g => g.classList.add("datos-ejemplo"));
-}
+// Sello de datos ilustrativos solo en la gráfica de alfabetismo
+if (DATOS.alfabetismoEjemplo) document.getElementById("caja-educacion").classList.add("datos-ejemplo");
 
-// ---------- Mapa ----------
+// ---------- Mapa interactivo ----------
 (function () {
   if (typeof L === "undefined") return;
-  const mapa = L.map("mapa", { scrollWheelZoom: false }).setView([6.14, -75.68], 11);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-    maxZoom: 18
-  }).addTo(mapa);
+  const mapa = L.map("mapa", { scrollWheelZoom: false, zoomSnap: .5 }).setView([6.14, -75.68], 11);
 
-  const puntos = [];
+  // Mapas base sin clave de API (funcionan en GitHub Pages y abriendo el archivo localmente)
+  const esriAttr = 'Teselas &copy; Esri &mdash; Esri, HERE, Garmin, USGS, NGA, EPA, NPS';
+  const claro = L.layerGroup([
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", { attribution: esriAttr, maxZoom: 16 }),
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", { maxZoom: 16 })
+  ]).addTo(mapa);
+  const relieve = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", { attribution: esriAttr, maxZoom: 18 });
+  const satelite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: 'Teselas &copy; Esri &mdash; Maxar, Earthstar Geographics', maxZoom: 18 });
+
+  // Ferrocarril de Amagá (trazado aproximado)
+  const ferrocarril = L.layerGroup([
+    L.polyline([[6.2470, -75.5700], [6.2150, -75.5830], [6.1719, -75.6114], [6.1576, -75.6300], [6.0911, -75.6357],
+                [6.0650, -75.6600], [6.0397, -75.7031], [6.0100, -75.7600], [5.9800, -75.8400]],
+      { color: "#33302d", weight: 3, opacity: .7, dashArray: "2 6", lineCap: "round" })
+      .bindTooltip("Ferrocarril de Amagá (trazado aproximado)", { sticky: true })
+  ]).addTo(mapa);
+  [["Itagüí", [6.1719, -75.6114]], ["La Estrella", [6.1576, -75.6430]], ["Caldas", [6.0911, -75.6357]], ["Bolombolo", [5.9800, -75.8400]]]
+    .forEach(([n, c]) => L.circleMarker(c, { radius: 3, color: "#33302d", weight: 1, fillColor: "#fffdf9", fillOpacity: 1 })
+      .bindTooltip(n, { direction: "top" }).addTo(ferrocarril));
+
+  // Minas (ubicación aproximada)
+  const minas = L.layerGroup([
+    L.marker([6.0830, -75.7700], { icon: L.divIcon({ className: "", html: "⛏️", iconSize: [20, 20] }) })
+      .bindPopup("<h4>Mina El Zancudo</h4><p>Mina de oro y plata de Titiribí, una de las empresas mineras más grandes de Antioquia en el siglo XIX. Ubicación aproximada.</p>"),
+    L.marker([6.0250, -75.7150], { icon: L.divIcon({ className: "", html: "⛏️", iconSize: [20, 20] }) })
+      .bindPopup("<h4>Cuenca carbonífera de Amagá</h4><p>Minas de carbón del suroeste antioqueño, que abastecieron al ferrocarril y a la industria de Medellín. Ubicación aproximada.</p>")
+  ]).addTo(mapa);
+
+  // Círculos proporcionales a la población
+  let anio = 2;
+  const maxPob = Math.max(...Object.values(DATOS.poblacion).flat());
+  const radio = pob => 6 + 34 * Math.sqrt(pob / maxPob);
+  const popup = l => {
+    const P = DATOS.poblacion[l.nombre], C = DATOS.cabecera[l.nombre];
+    const filas = DATOS.censos.map((a, i) => {
+      const pct = C[i] != null ? ` (${(C[i] / P[i] * 100).toFixed(0)} % cab.)` : "";
+      return `<div class="fila-mini"><span>${a}</span><span>${fmt(P[i])} hab.${pct}</span></div>`;
+    }).join("");
+    return `<h4>${l.nombre}</h4><p>${l.texto}</p><div class="tabla-mini">${filas}</div>
+            <p style="margin-top:.5rem"><strong>Mi familia:</strong> ${l.familia}</p>`;
+  };
+  const circulos = {};
   DATOS.lugares.forEach(l => {
-    puntos.push(l.coords);
-    L.circleMarker(l.coords, {
-      radius: 11, color: "#fffdf9", weight: 3, fillColor: l.color, fillOpacity: 1
+    circulos[l.nombre] = L.circleMarker(l.coords, {
+      radius: radio(DATOS.poblacion[l.nombre][anio]), color: "#fffdf9", weight: 3, fillColor: l.color, fillOpacity: .85
     }).addTo(mapa)
-      .bindPopup(`<h4>${l.nombre}</h4><p>${l.texto}</p><p><strong>Mi familia:</strong> ${l.familia}</p>`)
-      .bindTooltip(l.nombre, { permanent: true, direction: "right", offset: [12, 0] });
+      .bindPopup(popup(l), { maxWidth: 300, autoPanPaddingTopLeft: [20, 20] })
+      .bindTooltip(l.nombre, { permanent: true, direction: "right", offset: [14, 0] });
   });
-  L.polyline(puntos, { color: "#a4512b", weight: 3, dashArray: "8 8", opacity: .85 }).addTo(mapa);
-  mapa.fitBounds(puntos, { padding: [60, 60] });
+  const actualizarCirculos = () => DATOS.lugares.forEach(l => {
+    circulos[l.nombre].setRadius(radio(DATOS.poblacion[l.nombre][anio]));
+    circulos[l.nombre].setTooltipContent(`${l.nombre} · ${fmt(DATOS.poblacion[l.nombre][anio])} hab.`);
+  });
+  actualizarCirculos();
+  document.querySelectorAll("#anioCenso button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll("#anioCenso button").forEach(x => x.classList.remove("activo"));
+    b.classList.add("activo"); anio = +b.dataset.i; actualizarCirculos();
+  }));
+
+  // Trayectoria familiar: Titiribí → Amagá → Medellín
+  const pts = DATOS.lugares.map(l => l.coords);
+  const trayectoria = L.polyline(pts, { color: "#a4512b", weight: 3, dashArray: "8 8", opacity: .9 }).addTo(mapa);
+  const flecha = (a, b) => {
+    const ang = Math.atan2(b[0] - a[0], b[1] - a[1]) * 180 / Math.PI;
+    const m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+    return L.marker(m, { interactive: false, icon: L.divIcon({ className: "",
+      html: `<div style="transform:rotate(${-ang}deg);color:#a4512b;font-size:22px;line-height:1">➤</div>`, iconSize: [22, 22], iconAnchor: [11, 11] }) });
+  };
+  const flechas = L.layerGroup(pts.slice(1).map((p, i) => flecha(pts[i], p))).addTo(mapa);
+  const capaTrayectoria = L.layerGroup([trayectoria, flechas]).addTo(mapa);
+
+  L.control.layers({ "Mapa claro": claro, "Relieve": relieve, "Satélite": satelite },
+    { "Trayectoria familiar": capaTrayectoria, "Ferrocarril de Amagá": ferrocarril, "Minas": minas },
+    { collapsed: true }).addTo(mapa);
+  L.control.scale({ imperial: false }).addTo(mapa);
+
+  const leyenda = L.control({ position: "bottomleft" });
+  leyenda.onAdd = () => {
+    const d = L.DomUtil.create("div", "leyenda-mapa");
+    d.innerHTML = '<i style="border-color:#a4512b;border-top-style:dashed"></i>Trayectoria familiar<br>' +
+                  '<i style="border-color:#33302d;border-top-style:dotted"></i>Ferrocarril (aprox.)<br>⛏️ Minas';
+    return d;
+  };
+  leyenda.addTo(mapa);
+  mapa.fitBounds(pts, { padding: [70, 70] });
+
+  // Relato guiado
+  const panel = document.getElementById("relato");
+  let paso = 0;
+  const mostrar = i => {
+    paso = (i + DATOS.relato.length) % DATOS.relato.length;
+    const r = DATOS.relato[paso];
+    const texto = r.texto.replace(/\[COMPLETAR[^\]]*\]/g, m => `<span class="completar">${m}</span>`);
+    panel.innerHTML = `<span class="paso-n">Paso ${paso + 1} de ${DATOS.relato.length}</span><h4>${r.titulo}</h4><p>${texto}</p>
+      <div class="botones"><button data-d="-1" aria-label="Paso anterior">← Anterior</button><button data-d="1" aria-label="Paso siguiente">Siguiente →</button></div>`;
+    panel.querySelectorAll("button").forEach(b => b.addEventListener("click", () => mostrar(paso + +b.dataset.d)));
+    const lugar = DATOS.lugares.find(l => l.nombre === r.lugar);
+    if (lugar) { mapa.closePopup(); mapa.once("moveend", () => circulos[lugar.nombre].openPopup()); mapa.flyTo(lugar.coords, r.zoom, { duration: 1.2 }); }
+    else { mapa.closePopup(); r.centro ? mapa.flyTo(r.centro, r.zoom, { duration: 1.2 }) : mapa.flyToBounds(pts, { padding: [70, 70], duration: 1.2 }); }
+  };
+  panel.innerHTML = "";
+  mostrar(0);
 })();
 
 // ---------- Gráficas ----------
@@ -774,7 +916,6 @@ if (typeof Chart !== "undefined") {
   Chart.defaults.font.size = 14;
   Chart.defaults.color = "#5e5249";
 
-  const fmt = n => n.toLocaleString("es-CO");
 
   // Plugin: franja del periodo de traslado familiar
   const franjaTraslado = {
@@ -830,23 +971,25 @@ if (typeof Chart !== "undefined") {
     gPob.update();
   }));
 
-  // 2. Urbanización
+  // 2. Urbanización (solo censos con dato de cabecera para los tres municipios)
+  const idxUrb = DATOS.censos.map((_, i) => i).filter(i => Object.values(DATOS.cabecera).every(c => c[i] != null));
   new Chart(document.getElementById("graficaUrbana"), {
     type: "bar",
     data: {
-      labels: DATOS.censos,
-      datasets: Object.entries(DATOS.porcentajeCabecera).map(([nom, serie]) => ({
-        label: nom, data: serie, backgroundColor: COLORES[nom], borderRadius: 4
+      labels: idxUrb.map(i => DATOS.censos[i]),
+      datasets: Object.entries(DATOS.cabecera).map(([nom, cab]) => ({
+        label: nom, data: idxUrb.map(i => +(cab[i] / DATOS.poblacion[nom][i] * 100).toFixed(1)),
+        backgroundColor: COLORES[nom], borderRadius: 4
       }))
     },
     options: {
       responsive: true, maintainAspectRatio: false,
       plugins: {
         legend: { position: "bottom" },
-        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y}%` } }
+        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y.toLocaleString("es-CO")} %` } }
       },
       scales: {
-        y: { min: 0, max: 100, title: { display: true, text: "% en cabecera" }, ticks: { callback: v => v + "%" } },
+        y: { min: 0, max: 100, title: { display: true, text: "% en cabecera" }, ticks: { callback: v => v + " %" } },
         x: { grid: { display: false } }
       }
     }

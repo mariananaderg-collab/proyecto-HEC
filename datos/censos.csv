@@ -1,0 +1,31 @@
+municipio,censo,variable,valor,fuente,nota
+Medellín,1938,poblacion_total,168266,"Contraloría General de la República, Censo general de población 1938",Conteo censal
+Medellín,1938,poblacion_cabecera,143952,"Anuario Estadístico de Antioquia, citado en Revista Anuario Colombiano de Historia Social y de la Cultura 38(2)",Zona urbana
+Medellín,1951,poblacion_total,358189,"DANE, Censo de población 1951",Conteo censal
+Medellín,1964,poblacion_total,791589,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura (conteo sin ajuste: 772887)
+Medellín,1964,poblacion_cabecera,735236,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Medellín,1964,poblacion_resto,56353,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Medellín,1973,poblacion_total,1163868,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Medellín,1973,poblacion_cabecera,1122099,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Medellín,1973,poblacion_resto,41769,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Amagá,1938,poblacion_total,11033,"Contraloría General de la República, Censo general de población 1938",Conteo censal
+Amagá,1951,poblacion_total,12436,"DANE, Censo de población 1951",Conteo censal
+Amagá,1964,poblacion_total,17455,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Amagá,1964,poblacion_cabecera,4487,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Amagá,1964,poblacion_resto,12968,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Amagá,1973,poblacion_total,19068,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Amagá,1973,poblacion_cabecera,5436,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Amagá,1973,poblacion_resto,13632,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Titiribí,1938,poblacion_total,14433,"Contraloría General de la República, Censo general de población 1938",Conteo censal
+Titiribí,1951,poblacion_total,14450,"DANE, Censo de población 1951",Conteo censal
+Titiribí,1964,poblacion_total,16439,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Titiribí,1964,poblacion_cabecera,4317,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Titiribí,1964,poblacion_resto,12122,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Titiribí,1973,poblacion_total,13752,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Titiribí,1973,poblacion_cabecera,3798,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Titiribí,1973,poblacion_resto,9954,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",
+Antioquia,1938,poblacion_total,1188587,"Contraloría General de la República, Censo general de población 1938",Conteo censal
+Antioquia,1964,poblacion_total,2537250,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Antioquia,1964,poblacion_cabecera,1393307,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Antioquia,1973,poblacion_total,3176695,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
+Antioquia,1973,poblacion_cabecera,2001910,"DANE, vía Anuario Estadístico de Antioquia 2014, cuadro 3.1.5",Incluye ajuste por cobertura
